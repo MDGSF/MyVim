@@ -93,9 +93,8 @@ set whichwrap+=<,>,h,l
 
 " 搜索时忽略大小写。
 " Ignore case when searching
-" set ignorecase
-
-set noignorecase
+set ignorecase
+" set noignorecase
 
 " 如果同时打开了ignorecase，那么对于只有一个大写字母的搜索词，将大小写敏感；
 " 其他情况都是大小写不敏感。比如，搜索Test时，将不匹配test；搜索test时，将匹配Test。
@@ -153,11 +152,12 @@ endif
 
 " 配色方案
 try
-    colorscheme desert
+    colorscheme badwolf
 catch
 endtry
 " colorscheme badwolf 会使用 ~/.vim/colors/badwolf.vim 这个文件
 " colorscheme badwolf
+" colorscheme desert
 
 set background=dark
 
@@ -240,8 +240,8 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+" map <space> /
+" map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
