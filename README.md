@@ -35,6 +35,7 @@
     * [vim 窗口](doc/README_vim_panel.md)
     * [vim 常用插件](doc/README_vim_plugin.md)
     * [vim 快捷键映射](doc/README_vim_mapping.md)
+    * [vim 配色方案](doc/README_vim_colorscheme.md)
     * [vim tab 使用介绍](doc/README_vim_tab.md)
     * [vimtutor 30分钟入门 vim](doc/README_vim_tutor.md)
 

@@ -8,7 +8,7 @@
 <leader>nn
 ```
 
-## ack.vim
+## [ack.vim](https://github.com/mileszs/ack.vim)
 
 在当前目录和子目录下搜索字符串
 
@@ -16,7 +16,7 @@
 <leader>g
 ```
 
-## bufexplore
+## [bufexplore](https://github.com/vim-scripts/bufexplorer.zip)
 
 打开 bufexplore
 
@@ -24,7 +24,7 @@
 map <leader>o :BufExplorer<cr>
 ```
 
-## MRU.vim
+## [MRU.vim](https://github.com/vim-scripts/mru.vim)
 
 打开 MRU 面板，查看最近使用的文件。
 
@@ -32,7 +32,7 @@ map <leader>o :BufExplorer<cr>
 map <leader>f :MRU<CR>
 ```
 
-## ctrlp.vim
+## [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
 搜索文件
 
@@ -40,3 +40,4 @@ map <leader>f :MRU<CR>
 let g:ctrlp_map = '<c-f>'
 map <leader>j :CtrlP<cr>
 ```
+
