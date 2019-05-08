@@ -34,10 +34,11 @@
     * [vim 其他注意点](doc/README_vim_miscellanes.md)
     * [vim 窗口](doc/README_vim_panel.md)
     * [vim 常用插件](doc/README_vim_plugin.md)
-    * [vim 快捷键映射](doc/README_vim_mapping.md)
+    * [vim 常用快捷键映射](doc/README_vim_mapping_common_used.md)
     * [vim 配色方案](doc/README_vim_colorscheme.md)
     * [vim tab 使用介绍](doc/README_vim_tab.md)
     * [vimtutor 30分钟入门 vim](doc/README_vim_tutor.md)
+    * [vim 映射介绍](doc/README_vim_mapping_introduction.md)
 
 ## 使用说明
 

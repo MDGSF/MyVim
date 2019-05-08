@@ -1,4 +1,4 @@
-# vim 映射
+# vim 常用映射
 
 ## leader
 
@@ -90,3 +90,4 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 ```
 cno $q <C-\>eDeleteTillSlash()<cr>
 ```
+
