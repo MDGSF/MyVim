@@ -34,11 +34,24 @@ shift+#
 
 ## 查找选中的字符串
 
+### 方法一
+
 按 `v` 进入 `VISUAL` 模式，然后选择字符串，按 `y` 复制。
 
 然后按 `/` 进入搜索模式。
 
 按 `ctrl+r shift+"` 粘贴缓冲区的内容到搜索区域。
+
+### 方法二
+
+选择好字符串之后，直接按 `*` 向下查找，按 `#` 向上查找。
+
+需要在配置文件中增加如下配置：
+
+```
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+```
 
 ## f 单行搜索命令
 
