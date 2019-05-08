@@ -4,19 +4,18 @@
 
 ```
 .
+├── autoload (vim 启动的时候会自动加载这个目录中的插件)
 ├── doc (文档目录)
-├── script (脚步目录)
-├── vim_backup (~/.vim 备份目录)
-├── install.sh (安装脚本)
+├── sources_forked (插件目录)
+├── sources_non_forked (插件目录)
+├── tmuxconfs (tmux.conf 备份目录)
+├── vimrcs (vimrc 备份目录)
+├── vimtutor (vimtutor 备份目录)
+├── install_awesome_vimrc.sh (vim Awesome 版安装脚本)
+├── install_basic_vimrc.sh (vim basic 版安装脚本)
+├── install_tmux_conf.sh (tmux 安装脚本)
 ├── LICENSE
-├── README.md
-├── tmux.conf (~/.tmux.conf 备份文件)
-├── vimrc (~/.vimrc 备份文件，我自己使用的)
-├── vimrc_basic (~/.vimrc 备份文件，包含一些常用的插件)
-├── vimrc_simple (~/.vimrc 备份文件，不包含插件，只使用 vim 自带的配置)
-├── vimtutor_ch.sh (启动中文版 vimtutor)
-├── vimtutor_ch.txt (中文版 vimtutor)
-└── vimtutor.txt (英文版 vimtutor)
+└── README.md
 ```
 
 ## 文档
@@ -35,10 +34,13 @@
     * [vim 其他注意点](doc/README_vim_miscellanes.md)
     * [vim 窗口](doc/README_vim_panel.md)
     * [vim 常用插件](doc/README_vim_plugin.md)
+    * [vim 快捷键映射](doc/README_vim_mapping.md)
     * [vim tab 使用介绍](doc/README_vim_tab.md)
     * [vimtutor 30分钟入门 vim](doc/README_vim_tutor.md)
 
 ## 使用说明
+
+**vim** 环境来自 [amix/vimrc](https://github.com/amix/vimrc)
 
 ### 先安装 vim 和 tmux
 
@@ -53,23 +55,27 @@ sudo apt-get install xclip
 那你只需要把仓库克隆到你本地，然后复制下配置文件即可。
 
 ```bash
-git clone https://github.com/MDGSF/MyVim.git
-cd MyVim
+git clone https://github.com/MDGSF/MyVim.git ~/.MyVim
+cd ~/.MyVim
 ```
 
-#### 手动复制
+#### 安装 tmux 配置文件
 
-```bash
-mkdir ~/.vim
-cp -arf ./vim_backup/* ~/.vim
-cp -arf ./vimrc_basic ~/.vimrc
-cp -arf ./tmux.conf ~/.tmux.conf
+```
+./install_tmux_conf.sh
 ```
 
-#### 使用 install.sh 脚本复制
+#### 安装高级定制版 vim
 
-我已经把这几行复制命令放到了 `install.sh` 脚本中了，
-直接执行就会复制到你的环境中去了。
+```
+./install_awesome_vimrc.sh
+```
+
+#### 安装基本版 vim
+
+```
+./install_basic_vimrc.sh
+```
 
 ### 如果你想要自己定制属于自己的配置
 

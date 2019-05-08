@@ -11,6 +11,7 @@
 * [vim 其他注意点](README_vim_miscellanes.md)
 * [vim 窗口](README_vim_panel.md)
 * [vim 常用插件](README_vim_plugin.md)
+* [vim 快捷键映射](doc/README_vim_mapping.md)
 * [vim tab 使用介绍](README_vim_tab.md)
 * [vimtutor](README_vim_tutor.md)
 * [vim 其他资源](README_vim_resource.md)
