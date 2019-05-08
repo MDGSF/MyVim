@@ -1,6 +1,6 @@
 # vim 常用插件
 
-## Nerd Tree
+## [Nerd Tree](https://github.com/scrooloose/nerdtree)
 
 打开目录树。
 
