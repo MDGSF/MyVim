@@ -1,5 +1,8 @@
 # tmux + vim 搭建开发环境
 
+* [English](README_en.md)
+* [中文文档](README.md)
+
 ## 目录结构
 
 ```
@@ -83,4 +86,8 @@ cd ~/.MyVim
 
 那你可以先 **fork** 该仓库，然后再把你自己的仓库克隆到本地，
 然后修改成你自己想要的配置，再提交到你自己的仓库中就可以了。
+
+## License
+
+MyVim is licensed under the MIT License.
 

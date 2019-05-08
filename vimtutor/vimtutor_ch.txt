@@ -12,36 +12,34 @@
      在课程中的命令会修改该文档。复制一份该文档用来练习（如果你是通过
      “vimtutor”　命令启动的，那这已经是一个副本了）。
 
-     It is important to remember that this tutor is set up to teach by
-     use.  That means that you need to execute the commands to learn them
-     properly.  If you only read the text, you will forget the commands!
+     有一点很重要的需要记住：这份文档是通过使用 vim 来教学的。这意味着你
+     需要通过执行这些命令才能更好的学会 vim。如果你只是阅读，那么你是记不住
+     这些命令的。
 
-     Now, make sure that your Shift-Lock key is NOT depressed and press
-     the   j   key enough times to move the cursor so that Lesson 1.1
-     completely fills the screen.
+     现在，确保你没有按下 Shift-Lock 键（大小写锁定键），然后不断按 j 键来移动
+     光标，把课程 1.1 移动到屏幕正中间。
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-			Lesson 1.1:  MOVING THE CURSOR
+              			课程 1.1:  移动光标
 
 
-   ** To move the cursor, press the h,j,k,l keys as indicated. **
-	     ^
-	     k		    Hint:  The h key is at the left and moves left.
-       < h	 l >		   The l key is at the right and moves right.
-	     j			   The j key looks like a down arrow.
-	     v
-  1. Move the cursor around the screen until you are comfortable.
+   ** 要移动光标，请按指示按 h，j，k，l 键。 **
+	          ^
+	          k                提示:  h 键在左侧并向左移动。
+       < h         l >                l 键在右侧并向右移动。
+	          j                       j 键看起来像是向下的箭头。
+	          v
+  1. 在屏幕上移动光标，直到你感到舒适为止。
 
-  2. Hold down the down key (j) until it repeats.
-     Now you know how to move to the next lesson.
+  2. 按住 j 键不放光标就会一直不断向下移动。
+     现在你直到如何进入下一课了。
 
-  3. Using the down key, move to Lesson 1.2.
+  3. 使用向下键，移动到课程 1.2。
 
-NOTE: If you are ever unsure about something you typed, press <ESC> to place
-      you in Normal mode.  Then retype the command you wanted.
+注意：如果你不确定你按了什么键，请按 <ESC> 键返回普通模式。然后重新键入你
+      想要的命令。
 
-NOTE: The cursor keys should also work.  But using hjkl you will be able to
-      move around much faster, once you get used to it.  Really!
-
+注意：鼠标和键盘的方向键也应该有效。但是只要你习惯了 hjkl 你能够移动得更快。
+      这是真的！
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			    Lesson 1.2: EXITING VIM
 
