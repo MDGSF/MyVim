@@ -42,6 +42,7 @@
     * [vim tab 使用介绍](doc/README_vim_tab.md)
     * [vimtutor 30分钟入门 vim](doc/README_vim_tutor.md)
     * [vim 映射介绍](doc/README_vim_mapping_introduction.md)
+    * [vim 其他资源](doc/README_vim_resource.md)
 
 ## 使用说明
 
@@ -50,7 +51,7 @@
 ### 先安装 vim 和 tmux
 
 ```bash
-sudo apt-get install vim
+sudo apt-get install vim vim-scripts vim-gtk vim-gnome
 sudo apt-get install tmux
 sudo apt-get install xclip
 ```

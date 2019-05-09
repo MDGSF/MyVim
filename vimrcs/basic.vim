@@ -372,8 +372,8 @@ map <silent> <leader>ez :vsp ~/.zshrc<CR>
 
 map <leader>v :vsplit<CR>
 
-map <C-A> ggvGY
-map! <C-A> <Esc>ggvGY
+" map <C-A> ggvGY
+" map! <C-A> <Esc>ggvGY
 
 " 去除行尾空白字符
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR> 
