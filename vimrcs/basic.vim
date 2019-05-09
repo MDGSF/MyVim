@@ -152,11 +152,10 @@ endif
 
 " 配色方案
 try
-    colorscheme badwolf
+    colorscheme desert
 catch
 endtry
 " colorscheme badwolf 会使用 ~/.vim/colors/badwolf.vim 这个文件
-" colorscheme badwolf
 " colorscheme desert
 
 set background=dark
@@ -262,11 +261,12 @@ map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
+map <leader>ti :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprev<cr>
 map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
