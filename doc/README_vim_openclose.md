@@ -24,6 +24,25 @@ vim file1.txt file2.txt
 vim -p file1.txt file2.txt
 ```
 
+## 水平打开多个窗口
+
+```
+vim -o file1.txt file2.txt file3.txt ...
+```
+
+## 垂直打开多个窗口
+
+```
+vim -O file1.txt file2.txt file3.txt ...
+```
+
+## 对比文件
+
+```
+vim -d file1.txt file2.txt file3.txt ...
+vimdiff file1.txt file2.txt file3.txt ...
+```
+
 ## 退出 vim
 
 ```
