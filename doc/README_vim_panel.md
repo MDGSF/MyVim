@@ -3,14 +3,33 @@
 ## 水平新增一个窗口
 
 ```
+:help split
+:[N]sp[lit] [++opt] [+cmd] [file]
+:sp
 :split
 ```
 
 ## 垂直新增一个窗口
 
 ```
+:[N]vs[plit] [++opt] [+cmd] [file]
 :vsplit
 :vs
+```
+
+## 水平新增一个空白窗口
+
+```
+:[N]new [++opt] [+cmd]
+:new
+```
+
+## 垂直新增一个空白窗口
+
+```
+:[N]vne[w] [++opt] [+cmd] [file]
+:vne
+:vnew
 ```
 
 ## 交换左右两个窗口

@@ -16,11 +16,14 @@ ctrl+d
 ## 光标移动到行首
 
 ```
-shift+)
+:help 0    查看帮助文档
+0          移动光标到当前行的第一个字符
+<Home>     移动光标到当前行的第一个字符
+shift+^    移动光标到当前行的第一个非空白字符
 shift+B
 ```
 
-默认只有 `shift+)`，`shift+B` 是在配置文件中添加了映射。
+`shift+B` 是在配置文件中添加了映射。
 
 ```
 nnoremap B ^
@@ -33,7 +36,7 @@ shift+$
 shift+E
 ```
 
-默认只有 `shift+$`，`shift+E` 是在配置文件中添加了映射。
+`shift+E` 是在配置文件中添加了映射。
 
 ```
 nnoremap E $

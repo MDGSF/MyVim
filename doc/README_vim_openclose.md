@@ -18,7 +18,7 @@ vim file.txt
 vim file1.txt file2.txt
 ```
 
-## 以 tab 的方式打开多个文件
+## 以标签页的方式打开多个文件
 
 ```
 vim -p file1.txt file2.txt
