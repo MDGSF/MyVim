@@ -1,6 +1,6 @@
 ![Vim Logo](images/vimlogo.gif)
 
-> Vim 是编辑器之神<a name='fn1b'></a>
+> Vim 是编辑器之神
 
 **作者：黄剑**
 
@@ -11,8 +11,4 @@
 ### License
 
 MyVim is licensed under the MIT License.
-
-* * *
-
-<a href='#fn1b'><small>↑Back to Content↑</small></a>
 
