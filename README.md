@@ -1,4 +1,4 @@
-# Vim 入门文档
+![Vim Logo](images/vimlogo.gif)
 
 > Vim 是编辑器之神<a name='fn1b'></a>
 
