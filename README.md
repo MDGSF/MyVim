@@ -2,13 +2,15 @@
 
 > Vim 是编辑器之神<a name='fn1b'></a>
 
+**作者：黄剑**
+
 * [English](README_en.md)
 * [中文文档](https://github.com/MDGSF/MyVim)
 
-# 目录
+### 目录
 
 > * [使用说明](doc/README_02_how_to_use_this_document.md)
-> * [为什么需要学习 Vim](doc/README_01_why_you_need_learn_vim.md)
+> * [为什么你需要学习 Vim](doc/README_01_why_you_need_learn_vim.md)
 > * vim 文档
 >     * vim 入门
 >         * [vimtutor 30分钟入门 vim](doc/README_vim_tutor.md)
@@ -43,7 +45,7 @@
 >     * [tmux 其他资源](doc/README_tmux_resource.md)
 > * [工程目录](doc/README_00_project_directory.md)
 
-## License
+### License
 
 MyVim is licensed under the MIT License.
 

@@ -13,3 +13,5 @@ colorscheme pyte
 
 如果需要用其他的配色方案，参考 `sources_forked/badwolf` 目录。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

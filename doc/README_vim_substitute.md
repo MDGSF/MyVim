@@ -78,3 +78,5 @@ l: 替换当前匹配，然后退出替换
 :%s/\<old\>/new/gc
 ```
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

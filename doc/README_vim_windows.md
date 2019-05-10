@@ -64,3 +64,5 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 ```
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

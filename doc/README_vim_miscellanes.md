@@ -43,3 +43,5 @@ ctrl+r
 
 `number` 就是数字 1，2，3...
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

@@ -128,3 +128,5 @@ ctrl+b ] 粘贴
 ctrl+b ctrl+方向键
 ```
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

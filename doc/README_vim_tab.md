@@ -117,3 +117,5 @@ gT
 
 添加映射 `map <leader>tm :tabmove` 之后，可以使用 `,tm`。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

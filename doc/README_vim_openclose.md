@@ -115,3 +115,5 @@ command W w !sudo tee % > /dev/null
 :x
 ```
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

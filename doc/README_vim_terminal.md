@@ -63,3 +63,5 @@ ctrl+w shift+:
 
 `Terminal-Normal` 模式下按 `i` 或者 `a` 切换为 `Terminal-Job` 模式。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

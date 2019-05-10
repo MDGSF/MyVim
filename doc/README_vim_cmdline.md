@@ -12,3 +12,5 @@
 2. 按 `:` 键进入命令行模式。
 3. `ctrl+r shift+"` 将文本复制到 `cmdline` 上面。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

@@ -115,3 +115,5 @@ vim 有两个特殊的寄存器对应着这两个剪切板：
 
 在 vim 中粘贴的时候需要进入插入模式。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

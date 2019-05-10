@@ -142,3 +142,5 @@ ctrl+o （小写字母o）
 10j
 ```
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

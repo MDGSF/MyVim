@@ -15,3 +15,5 @@
 你也可以直接打开 `vimtutor_ch.txt` 文件来学习，不过最好先复制一个副本，
 因为在学习的过程中会修改文档。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

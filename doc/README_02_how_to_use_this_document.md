@@ -42,4 +42,5 @@ cd ~/.MyVim
 那你可以先 **fork** 该仓库，然后再把你自己的仓库克隆到本地，
 然后修改成你自己想要的配置，再提交到你自己的仓库中就可以了。
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

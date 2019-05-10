@@ -91,3 +91,5 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 cno $q <C-\>eDeleteTillSlash()<cr>
 ```
 
+<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+
