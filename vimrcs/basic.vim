@@ -1,5 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
+"    Huang Jian (1342042894@qq.com)
 "
 " Sections:
 "    -> General
@@ -109,6 +110,9 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch 
 
+" Faster redrawing
+set ttyfast
+
 " Vim loves to redraw the screen during things it probably doesn't need to—like
 " in the middle of macros. This tells Vim not to bother redrawing during these
 " scenarios, leading to faster macros.
@@ -200,6 +204,8 @@ set expandtab
 set smarttab
 
 set shiftwidth=4 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数。
+set shiftround
+
 set tabstop=4 " 按下 Tab 键时，Vim 显示的空格数。
 set softtabstop=4 " Tab 转为多少个空格。
 
@@ -307,6 +313,14 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" 执行 :split 的时候，在当前窗口的下方新建窗口
+" open new windows below the current windows.
+set splitbelow
+
+" 执行 :vsplit 的时候，在当前窗口的右方新建窗口
+" open new windows right of the current windows.
+set splitright
+
 " set number 打开
 " set nonumber 关闭
 " set number? 查询配置项是打开还是关闭
@@ -316,10 +330,10 @@ set number
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）。
 set nocompatible
 
-" 在底部显示，当前处于命令模式还是插入模式。
+" 在底部显示，当前处于什么模式。
 set showmode
 
-" 在底部显示，当前处于命令模式还是插入模式。
+" 在底部显示输入的命令，具体看帮助文档 :help showcmd
 set showcmd
 
 " 支持使用鼠标。
@@ -331,7 +345,13 @@ set mouse=a
 " 光标所在的当前行高亮。
 set cursorline
 
+" Searches wrap around end-of-file.
 set wrapscan
+
+" Always report changed lines.
+set report=0
+
+" Switch between buffers without having to save first.
 set hidden
 
 " move vertically by visual line

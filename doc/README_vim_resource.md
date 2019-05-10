@@ -18,3 +18,5 @@
 
 [Vim 从入门到精通](https://github.com/wsdjeg/vim-galore-zh_cn)
 
+[Why I love Vim: It’s the lesser-known features that make it so amazing](https://medium.freecodecamp.org/learn-linux-vim-basic-features-19134461ab85)
+

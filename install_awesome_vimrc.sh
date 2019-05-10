@@ -13,6 +13,7 @@ source $ProjectPath/vimrcs/basic.vim
 source $ProjectPath/vimrcs/filetypes.vim
 source $ProjectPath/vimrcs/plugins_config.vim
 source $ProjectPath/vimrcs/extended.vim
+source $ProjectPath/vimrcs/terminal.vim
 
 try
 source $ProjectPath/my_configs.vim
