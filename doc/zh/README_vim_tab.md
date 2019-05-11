@@ -1,5 +1,11 @@
 # vim 标签页介绍
 
+## 在多个标签页中打开多个文件
+
+```
+vim -p file1 file2 file3
+```
+
 ## 新建一个标签页
 
 ```
@@ -18,6 +24,10 @@
 ```
 
 添加映射 `map <leader>ti :tabnew<cr>` 之后，可以使用 `,ti`。
+
+`:tabedit file1` 在新的标签页中打开 `file1` 文件。
+
+`:tabnew file2` 在新的标签页中打开 `file2` 文件。
 
 ## 查看所有的标签页
 
@@ -68,6 +78,12 @@
 :tabn[ext] {count}
 {count}gt
 ```
+
+`gt` 跳转到下一个标签页。
+
+`2gt` 跳转到第 2 个标签页。
+
+`3gt` 跳转到第 3 个标签页。
 
 添加映射 `map <leader>tn :tabnext<cr>` 之后，可以使用 `,tn`。
 

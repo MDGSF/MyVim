@@ -178,6 +178,17 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 设置备份文件、交换文件、操作历史文件的保存位置。
 " 结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名。
+
+if !isdirectory($HOME.'/.vim/.backup') && exists('*mkdir')
+    call mkdir($HOME.'/.vim/.backup')
+endif
+if !isdirectory($HOME.'/.vim/.swp') && exists('*mkdir')
+    call mkdir($HOME.'/.vim/.swp')
+endif
+if !isdirectory($HOME.'/.vim/.undo') && exists('*mkdir')
+    call mkdir($HOME.'/.vim/.undo')
+endif
+
 set backup
 set backupdir=~/.vim/.backup//,~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*

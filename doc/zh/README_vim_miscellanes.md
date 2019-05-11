@@ -43,5 +43,37 @@ ctrl+r
 
 `number` 就是数字 1，2，3...
 
+## 自动补全提示
+
+```
+ctrl+n
+```
+
+## read 命令
+
+read 命令用来读取其他文件内容到当前 buffer，
+或者是读取其他命令的输出到当前 buffer。
+
+```
+:help :read
+:r[ead] [++opt] [name]
+:r
+:re
+:read
+```
+
+`:read !ls` 读取 `ls` 命令的输出到光标所在位置。
+
+`:0r !ls` 读取 `ls` 命令的输出到文档的最开头。
+
+`:r !pwd` 获取当前路径。
+
+**获取其他终端的路径：**
+
+> echo $PWD > /tmp/a
+> :read /tmp/a
+
+* * *
+
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 
