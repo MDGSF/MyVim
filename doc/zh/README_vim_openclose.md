@@ -93,6 +93,12 @@ command W w !sudo tee % > /dev/null
 :wq
 ```
 
+## 保存内容到 filename.txt 并退出
+
+```
+:wq filename.txt
+```
+
 ## 退出多个文件
 
 ```
