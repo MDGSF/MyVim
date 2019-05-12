@@ -107,5 +107,15 @@ CTRL-W [N} >	增加当前窗口宽度 N 行 (N 默认为 1)
 
 * * *
 
-<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> [上一章](README_vim_1.6_tab.md)
+>
+> [下一章](README_vim_1.8_buffer.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 
