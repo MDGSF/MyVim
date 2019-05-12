@@ -4,8 +4,8 @@
 >     * vim 入门
 >         * [vimtutor 30分钟入门 vim](README_vim_tutor.md)
 >     * vim 基础操作
->         * [vim 打开、退出](README_vim_openclose.md)
->         * [vim 移动光标](README_vim_movecursor.md)
+>         * [vim 打开、退出](README_vim_1.1_open_close.md)
+>         * [vim 移动光标](README_vim_1.2_move_cursor.md)
 >         * [vim 查找文本](README_vim_search.md)
 >         * [vim 修改文本](README_vim_modify.md)
 >         * [vim 替换文本](README_vim_substitute.md)
@@ -32,7 +32,9 @@
 > * tmux 文档
 >     * [tmux 常用操作](README_tmux_basic.md)
 >     * [tmux 其他资源](README_tmux_resource.md)
+>     * [tmux 安装](README_tmux_install.md)
 > * [工程目录](README_00_project_directory.md)
+> * [安装说明](README_03_install.md)
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

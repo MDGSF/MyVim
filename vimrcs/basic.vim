@@ -133,7 +133,7 @@ set mat=2
 " No annoying sound on errors
 set noerrorbells
 " 出错时，发出视觉提示，通常是屏幕闪烁。
-set visualbell
+set novisualbell
 set t_vb=
 set tm=500
 
