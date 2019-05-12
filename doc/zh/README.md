@@ -6,7 +6,7 @@
 >     * vim 基础操作
 >         * [vim 打开、退出](README_vim_1.1_open_close.md)
 >         * [vim 移动光标](README_vim_1.2_move_cursor.md)
->         * [vim 查找文本](README_vim_search.md)
+>         * [vim 查找文本](README_vim_1.3_search.md)
 >         * [vim 修改文本](README_vim_modify.md)
 >         * [vim 替换文本](README_vim_substitute.md)
 >         * [vim 命令行](README_vim_cmdline.md)
@@ -15,7 +15,7 @@
 >         * [vim 缓冲区](README_vim_buffer.md)
 >         * [vim 配色方案](README_vim_colorscheme.md)
 >         * [vim 其他注意点](README_vim_miscellanes.md)
->     * vim 高级
+>     * vim 高级进阶
 >         * [vim 标签页,窗口,缓冲区三者之间的关系](README_vim_tab_windows_buffer.md)
 >         * [vim 模式](README_vim_mode.md)
 >         * [vim,shell,tmux,浏览器之间互相复制数据](README_vim_copydata.md)

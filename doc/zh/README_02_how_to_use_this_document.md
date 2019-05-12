@@ -21,7 +21,7 @@
 git clone https://github.com/MDGSF/MyVim.git ~/.MyVim
 ```
 
-请先阅读 [安装说明](README_03_install.md)。
+请先阅读 [安装说明](README_03_install.md)　把 vim 基础配置安装好。
 
 如果你从来没有接触过 `vim`，那么建议先阅读 [vimtutor 30分钟入门 vim](README_vim_tutor.md)，
 当然就算你使用过好多年的 `vim`，阅读 `vimtutor` 大概率一样会学到新的东西。
@@ -37,7 +37,11 @@ git clone https://github.com/MDGSF/MyVim.git ~/.MyVim
 
 * * *
 
+将光标移动到下面的文件名上，执行 `gf` 跳转。
+
 [目录](README.md)
+
+[下一章](README_vim_1.1_open_close.md)
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 
