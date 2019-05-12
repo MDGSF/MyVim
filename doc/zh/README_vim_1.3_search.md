@@ -69,6 +69,10 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 第一次使用 `f` 来搜索之后，相同的查找就可以使用分号 `;`。
 
+`;` 是继续向当前方向查找下一个字母。
+
+`,` 是向当前相反方向查找。
+
 ## 查找时区分大小写
 
 ```
@@ -115,7 +119,7 @@ map <silent> <leader><cr> :noh<cr>
 
 [上一章](README_vim_1.2_move_cursor.md)
 
-[下一章](README_vim_1.3_search.md)
+[下一章](README_vim_1.4_modify.md)
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

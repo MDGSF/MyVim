@@ -26,6 +26,9 @@ cd ~/.MyVim
 
 `install_awesome_vimrc.sh` 会带有一些常用的插件（建议安装）。
 
+如果使用 `install_awesome_vimrc.sh` 安装之后，有插件报错了，
+那就使用 `install_basic_vimrc.sh` 来安装基本的版本就好了。
+
 **如果你想要自己定制属于自己的配置**
 
 那你可以先 **fork** 该仓库，然后再把你自己的仓库克隆到本地，

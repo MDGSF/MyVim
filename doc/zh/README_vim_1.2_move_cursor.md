@@ -123,8 +123,13 @@ zb
 
 如果光标处于括号上 `(), [], {}`，用 `%` 可以将光标移动到对应的另一半括号上。
 
+> 你可以在下面代码上的 (),[],{} 字符上按 % 看看效果，多按几次直到你熟悉它为止。
+
 ```
-%
+func main() {
+	num := ((1 + 2) * (4 - 3)) / 3
+	fmt.Println("vim-go, num =", num)
+}
 ```
 
 ## 移动光标到之前所在的位置
@@ -157,19 +162,22 @@ ctrl+o （小写字母o）
 10k
 ```
 
-**注意：**在命令前面加上数字 `N` 表示执行这个命令 `N` 次。
+**注意：** 在命令前面加上数字 `N` 表示执行这个命令 `N` 次。
+
+**最后，在进入下一章之前，请确保已经熟悉了本章的操作。
+如果觉得操作还不太习惯，那就在该文档中多执行几次。**
 
 * * *
 
-按 `gg` 回到文档顶部。
-
-将光标移动到下面的文件名上，执行 `gf` 跳转。
-
-[目录](README.md)
-
-[上一章](README_vim_1.1_open_close.md)
-
-[下一章](README_vim_1.3_search.md)
-
-<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> [上一章](README_vim_1.1_open_close.md)
+>
+> [下一章](README_vim_1.3_search.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

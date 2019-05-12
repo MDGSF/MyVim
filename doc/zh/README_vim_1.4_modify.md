@@ -1,5 +1,8 @@
 # vim 修改文本
 
+前面两章介绍的**光标移动**和**文本查找**都是在普通模式下进行的，
+这一章介绍的修改文本需要在插入模式下进行。
+
 ## 删除光标所在的字符
 
 删除字符，并把删除掉的字符放到 vim 的缓冲区中。
@@ -132,6 +135,7 @@ c$
 
 1. `ctrl+v` 进入 `VISULA BLOCK` 模式。
 2. `h,j,k,l` 方向键进行选择。
+3. `shift+$`。
 3. `shift+A` 插入。
 4. `Esc` 插入完成。
 
@@ -149,6 +153,30 @@ d3w
 ```
 4dd
 ```
+
+## 取消
+
+```
+u
+```
+
+## 重做
+
+```
+ctrl+r
+```
+
+* * *
+
+按 `gg` 回到文档顶部。
+
+将光标移动到下面的文件名上，执行 `gf` 跳转。
+
+[目录](README.md)
+
+[上一章](README_vim_1.3_search.md)
+
+[下一章](README_vim_1.4_modify.md)
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

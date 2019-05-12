@@ -57,7 +57,7 @@ vimdiff file1.txt file2.txt file3.txt ...
 :q!
 ```
 
-## 保存
+## 保存当前文件
 
 ```
 :w
@@ -85,6 +85,12 @@ nmap <leader>w :w!<cr>
 
 ```
 command W w !sudo tee % > /dev/null
+```
+
+## 保存全部文件
+
+```
+:wa
 ```
 
 ## 保存并退出
@@ -121,6 +127,12 @@ command W w !sudo tee % > /dev/null
 :x
 ```
 
+## 另存为
+
+`:saveas newfilename.txt` 另存为 `newfilename.txt` 并开始编辑新的这个 `newfilename.txt`。
+
+`:w newfilename.txt` 把当前文件另存一份副本 `newfilename.txt`，并继续编辑原文件。
+
 * * *
 
 按 `gg` 回到文档顶部。
@@ -129,7 +141,7 @@ command W w !sudo tee % > /dev/null
 
 [目录](README.md)
 
-[上一章](README_02_how_to_use_this_document.md)
+[上一章](README_02_how_to_use_this_document.mdmd)
 
 [下一章](README_vim_1.2_move_cursor.md)
 
