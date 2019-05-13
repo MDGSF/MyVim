@@ -33,3 +33,13 @@ void another_important_function(int bytes, double precision)
 3. 光标移动到第三行。
 4. 输入 `@@` 对第三行应用上一次使用的宏。
 
+* * *
+
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

@@ -19,3 +19,13 @@
 如果你执行了 `:Ex` 在当前窗口打开了文件管理器，又想回到之前的文件，
 可以使用 `:bdel` 当前窗口的缓冲区删掉。
 
+* * *
+
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+

@@ -18,8 +18,6 @@
 
 ## 操作系统剪切板
 
-[How can I copy text to the system clipboard from Vim?](https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim)
-
 大部分的 Linux 和 UNIX-like 操作系统都有两个独立的剪切板：
 
 **PRIMARY 剪切板**：
@@ -80,7 +78,7 @@ vim 有两个特殊的寄存器对应着这两个剪切板：
 3. `ctrl+b c` 复制。
 4. 在浏览器中用 `ctrl+v` 粘贴。
 
-## tmux 终端之间互相复制粘贴
+## tmux终端之间互相复制粘贴
 
 1. `ctrl+b [` 进入复制模式，通过 hjkl 来上下左右移动光标。
 2. 按空格开始复制，按回车结束复制。
@@ -114,11 +112,13 @@ vim 有两个特殊的寄存器对应着这两个剪切板：
 
 ## vim 和 tmux 之间互相复制数据
 
-如果 vim 是在 tmux 中打开的，可以直接使用 [tmux 终端之间互相复制粘贴](#tmux 终端之间互相复制粘贴)。
+如果 vim 是在 tmux 中打开的，可以直接使用 [tmux终端之间互相复制粘贴](#tmux终端之间互相复制粘贴)。
 
 在 vim 中粘贴的时候需要进入插入模式。
 
 * * *
+
+[How can I copy text to the system clipboard from Vim?](https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim)
 
 > 按 `gg` 回到文档顶部。
 >
