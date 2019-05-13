@@ -27,11 +27,21 @@
 `:enew` 把当前窗口的缓冲区切换为**隐藏缓冲区**，
 然后新建一个**未命名缓冲区**显示在当前窗口。
 
+> [vim 标签页](README_vim_1.6_tab.md)
+> [vim 窗口](README_vim_1.7_windows.md)
+> [vim 缓冲区](README_vim_1.8_buffer.md)
+
 * * *
 
 [buffers-windows-tabs](https://github.com/mhinz/vim-galore/blob/master/README.md#buffers-windows-tabs)
 
 [http://vimdoc.sourceforge.net/htmldoc/windows.html#windows-intro](http://vimdoc.sourceforge.net/htmldoc/windows.html#windows-intro)
 
-<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

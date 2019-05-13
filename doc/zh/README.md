@@ -1,5 +1,5 @@
-> * [使用说明](README_02_how_to_use_this_document.md)
 > * [为什么你需要学习 Vim](README_01_why_you_need_learn_vim.md)
+> * [使用说明](README_02_how_to_use_this_document.md)
 > * vim 文档
 >     * vim 入门
 >         * [vimtutor 30分钟入门 vim](README_vim_tutor.md)
@@ -12,29 +12,35 @@
 >         * [vim 标签页](README_vim_1.6_tab.md)
 >         * [vim 窗口](README_vim_1.7_windows.md)
 >         * [vim 缓冲区](README_vim_1.8_buffer.md)
->         * [vim 其他注意点](README_vim_miscellanes.md)
 >     * vim 高级进阶
->         * [vim 命令行](README_vim_cmdline.md)
->         * [vim 配色方案](README_vim_colorscheme.md)
->         * [vim 标签页,窗口,缓冲区三者之间的关系](README_vim_tab_windows_buffer.md)
->         * [vim 模式](README_vim_mode.md)
->         * [vim,shell,tmux,浏览器之间互相复制数据](README_vim_copydata.md)
->         * [vim 映射介绍](README_vim_mapping_introduction.md)
->         * [vim 常用快捷键映射](README_vim_mapping_common_used.md)
->         * [vim 基础配置介绍](README_vim_basicsetting.md)
->         * [vim 常用插件](README_vim_plugin.md)
->         * [vim 源码编译](README_vim_build.md)
->         * [vim 8 terminal](README_vim_terminal.md)
->     * vim 黑魔法
->         * [vim 修改远程电脑上的文档](README_vim_darkmagic_modify_remote_file.md)
+>         * [vim 模式](README_vim_2_mode.md)
+>         * [vim 命令行](README_vim_2_cmdline.md)
+>         * [vim 配色方案](README_vim_2_colorscheme.md)
+>         * [vim 标签页,窗口,缓冲区三者之间的关系](README_vim_2_tab_windows_buffer.md)
+>         * [vim,shell,tmux,浏览器之间互相复制数据](README_vim_2_copydata.md)
+>         * [vim 映射介绍](README_vim_2_mapping_introduction.md)
+>         * [vim 常用快捷键映射](README_vim_2_mapping_common_used.md)
+>         * [vim 基础配置介绍](README_vim_2_basicsetting.md)
+>         * [vim 源码编译](README_vim_2_build.md)
+>         * [vim 8 terminal](README_vim_2_terminal.md)
+>         * [vim 修改远程电脑上的文档](README_vim_2_modify_remote_file.md)
+>         * [vim 其他注意点](README_vim_2_miscellanea.md)
+>     * vim 常用插件
+>         * [vim 常用插件](README_vim_3.1_plugin.md)
+>         * [插件 pathogen.vim](README_vim_3.2_plugin_pathogen.md)
+>         * [插件 cscope](README_vim_3.3_plugin_cscope.md)
+>         * [插件 NERD Tree](README_vim_3.4_plugin_nerdtree.md)
+>         * [插件 ack.vim](README_vim_3.5_plugin_ack.md)
+>         * [插件 ctrlp.vim](README_vim_3.6_plugin_ctrlp.md)
+>         * [插件 a.vim](README_vim_3.7_plugin_a.md)
 >     * vim 其他
 >         * [vim 其他资源](README_vim_resource.md)
 > * tmux 文档
 >     * [tmux 常用操作](README_tmux_basic.md)
 >     * [tmux 其他资源](README_tmux_resource.md)
 >     * [tmux 安装](README_tmux_install.md)
-> * [工程目录](README_00_project_directory.md)
 > * [安装说明](README_03_install.md)
+> * [工程目录](README_04_project_directory.md)
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

@@ -99,6 +99,9 @@ vim 有两个特殊的寄存器对应着这两个剪切板：
 1. 通过 `PRIMARY` 剪切板，选择文本，然后用鼠标中键粘贴。
 2. 通过 `CLIPBOARD` 剪切板，`ctrl+c` 复制，`"+p` 粘贴。
 
+如果 vim 是在 tmux 终端下的，可以按 `i` 先进入插入模式，然后 `ctrl+b ctrl+v`
+来复制数据到 vim。
+
 ## 复制 vim 数据到 shell
 
 1. 通过 `PRIMARY` 剪切板，选择文本，然后用鼠标中键粘贴。
@@ -115,5 +118,13 @@ vim 有两个特殊的寄存器对应着这两个剪切板：
 
 在 vim 中粘贴的时候需要进入插入模式。
 
-<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+* * *
+
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

@@ -32,5 +32,7 @@ LDFLAGS=-fno-lto
 
 [链接](https://pan.baidu.com/s/1RNzhsRmLowCOoT9mR1SZZg) 提取码: jez4
 
+下载下来之后，直接执行 `make install` 就可以了，这个是在 `ubuntu 16.04` 下编译的。
+
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 
