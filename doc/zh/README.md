@@ -28,8 +28,6 @@
 >         * [vim 宏录制](README_vim_2_macros.md)
 >         * [vim 打标记](README_vim_2_mark.md)
 >         * [vim 会话](README_vim_2_session.md)
->         * [vim 源码编译](README_vim_2_build.md)
->         * [vim 8 terminal](README_vim_2_terminal.md)
 >     * vim 常用插件
 >         * [vim 常用插件](README_vim_3.1_plugin.md)
 >         * [插件 pathogen.vim](README_vim_3.2_plugin_pathogen.md)
@@ -38,6 +36,10 @@
 >         * [插件 ack.vim](README_vim_3.5_plugin_ack.md)
 >         * [插件 ctrlp.vim](README_vim_3.6_plugin_ctrlp.md)
 >         * [插件 a.vim](README_vim_3.7_plugin_a.md)
+>     * vim 8
+>         * [vim 8 源码编译](README_vim_4_build.md)
+>         * [vim 8 自带终端](README_vim_4_terminal.md)
+>         * [vim 8 插件管理器](README_vim_4_packages.md)
 >     * vim 其他
 >         * [vim 其他资源](README_vim_resource.md)
 > * tmux 文档
