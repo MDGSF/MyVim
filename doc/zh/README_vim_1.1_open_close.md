@@ -8,6 +8,8 @@ vim
 
 ![vim_1.1_open.svg](../../images/vim_1.1_open.svg?sanitize=true)
 
+[<img src="../../images/vim_1.1_open.svg">]()
+
 ## 打开 file.txt
 
 ```
