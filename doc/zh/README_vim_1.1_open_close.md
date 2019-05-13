@@ -6,6 +6,8 @@
 vim
 ```
 
+[vim_1.1_open.svg](../../images/vim_1.1_open.svg)
+
 ## 打开 file.txt
 
 ```
