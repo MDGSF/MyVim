@@ -9,6 +9,7 @@ if [ ! -d "$ProjectPath/tmp" ];then
   mkdir -p $ProjectPath/tmp
 fi
 
-cp -arf vimtutor_ch.txt $ProjectPath/tmp/vimtutor_ch.txt
+cp -arf tutor.zh_cn.utf-8 $ProjectPath/tmp/tutor.zh_cn.utf-8
 
-vim $ProjectPath/tmp/vimtutor_ch.txt
+vim $ProjectPath/tmp/tutor.zh_cn.utf-8
+
