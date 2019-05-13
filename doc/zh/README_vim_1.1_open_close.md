@@ -6,7 +6,7 @@
 vim
 ```
 
-[vim_1.1_open.svg](../../images/vim_1.1_open.svg)
+![vim_1.1_open.svg](../../images/vim_1.1_open.svg?sanitize=true)
 
 ## 打开 file.txt
 
