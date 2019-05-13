@@ -12,6 +12,7 @@ echo "set runtimepath+=${ProjectPath}
 source $ProjectPath/vimrcs/basic.vim
 source $ProjectPath/vimrcs/filetypes.vim
 source $ProjectPath/vimrcs/plugins_config.vim
+source $ProjectPath/vimrcs/plugins_cscope_maps.vim
 source $ProjectPath/vimrcs/extended.vim
 source $ProjectPath/vimrcs/terminal.vim
 
