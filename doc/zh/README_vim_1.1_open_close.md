@@ -9,6 +9,7 @@ vim
 <details>
 <summary>展开查看图片</summary>
 ![vim_1.1_open_01.gif](../../images/vim_1.1_open_01.gif)
+<img src="../../images/vim_1.1_open_01.gif" alt="vim_1.1_open_01.gif" />
 </details>
 
 ## 打开 file.txt
