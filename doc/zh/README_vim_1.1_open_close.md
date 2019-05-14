@@ -98,6 +98,11 @@ vimdiff file1.txt file2.txt file3.txt ...
 :w
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_07.gif" alt="vim_1.1_open_07.gif" />
+</details>
+
 ## 强制保存
 
 ```
@@ -146,6 +151,8 @@ command W w !sudo tee % > /dev/null
 :qa
 ```
 
+`:q` 只是关闭当前窗口，`:qa` 可以把所有的窗口都关闭。
+
 ## 强制退出多个文件
 
 ```
@@ -162,11 +169,22 @@ command W w !sudo tee % > /dev/null
 :x
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_08.gif" alt="vim_1.1_open_08.gif" />
+</details>
+
 ## 另存为
 
 `:saveas newfilename.txt` 另存为 `newfilename.txt` 并开始编辑新的这个 `newfilename.txt`。
 
 `:w newfilename.txt` 把当前文件另存一份副本 `newfilename.txt`，并继续编辑原文件。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_09.gif" alt="vim_1.1_open_09.gif" />
+<img src="../../images/vim_1.1_open_10.gif" alt="vim_1.1_open_10.gif" />
+</details>
 
 * * *
 
