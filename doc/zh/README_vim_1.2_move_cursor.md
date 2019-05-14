@@ -31,6 +31,11 @@ ctrl+u
 ctrl+d
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_02.gif" alt="vim_1.2_move_cursor_02.gif" />
+</details>
+
 ## 光标移动到行首
 
 ```
