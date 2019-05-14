@@ -109,6 +109,8 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 map <silent> <leader><cr> :noh<cr>
 ```
 
+还有一种方法可以取消高亮，那就是随便搜索一个不存在的字符串，我估计应该也有人这么使用。
+
 * * *
 
 > 按 `gg` 回到文档顶部。
