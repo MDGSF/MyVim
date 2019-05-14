@@ -65,6 +65,11 @@ shift+E
 nnoremap E $
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_03.gif" alt="vim_1.2_move_cursor_03.gif" />
+</details>
+
 ## 光标移动到最开头
 
 ```
@@ -77,11 +82,21 @@ gg
 shift+G
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_04.gif" alt="vim_1.2_move_cursor_04.gif" />
+</details>
+
 ## 光标移动到指定行
 
 `:100 enter` 跳转到第 100 行
 
 `100 shift+G` 跳转到第 100 行
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_05.gif" alt="vim_1.2_move_cursor_05.gif" />
+</details>
 
 ## 查看当前处于第几行、第几列
 
@@ -133,6 +148,11 @@ zt
 zb
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_06.gif" alt="vim_1.2_move_cursor_06.gif" />
+</details>
+
 ## 在括号之间跳转光标
 
 如果光标处于括号上 `(), [], {}`，用 `%` 可以将光标移动到对应的另一半括号上。
@@ -145,6 +165,11 @@ func main() {
 	fmt.Println("vim-go, num =", num)
 }
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_06.gif" alt="vim_1.2_move_cursor_06.gif" />
+</details>
 
 ## 移动光标到之前所在的位置
 
