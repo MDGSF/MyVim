@@ -76,6 +76,8 @@ vim -d file1.txt file2.txt file3.txt ...
 vimdiff file1.txt file2.txt file3.txt ...
 ```
 
+详细见 [vimdiff](README_vim_2_vimdiff.md) 那一章。
+
 ## 退出 vim
 
 ```
