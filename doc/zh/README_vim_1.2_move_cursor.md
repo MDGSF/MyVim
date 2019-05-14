@@ -4,6 +4,10 @@
 
 掌握了这一章的内容之后，就可以使用 vim 来阅读剩下的所有文档了。
 
+移动光标 vim 需要处于普通模式，看下左下角，如果有显示 `NORMAL`
+说明就是普通模式，如果不是的话，只要按 `<Esc>` 键就会回到普通模式。
+更多关于模式的知识点将在 [vim 模式](README_vim_2_mode.md) 那一章介绍。
+
 ## 上下左右移动光标
 
 ```
@@ -14,6 +18,11 @@ h, j, k, l
 * j 光标向下移动一行
 * k 光标向上移动一行
 * l 光标向右移动一个字符
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_01.gif" alt="vim_1.2_move_cursor_01.gif" />
+</details>
 
 ## 快速上下移动光标
 
