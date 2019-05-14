@@ -8,9 +8,7 @@ vim
 
 <details>
 <summary>展开查看图片</summary>
-<pre>
 ![vim_1.1_open_01.gif](../../images/vim_1.1_open_01.gif)
-</pre>
 </details>
 
 ## 打开 file.txt
