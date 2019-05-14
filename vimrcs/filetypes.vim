@@ -21,6 +21,8 @@ au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
+nnoremap <leader>pyt ggO#!/usr/bin/env python<CR># -*- coding: UTF-8 -*-<CR><CR>def main():<CR>pass<CR><CR><CR><Backspace>if __name__ == "__main__":<CR>main()<Esc>gg
+
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
