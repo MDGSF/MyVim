@@ -6,6 +6,8 @@
 vim
 ```
 
+![vim_1.1_open_01.gif](../../images/vim_1.1_open_01.gif)
+
 ## 打开 file.txt
 
 ```
