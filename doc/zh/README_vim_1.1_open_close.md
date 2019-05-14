@@ -8,7 +8,6 @@ vim
 
 <details>
 <summary>展开查看图片</summary>
-![vim_1.1_open_01.gif](../../images/vim_1.1_open_01.gif)
 <img src="../../images/vim_1.1_open_01.gif" alt="vim_1.1_open_01.gif" />
 </details>
 
@@ -18,7 +17,10 @@ vim
 vim file.txt
 ```
 
-![vim_1.1_open_02.gif](../../images/vim_1.1_open_02.gif)
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_02.gif" alt="vim_1.1_open_02.gif" />
+</details>
 
 ## 打开多个文件
 
@@ -26,11 +28,21 @@ vim file.txt
 vim file1.txt file2.txt
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_03.gif" alt="vim_1.1_open_03.gif" />
+</details>
+
 ## 以标签页的方式打开多个文件
 
 ```
 vim -p file1.txt file2.txt
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_04.gif" alt="vim_1.1_open_04.gif" />
+</details>
 
 ## 水平打开多个窗口
 
