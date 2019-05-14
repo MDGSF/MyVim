@@ -168,7 +168,7 @@ func main() {
 
 <details>
 <summary>展开查看图片</summary>
-<img src="../../images/vim_1.2_move_cursor_06.gif" alt="vim_1.2_move_cursor_06.gif" />
+<img src="../../images/vim_1.2_move_cursor_07.gif" alt="vim_1.2_move_cursor_07.gif" />
 </details>
 
 ## 移动光标到之前所在的位置
