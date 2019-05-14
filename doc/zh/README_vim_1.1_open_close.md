@@ -6,13 +6,20 @@
 vim
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<pre><code>
 ![vim_1.1_open_01.gif](../../images/vim_1.1_open_01.gif)
+</code></pre>
+</details>
 
 ## 打开 file.txt
 
 ```
 vim file.txt
 ```
+
+![vim_1.1_open_02.gif](../../images/vim_1.1_open_02.gif)
 
 ## 打开多个文件
 
