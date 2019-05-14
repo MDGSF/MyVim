@@ -50,11 +50,24 @@ vim -p file1.txt file2.txt
 vim -o file1.txt file2.txt file3.txt ...
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_05.gif" alt="vim_1.1_open_05.gif" />
+</details>
+
+在不同的窗口之间移动光标可以使用 `ctrl+h,j,k,l`。
+和窗口相关的其它知识点会在 [vim 窗口](README_vim_1.7_windows.md) 那一章介绍。
+
 ## 垂直打开多个窗口
 
 ```
 vim -O file1.txt file2.txt file3.txt ...
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.1_open_05.gif" alt="vim_1.1_open_05.gif" />
+</details>
 
 ## 对比文件
 
