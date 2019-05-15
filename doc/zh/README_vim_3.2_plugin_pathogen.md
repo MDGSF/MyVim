@@ -131,5 +131,7 @@ call pathogen#helptags()
 >
 > [上一章](README_vim_3.1_plugin.md)
 >
+> [下一章](README_vim_3.3_plugin_cscope.md)
+>
 > <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

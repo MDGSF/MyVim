@@ -2,7 +2,7 @@
 > * [使用说明](README_02_how_to_use_this_document.md)
 > * vim 文档
 >     * vim 入门
->         * [vimtutor 30分钟入门 vim](README_vim_tutor.md)
+>         * [vimtutor 30分钟入门](README_vim_tutor.md)
 >     * vim 基础操作
 >         * [vim 打开、退出](README_vim_1.1_open_close.md)
 >         * [vim 移动光标](README_vim_1.2_move_cursor.md)
@@ -28,15 +28,16 @@
 >         * [vim 宏录制](README_vim_2_macros.md)
 >         * [vim 打标记](README_vim_2_mark.md)
 >         * [vim 会话](README_vim_2_session.md)
->         * [vimdiff](README_vim_2_vimdiff.md)
+>         * [vimdiff 对比两个文件](README_vim_2_vimdiff.md)
 >     * vim 常用插件
 >         * [vim 常用插件](README_vim_3.1_plugin.md)
->         * [插件 pathogen.vim](README_vim_3.2_plugin_pathogen.md)
->         * [插件 cscope](README_vim_3.3_plugin_cscope.md)
->         * [插件 NERD Tree](README_vim_3.4_plugin_nerdtree.md)
->         * [插件 ack.vim](README_vim_3.5_plugin_ack.md)
->         * [插件 ctrlp.vim](README_vim_3.6_plugin_ctrlp.md)
->         * [插件 a.vim](README_vim_3.7_plugin_a.md)
+>         * [插件 pathogen.vim -- 插件管理器](README_vim_3.2_plugin_pathogen.md)
+>         * [插件 cscope -- ctags增强版](README_vim_3.3_plugin_cscope.md)
+>         * [插件 NERD Tree -- 目录树](README_vim_3.4_plugin_nerdtree.md)
+>         * [插件 ack.vim -- 字符串查找](README_vim_3.5_plugin_ack.md)
+>         * [插件 ctrlp.vim -- 文件查找](README_vim_3.6_plugin_ctrlp.md)
+>         * [插件 a.vim -- 头文件和源文件之前快速切换](README_vim_3.7_plugin_a.md)
+>         * [python 开发环境搭建](README_vim_3_plugin_python.md)
 >     * vim 8
 >         * [vim 8 源码编译](README_vim_4_build.md)
 >         * [vim 8 自带终端](README_vim_4_terminal.md)

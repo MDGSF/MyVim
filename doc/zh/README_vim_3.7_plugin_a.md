@@ -20,3 +20,17 @@
 
 [a.vim](https://github.com/vim-scripts/a.vim)
 
+* * *
+
+> 按 `gg` 回到文档顶部。
+>
+> 将光标移动到下面的文件名上，执行 `gf` 跳转。
+>
+> [目录](README.md)
+>
+> [上一章](README_vim_3.6_plugin_ctrlp.md)
+>
+> [下一章]()
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+
