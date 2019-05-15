@@ -1,5 +1,7 @@
 # vim 相关资源
 
+## 资源
+
 [Github Vim Topic](https://github.com/topics/vim)
 
 [The official Vim reposity](https://github.com/vim/vim)
@@ -19,6 +21,21 @@
 [Vim 从入门到精通](https://github.com/wsdjeg/vim-galore-zh_cn)
 
 [Why I love Vim: It’s the lesser-known features that make it so amazing](https://medium.freecodecamp.org/learn-linux-vim-basic-features-19134461ab85)
+
+[Learn-Vim-Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
+
+[Learn-Vim-Progressively 翻译](https://coolshell.cn/articles/5426.html)
+
+## 一些图片
+
+放在了目录 `~/.MyVim/images/resource`
+
+```
+http://www.nathael.org/Data/vi-vim-cheat-sheet.svg
+http://people.csail.mit.edu/vgod/vim/vim-cheat-sheet-en.png
+https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png
+http://michael.peopleofhonoronly.com/vim/vim_cheat_sheet_for_programmers_screen.png
+```
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 
