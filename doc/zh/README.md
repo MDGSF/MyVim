@@ -44,6 +44,7 @@
 >         * [vim 8 插件管理器](README_vim_4_packages.md)
 >     * vim 其他
 >         * [vim 其他资源](README_vim_resource.md)
+>     * vim 测试题目
 > * tmux 文档
 >     * [tmux 常用操作](README_tmux_basic.md)
 >     * [tmux 其他资源](README_tmux_resource.md)

@@ -87,11 +87,21 @@ dgg
 
 `4dd` 删除 4 行
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_07.gif" alt="vim_1.4_modify_07.gif" />
+</details>
+
 ## 删除括号中的内容，包括括号
 
 ```
 d%
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_08.gif" alt="vim_1.4_modify_08.gif" />
+</details>
 
 ## 复制
 
@@ -106,9 +116,19 @@ d%
 
 `shift+P` 粘贴缓冲区中的内容到光标所在位置前面。
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_09.gif" alt="vim_1.4_modify_09.gif" />
+</details>
+
 ## 合并
 
 `shift+J` 把光标所在行的下一行添加到当前行的末尾。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_10.gif" alt="vim_1.4_modify_10.gif" />
+</details>
 
 ## 快速交换前后两个字符
 
@@ -116,11 +136,21 @@ d%
 xp
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_11.gif" alt="vim_1.4_modify_11.gif" />
+</details>
+
 ## 快速交换上下两行
 
 ```
 ddp
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_12.gif" alt="vim_1.4_modify_12.gif" />
+</details>
 
 ## 修改光标所在的字母
 
@@ -130,6 +160,11 @@ ddp
 
 `rb` 把光标所在的字母修改为 `b`。
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_13.gif" alt="vim_1.4_modify_13.gif" />
+</details>
+
 ## 删除光标所在位置直到单词末尾，并进入插入模式
 
 ```
@@ -137,11 +172,21 @@ ce
 cw
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_14.gif" alt="vim_1.4_modify_14.gif" />
+</details>
+
 ## 删除光标所在位置直到当前行末尾，并进入插入模式
 
 ```
 c$
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_15.gif" alt="vim_1.4_modify_15.gif" />
+</details>
 
 ## 大小写转换
 
@@ -159,17 +204,32 @@ c$
 
 `gUU` 把当前行全部变成大写。
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_16.gif" alt="vim_1.4_modify_16.gif" />
+</details>
+
 ## 删除每行末尾空白字符
 
 ```
 :%s/\s\+$//e
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_17.gif" alt="vim_1.4_modify_17.gif" />
+</details>
+
 ## 删除所有空行
 
 ```
 :g/^$/d
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_18.gif" alt="vim_1.4_modify_18.gif" />
+</details>
 
 ## 批量插入多行
 
@@ -180,6 +240,11 @@ c$
 
 这个可以用来注释多行代码。
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_19.gif" alt="vim_1.4_modify_19.gif" />
+</details>
+
 ## 批量删除多行
 
 1. `ctrl+v` 进入 `VISULA BLOCK` 模式。
@@ -187,6 +252,11 @@ c$
 3. `d` 将选中的部分全部删除。
 
 这个可以将多行注释删除。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_20.gif" alt="vim_1.4_modify_20.gif" />
+</details>
 
 ## 批量插入多行末尾
 
@@ -197,6 +267,11 @@ c$
 4. `Esc` 插入完成。
 
 这个可以用来给每行加上句号。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_21.gif" alt="vim_1.4_modify_21.gif" />
+</details>
 
 ## 取消
 
