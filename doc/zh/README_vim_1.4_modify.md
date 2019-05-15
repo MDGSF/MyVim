@@ -11,6 +11,11 @@
 x
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_01.gif" alt="vim_1.4_modify_01.gif" />
+</details>
+
 ## 删除单词 de
 
 从光标所在位置一直删除到光标所在的单词的最末尾。
@@ -20,6 +25,11 @@ x
 ```
 de
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_02.gif" alt="vim_1.4_modify_02.gif" />
+</details>
 
 ## 删除单词 dw
 
@@ -31,11 +41,23 @@ de
 dw
 ```
 
+`d3w` 删除 3 个连续的单词。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_03.gif" alt="vim_1.4_modify_03.gif" />
+</details>
+
 ## 从光标所在位置删除到当前行末尾
 
 ```
 d$
 ```
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_04.gif" alt="vim_1.4_modify_04.gif" />
+</details>
 
 ## 从光标所在位置删除到文档末尾
 
@@ -43,17 +65,27 @@ d$
 d shift+G
 ```
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_05.gif" alt="vim_1.4_modify_05.gif" />
+</details>
+
 ## 从光标所在位置删除到文档开头
 
 ```
 dgg
 ```
 
-## 删除当前行
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.4_modify_06.gif" alt="vim_1.4_modify_06.gif" />
+</details>
 
-```
-dd
-```
+## 删除行
+
+`dd` 删除当前行
+
+`4dd` 删除 4 行
 
 ## 删除括号中的内容，包括括号
 
@@ -63,11 +95,20 @@ d%
 
 ## 复制
 
-粘贴缓冲区中的内容到光标所在位置。
+`yy` 复制当前行到缓冲区。
 
-```
-p
-```
+先按 `v` 进入 VISUAL 模式，选中文本，再按 `y` 可以复制指定
+内容到缓冲区。
+
+## 粘贴
+
+`p` 粘贴缓冲区中的内容到光标所在位置后面。
+
+`shift+P` 粘贴缓冲区中的内容到光标所在位置前面。
+
+## 合并
+
+`shift+J` 把光标所在行的下一行添加到当前行的末尾。
 
 ## 快速交换前后两个字符
 
@@ -101,6 +142,22 @@ cw
 ```
 c$
 ```
+
+## 大小写转换
+
+`shift+~` 把光标所在的字母，大写变小写，小写变大写。
+如果在 VISUAL 模式下选中了字符串，再按 `shift+~`，则会
+把每个字母大小写互换。
+
+`gu` 把选中的字符串转换为小写。
+
+`gU` 把选中的字符串转换为大写。
+
+`gU` 按键方式：先按一下 `g`，然后放开，再按 `shift+U`。
+
+`guu` 把当前行全部变成小写。
+
+`gUU` 把当前行全部变成大写。
 
 ## 删除每行末尾空白字符
 
@@ -140,19 +197,6 @@ c$
 4. `Esc` 插入完成。
 
 这个可以用来给每行加上句号。
-
-
-## 删除 3 个单词
-
-```
-d3w
-```
-
-## 删除 4 行
-
-```
-4dd
-```
 
 ## 取消
 
