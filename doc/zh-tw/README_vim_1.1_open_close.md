@@ -6,11 +6,21 @@
 vim
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_01.gif" alt="vim_1.1_open_01.gif" />
+</details>
+
 ## 打開 file.txt
 
 ```
 vim file.txt
 ```
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_02.gif" alt="vim_1.1_open_02.gif" />
+</details>
 
 ## 打開多個文件
 
@@ -18,11 +28,21 @@ vim file.txt
 vim file1.txt file2.txt
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_03.gif" alt="vim_1.1_open_03.gif" />
+</details>
+
 ## 以標簽頁的方式打開多個文件
 
 ```
 vim -p file1.txt file2.txt
 ```
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_04.gif" alt="vim_1.1_open_04.gif" />
+</details>
 
 ## 水平打開多個窗口
 
@@ -30,11 +50,24 @@ vim -p file1.txt file2.txt
 vim -o file1.txt file2.txt file3.txt ...
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_05.gif" alt="vim_1.1_open_05.gif" />
+</details>
+
+在不同的窗口之間移動光標可以使用 `ctrl+h,j,k,l`。
+和窗口相關的其它知識點會在 [vim 窗口](README_vim_1.7_windows.md) 那一章介紹。
+
 ## 垂直打開多個窗口
 
 ```
 vim -O file1.txt file2.txt file3.txt ...
 ```
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_06.gif" alt="vim_1.1_open_06.gif" />
+</details>
 
 ## 對比文件
 
@@ -42,6 +75,8 @@ vim -O file1.txt file2.txt file3.txt ...
 vim -d file1.txt file2.txt file3.txt ...
 vimdiff file1.txt file2.txt file3.txt ...
 ```
+
+詳細見 [vimdiff](README_vim_2_vimdiff.md) 那一章。
 
 ## 退出 vim
 
@@ -62,6 +97,11 @@ vimdiff file1.txt file2.txt file3.txt ...
 ```
 :w
 ```
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_07.gif" alt="vim_1.1_open_07.gif" />
+</details>
 
 ## 強製保存
 
@@ -111,6 +151,8 @@ command W w !sudo tee % > /dev/null
 :qa
 ```
 
+`:q` 隻是關閉當前窗口，`:qa` 可以把所有的窗口都關閉。
+
 ## 強製退出多個文件
 
 ```
@@ -127,11 +169,22 @@ command W w !sudo tee % > /dev/null
 :x
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_08.gif" alt="vim_1.1_open_08.gif" />
+</details>
+
 ## 另存為
 
 `:saveas newfilename.txt` 另存為 `newfilename.txt` 並開始編輯新的這個 `newfilename.txt`。
 
 `:w newfilename.txt` 把當前文件另存一份副本 `newfilename.txt`，並繼續編輯原文件。
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.1_open_09.gif" alt="vim_1.1_open_09.gif" />
+<img src="../../images/vim_1.1_open_10.gif" alt="vim_1.1_open_10.gif" />
+</details>
 
 * * *
 

@@ -28,6 +28,7 @@
 >         * [vim 宏錄製](README_vim_2_macros.md)
 >         * [vim 打標記](README_vim_2_mark.md)
 >         * [vim 會話](README_vim_2_session.md)
+>         * [vimdiff](README_vim_2_vimdiff.md)
 >     * vim 常用插件
 >         * [vim 常用插件](README_vim_3.1_plugin.md)
 >         * [插件 pathogen.vim](README_vim_3.2_plugin_pathogen.md)

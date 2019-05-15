@@ -4,6 +4,10 @@
 
 掌握了這一章的內容之後，就可以使用 vim 來閱讀剩下的所有文檔了。
 
+移動光標 vim 需要處於普通模式，看下左下角，如果有顯示 `NORMAL`
+說明就是普通模式，如果不是的話，隻要按 `<Esc>` 鍵就會回到普通模式。
+更多關於模式的知識點將在 [vim 模式](README_vim_2_mode.md) 那一章介紹。
+
 ## 上下左右移動光標
 
 ```
@@ -15,12 +19,22 @@ h, j, k, l
 * k 光標向上移動一行
 * l 光標向右移動一個字符
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_01.gif" alt="vim_1.2_move_cursor_01.gif" />
+</details>
+
 ## 快速上下移動光標
 
 ```
 ctrl+u
 ctrl+d
 ```
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_02.gif" alt="vim_1.2_move_cursor_02.gif" />
+</details>
 
 ## 光標移動到行首
 
@@ -51,6 +65,11 @@ shift+E
 nnoremap E $
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_03.gif" alt="vim_1.2_move_cursor_03.gif" />
+</details>
+
 ## 光標移動到最開頭
 
 ```
@@ -63,11 +82,21 @@ gg
 shift+G
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_04.gif" alt="vim_1.2_move_cursor_04.gif" />
+</details>
+
 ## 光標移動到指定行
 
 `:100 enter` 跳轉到第 100 行
 
 `100 shift+G` 跳轉到第 100 行
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_05.gif" alt="vim_1.2_move_cursor_05.gif" />
+</details>
 
 ## 查看當前處於第幾行、第幾列
 
@@ -119,6 +148,11 @@ zt
 zb
 ```
 
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_06.gif" alt="vim_1.2_move_cursor_06.gif" />
+</details>
+
 ## 在括號之間跳轉光標
 
 如果光標處於括號上 `(), [], {}`，用 `%` 可以將光標移動到對應的另一半括號上。
@@ -131,6 +165,11 @@ func main() {
 	fmt.Println("vim-go, num =", num)
 }
 ```
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_07.gif" alt="vim_1.2_move_cursor_07.gif" />
+</details>
 
 ## 移動光標到之前所在的位置
 

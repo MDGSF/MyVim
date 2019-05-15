@@ -66,7 +66,7 @@ vim -O file1.txt file2.txt file3.txt ...
 
 <details>
 <summary>展开查看图片</summary>
-<img src="../../images/vim_1.1_open_05.gif" alt="vim_1.1_open_05.gif" />
+<img src="../../images/vim_1.1_open_06.gif" alt="vim_1.1_open_06.gif" />
 </details>
 
 ## 对比文件
