@@ -28,6 +28,7 @@
 >         * [vim 宏录制](README_vim_2_macros.md)
 >         * [vim 打标记](README_vim_2_mark.md)
 >         * [vim 会话](README_vim_2_session.md)
+>         * [vim 格式化](README_vim_2_format.md)
 >         * [vimdiff 对比两个文件](README_vim_2_vimdiff.md)
 >     * vim 常用插件
 >         * [vim 常用插件](README_vim_3.1_plugin.md)
