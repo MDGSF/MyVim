@@ -48,6 +48,8 @@
 >         * [vim 8 插件管理器](README_vim_4_packages.md)
 >     * vim 其他
 >         * [vim 其他资源](README_vim_resource.md)
+>     * vim 技巧集锦
+>         * [vim 技巧0001](README_vim_tips_0001.md)
 >     * vim 测试题目
 >     * vim 翻译文章
 > * tmux 文档
