@@ -32,6 +32,8 @@
 
 [Your problem with Vim is that you don't grok vi](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
 
+[Seven habits of effective text editing](https://www.moolenaar.net/habits.html)
+
 ## 一些图片
 
 放在了目录 `~/.MyVim/images/resource`

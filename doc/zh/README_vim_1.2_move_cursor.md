@@ -174,6 +174,16 @@ func main() {
 <img src="../../images/vim_1.2_move_cursor_07.gif" alt="vim_1.2_move_cursor_07.gif" />
 </details>
 
+## 移动光标到花括号
+
+如果光标处于花括号中间，可以使用 `[{` 来跳转到 `{`，
+可以使用 `]}` 来跳转到 `}`。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_1.2_move_cursor_08.gif" alt="vim_1.2_move_cursor_08.gif" />
+</details>
+
 ## 移动光标到之前所在的位置
 
 ```
