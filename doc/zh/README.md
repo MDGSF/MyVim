@@ -12,6 +12,7 @@
 >         * [vim 标签页](README_vim_1.6_tab.md)
 >         * [vim 窗口](README_vim_1.7_windows.md)
 >         * [vim 缓冲区](README_vim_1.8_buffer.md)
+>         * [Vim 如何使用帮助文档](README_vim_1_how_to_find_help.md)
 >     * vim 高级进阶
 >         * [vim 模式](README_vim_2_mode.md)
 >         * [vim 命令行](README_vim_2_cmdline.md)

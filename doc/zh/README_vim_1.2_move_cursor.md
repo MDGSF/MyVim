@@ -24,6 +24,9 @@ h, j, k, l
 <img src="../../images/vim_1.2_move_cursor_01.gif" alt="vim_1.2_move_cursor_01.gif" />
 </details>
 
+这 4 个按键将是你使用 vim 过程中使用得最多的 4 个键了，非常重要。
+当然，你也可以使用方向键来移动光标，但是那实在是太慢了。
+
 ## 快速上下移动光标
 
 ```

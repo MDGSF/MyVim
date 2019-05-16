@@ -84,6 +84,8 @@ vimdiff file1.txt file2.txt file3.txt ...
 :q
 ```
 
+按键方式：`shift+:`，然后再按下 `q`，最后按回车。
+
 ## 强制退出
 
 如果修改了文件，不想保存
@@ -139,6 +141,8 @@ command W w !sudo tee % > /dev/null
 :wq
 ```
 
+`ZZ` 也是保存之后再退出，按键方式：按着 `shift` 不放，按两下 `z` 键。
+
 ## 保存内容到 filename.txt 并退出
 
 ```
@@ -185,6 +189,16 @@ command W w !sudo tee % > /dev/null
 <img src="../../images/vim_1.1_open_09.gif" alt="vim_1.1_open_09.gif" />
 <img src="../../images/vim_1.1_open_10.gif" alt="vim_1.1_open_10.gif" />
 </details>
+
+## 其他
+
+你如果修改了文档，还没有保存，执行 `:q` 会报错。
+
+你如果想要不保存退出，使用 `:q!`。
+
+你如果想要保存退出，使用 `:wq`。
+
+你如果想要放弃所有的修改，重新加载原始的文件到 vim，使用 `:e!`。
 
 * * *
 
