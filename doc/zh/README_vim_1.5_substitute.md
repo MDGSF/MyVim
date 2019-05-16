@@ -1,9 +1,8 @@
 # vim 替换文本
 
-把 `old` 替换为 `new`
-
 ```
-:s/old/new/g
+:help :s
+:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]
 ```
 
 ## 替换光标所在行的第一个 `old` 字符串

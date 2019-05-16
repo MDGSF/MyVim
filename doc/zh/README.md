@@ -24,6 +24,7 @@
 >         * [vim 基础配置介绍](README_vim_2_basicsetting.md)
 >         * [vim 文件管理器](README_vim_2_file_explorer.md)
 >         * [vim 折叠代码](README_vim_2_fold.md)
+>         * [vim pattern](README_vim_2_pattern.md)
 >         * [vim 会话](README_vim_2_session.md)
 >         * [vim 格式化](README_vim_2_format.md)
 >         * [vimdiff 对比两个文件](README_vim_2_vimdiff.md)
