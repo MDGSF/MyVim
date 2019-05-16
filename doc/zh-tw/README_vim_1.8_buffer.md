@@ -73,7 +73,7 @@
 >
 > [上一章](README_vim_1.7_windows.md)
 >
-> [下一章](README.md)
+> [下一章](README_vim_1_how_to_find_help.md)
 >
 > <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

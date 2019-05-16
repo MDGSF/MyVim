@@ -1,5 +1,11 @@
 # vim 常用插件
 
+## vim-pathogen
+
+[插件 vim-pathogen](README_vim_3.2_plugin_pathogen.md)
+
+用來管理其他插件。
+
 ## [Nerd Tree](https://github.com/scrooloose/nerdtree)
 
 打開目錄樹。
@@ -41,5 +47,15 @@ let g:ctrlp_map = '<c-f>'
 map <leader>j :CtrlP<cr>
 ```
 
-<a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
+* * *
+
+> 按 `gg` 回到文檔頂部。
+>
+> 將光標移動到下麵的文件名上，執行 `gf` 跳轉。
+>
+> [目錄](README.md)
+>
+> [下一章](README_vim_3.2_plugin_pathogen.md)
+>
+> <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 

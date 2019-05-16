@@ -24,6 +24,9 @@ h, j, k, l
 <img src="../../images/vim_1.2_move_cursor_01.gif" alt="vim_1.2_move_cursor_01.gif" />
 </details>
 
+這 4 個按鍵將是你使用 vim 過程中使用得最多的 4 個鍵了，非常重要。
+當然，你也可以使用方向鍵來移動光標，但是那實在是太慢了。
+
 ## 快速上下移動光標
 
 ```
@@ -169,6 +172,16 @@ func main() {
 <details>
 <summary>展開查看圖片</summary>
 <img src="../../images/vim_1.2_move_cursor_07.gif" alt="vim_1.2_move_cursor_07.gif" />
+</details>
+
+## 移動光標到花括號
+
+如果光標處於花括號中間，可以使用 `[{` 來跳轉到 `{`，
+可以使用 `]}` 來跳轉到 `}`。
+
+<details>
+<summary>展開查看圖片</summary>
+<img src="../../images/vim_1.2_move_cursor_08.gif" alt="vim_1.2_move_cursor_08.gif" />
 </details>
 
 ## 移動光標到之前所在的位置

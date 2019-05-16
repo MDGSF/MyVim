@@ -8,11 +8,14 @@
 
 ## 中文版 vimtutor
 
-如果你不願意閱讀英文，那我為你準備了一份中文版的 `vimtutor_ch.txt`。
+在 `shell` 下直接輸入 `vimtutor zh` 可以打開中文版，如果冇有中文版的話，
+那還是會默認打開英文版。
 
-你可以到目錄 `vimtutor` 下執行 `./tutor_zh_cn.sh` 命令來啟動，這會複製一個副本。
+我在目錄 `~/.MyVim/vimtutor` 下備份了一份中文版的 `vimtutor`。
 
-你也可以直接打開 `tutor.zh_cn.utf-8` 文件來學習，不過最好先複製一個副本，
+你可以到目錄 `~/.MyVim/vimtutor` 下執行 `./tutor_zh_cn.sh` 命令來啟動，這會複製一個副本。
+
+你也可以直接打開 `~/.MyVim/vimtutor/tutor.zh_cn.utf-8` 文件來學習，不過最好先複製一個副本，
 因為在學習的過程中會修改文檔。
 
 * * *
