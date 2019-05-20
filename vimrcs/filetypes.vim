@@ -1,4 +1,21 @@
 """"""""""""""""""""""""""""""
+" => C/C++
+""""""""""""""""""""""""""""""
+" {{{
+augroup filetype_cpp
+  autocmd!
+  autocmd FileType cpp setl foldenable
+  autocmd FileType cpp setl foldmethod=syntax
+  autocmd FileType cpp setl foldopen-=search  "don't open folds when I search 
+  autocmd FileType cpp setl foldopen-=undo    "don't open folds when I undo
+  autocmd FileType cpp setl foldlevel=100    "don't folds when I open the file
+  autocmd FileType cpp nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
+augroup END
+" }}}
+
+
+
+""""""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
@@ -21,7 +38,7 @@ au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
-nnoremap <leader>pyt ggO#!/usr/bin/env python<CR># -*- coding: UTF-8 -*-<CR><CR>def main():<CR>pass<CR><CR><CR><Backspace>if __name__ == "__main__":<CR>main()<Esc>gg
+au FileType python nnoremap <buffer> <leader>pyt ggO#!/usr/bin/env python<CR># -*- coding: UTF-8 -*-<CR><CR>def main():<CR>pass<CR><CR><CR><Backspace>if __name__ == "__main__":<CR>main()<Esc>gg
 
 
 """"""""""""""""""""""""""""""
@@ -38,14 +55,14 @@ au FileType javascript inoremap <buffer> $r return
 au FileType javascript inoremap <buffer> $f // --- PH<esc>FP2xi
 
 function! JavaScriptFold() 
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
+  setl foldmethod=syntax
+  setl foldlevelstart=1
+  syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
 
-    function! FoldText()
-        return substitute(getline(v:foldstart), '{.*', '{...}', '')
-    endfunction
-    setl foldtext=FoldText()
+  function! FoldText()
+    return substitute(getline(v:foldstart), '{.*', '{...}', '')
+  endfunction
+  setl foldtext=FoldText()
 endfunction
 
 
@@ -53,8 +70,8 @@ endfunction
 " => CoffeeScript section
 """""""""""""""""""""""""""""""
 function! CoffeeScriptFold()
-    setl foldmethod=indent
-    setl foldlevelstart=1
+  setl foldmethod=indent
+  setl foldlevelstart=1
 endfunction
 au FileType coffee call CoffeeScriptFold()
 
@@ -65,11 +82,11 @@ au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 " => Shell section
 """"""""""""""""""""""""""""""
 if exists('$TMUX') 
-    if has('nvim')
-        set termguicolors
-    else
-        set term=screen-256color 
-    endif
+  if has('nvim')
+    set termguicolors
+  else
+    set term=screen-256color 
+  endif
 endif
 
 
@@ -77,3 +94,19 @@ endif
 " => Twig section
 """"""""""""""""""""""""""""""
 autocmd BufRead *.twig set syntax=html filetype=html
+
+
+""""""""""""""""""""""""""""""
+" => Vimscript file settings
+""""""""""""""""""""""""""""""
+" {{{
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType vim setlocal foldlevelstart=0
+  autocmd FileType vim setlocal foldlevel=0
+  autocmd BufEnter *.vim setlocal tabstop=2
+  autocmd BufEnter *.vim setlocal shiftwidth=2
+  autocmd BufEnter *.vim setlocal softtabstop=2
+augroup END
+" }}}

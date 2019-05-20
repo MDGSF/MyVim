@@ -58,10 +58,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|gif|png)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(exe|so|dll|gif|png)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
 
 """"""""""""""""""""""""""""""
 " => ZenCoding
@@ -168,10 +168,10 @@ let g:go_version_warning = 0
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
-\   'javascript': ['jshint'],
-\   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
-\}
+      \   'javascript': ['jshint'],
+      \   'python': ['flake8'],
+      \   'go': ['go', 'golint', 'errcheck']
+      \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 

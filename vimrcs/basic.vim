@@ -13,7 +13,6 @@
 "    -> Status line
 "    -> Misc
 "    -> keymapping
-"    -> fold
 "    -> Autogroups
 "    -> Helper functions
 " 
@@ -73,9 +72,9 @@ set wildmode=longest:list,full
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
-    set wildignore+=.git\*,.hg\*,.svn\*
+  set wildignore+=.git\*,.hg\*,.svn\*
 else
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
 " 在状态栏显示光标的当前位置（位于哪一行哪一列）。
@@ -151,12 +150,12 @@ syntax on
 " 启用 256 色,必须有这个了，下面的配色方案才会生效
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
+  set t_Co=256
 endif
 
 " 配色方案
 try
-    colorscheme desert
+  colorscheme desert
 catch
 endtry
 " colorscheme badwolf 会使用 ~/.vim/colors/badwolf.vim 这个文件
@@ -180,13 +179,13 @@ set ffs=unix,dos,mac
 " 结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名。
 
 if !isdirectory($HOME.'/.vim/.backup') && exists('*mkdir')
-    call mkdir($HOME.'/.vim/.backup')
+  call mkdir($HOME.'/.vim/.backup')
 endif
 if !isdirectory($HOME.'/.vim/.swp') && exists('*mkdir')
-    call mkdir($HOME.'/.vim/.swp')
+  call mkdir($HOME.'/.vim/.swp')
 endif
 if !isdirectory($HOME.'/.vim/.undo') && exists('*mkdir')
-    call mkdir($HOME.'/.vim/.undo')
+  call mkdir($HOME.'/.vim/.undo')
 endif
 
 set backup
@@ -386,6 +385,8 @@ nnoremap E $
 " set listchars=tab:»■,trail:■
 " set list
 
+setl foldlevel=100    "don't folds when I open the file
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -414,47 +415,33 @@ nmap <leader>= :call Preserve("normal gg=G")<CR>
 
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => fold
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldenable
-set foldmethod=syntax    "indent, expr, marker, syntax, diff
-"set foldclose=all
-" use space to folden, zo:open the fold, zc:fold.
-nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
-set foldopen-=search  "don't open folds when I search 
-set foldopen-=undo    "don't open folds when I undo
-set foldlevel=100    "don't folds when I open the file
-"set foldcolumn=1   "set the fold column width
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autogroups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup configgroup
-autocmd!
-autocmd VimEnter * highlight clear SignColumn
-autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.go :call <SID>StripTrailingWhitespaces()
-autocmd FileType java setlocal noexpandtab
-autocmd FileType java setlocal list
-autocmd FileType java setlocal listchars=tab:+\ ,eol:-
-autocmd FileType java setlocal formatprg=par\ -w80\ -T4
-autocmd FileType php setlocal expandtab
-autocmd FileType php setlocal list
-autocmd FileType php setlocal listchars=tab:+\ ,eol:-
-autocmd FileType php setlocal formatprg=par\ -w80\ -T4
-autocmd FileType ruby setlocal tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2
-autocmd FileType ruby setlocal softtabstop=2
-autocmd FileType ruby setlocal commentstring=#\ %s
-autocmd FileType python setlocal commentstring=#\ %s
-autocmd BufEnter *.cls setlocal filetype=java
-autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-autocmd BufEnter Makefile setlocal noexpandtab
-autocmd BufEnter *.sh setlocal tabstop=2
-autocmd BufEnter *.sh setlocal shiftwidth=2
-autocmd BufEnter *.sh setlocal softtabstop=2
+  autocmd!
+  autocmd VimEnter * highlight clear SignColumn
+  autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.go :call <SID>StripTrailingWhitespaces()
+  autocmd FileType java setlocal noexpandtab
+  autocmd FileType java setlocal list
+  autocmd FileType java setlocal listchars=tab:+\ ,eol:-
+  autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+  autocmd FileType php setlocal expandtab
+  autocmd FileType php setlocal list
+  autocmd FileType php setlocal listchars=tab:+\ ,eol:-
+  autocmd FileType php setlocal formatprg=par\ -w80\ -T4
+  autocmd FileType ruby setlocal tabstop=2
+  autocmd FileType ruby setlocal shiftwidth=2
+  autocmd FileType ruby setlocal softtabstop=2
+  autocmd FileType ruby setlocal commentstring=#\ %s
+  autocmd FileType python setlocal commentstring=#\ %s
+  autocmd BufEnter *.cls setlocal filetype=java
+  autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+  autocmd BufEnter Makefile setlocal noexpandtab
+  autocmd BufEnter *.sh setlocal tabstop=2
+  autocmd BufEnter *.sh setlocal shiftwidth=2
+  autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
 
 
@@ -465,86 +452,86 @@ augroup END
 
 " Returns true if paste mode is enabled
 function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
+  if &paste
+    return 'PASTE MODE  '
+  endif
+  return ''
 endfunction
 
 " Don't close window, when deleting a buffer
 command! Bclose call <SID>BufcloseCloseIt()
 function! <SID>BufcloseCloseIt()
-    let l:currentBufNum = bufnr("%")
-    let l:alternateBufNum = bufnr("#")
+  let l:currentBufNum = bufnr("%")
+  let l:alternateBufNum = bufnr("#")
 
-    if buflisted(l:alternateBufNum)
-        buffer #
-    else
-        bnext
-    endif
+  if buflisted(l:alternateBufNum)
+    buffer #
+  else
+    bnext
+  endif
 
-    if bufnr("%") == l:currentBufNum
-        new
-    endif
+  if bufnr("%") == l:currentBufNum
+    new
+  endif
 
-    if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
+  if buflisted(l:currentBufNum)
+    execute("bdelete! ".l:currentBufNum)
+  endif
 endfunction
 
 function! CmdLine(str)
-    call feedkeys(":" . a:str)
+  call feedkeys(":" . a:str)
 endfunction 
 
 function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
+  let l:saved_reg = @"
+  execute "normal! vgvy"
 
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
+  let l:pattern = escape(@", "\\/.*'$^~[]")
+  let l:pattern = substitute(l:pattern, "\n$", "", "")
 
-    if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    endif
+  if a:direction == 'gv'
+    call CmdLine("Ack '" . l:pattern . "' " )
+  elseif a:direction == 'replace'
+    call CmdLine("%s" . '/'. l:pattern . '/')
+  endif
 
-    let @/ = l:pattern
-    let @" = l:saved_reg
+  let @/ = l:pattern
+  let @" = l:saved_reg
 endfunction
 
 " toggle between number and relativenumber
 function! ToggleNumber()
-    if(&relativenumber == 1)
-        set norelativenumber
-        set number
-    else
-        set relativenumber
-    endif
+  if(&relativenumber == 1)
+    set norelativenumber
+    set number
+  else
+    set relativenumber
+  endif
 endfunction
 
 " strips trailing whitespace at the end of files. 
 " this is called on buffer write in the autogroup above.
 function! <SID>StripTrailingWhitespaces()
-    " save last search & cursor position
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    let @/=_s
-    call cursor(l, c)
+  " save last search & cursor position
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  let @/=_s
+  call cursor(l, c)
 endfunction
 
 function! Preserve(command)
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    execute a:command
-    " Clean up: restore previous search history, and cursor
-    " position
-    let @/=_s
-    call cursor(l, c)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor
+  " position
+  let @/=_s
+  call cursor(l, c)
 endfunction 
 
