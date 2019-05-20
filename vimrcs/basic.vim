@@ -44,7 +44,7 @@ let mapleader=","
 let g:mapleader=","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -259,43 +259,43 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+noremap <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+noremap <leader>bd :Bclose<cr>:tabclose<cr>gT
 
 " Close all the buffers
-map <leader>ba :bufdo bd<cr>
+noremap <leader>ba :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+noremap <leader>l :bnext<cr>
+noremap <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>ti :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprev<cr>
-map <leader>tm :tabmove 
+noremap <leader>ti :tabnew<cr>
+noremap <leader>to :tabonly<cr>
+noremap <leader>tc :tabclose<cr>
+noremap <leader>tn :tabnext<cr>
+noremap <leader>tp :tabprev<cr>
+noremap <leader>tm :tabmove 
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <Leader>tl :exe "tabn ".g:lasttab<CR>
+autocmd TabLeave * let g:lasttab = tabpagenr()
 
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
@@ -305,7 +305,7 @@ catch
 endtry
 
 " Return to last edit position when opening files (You want this!)
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -385,33 +385,32 @@ nnoremap E $
 " set listchars=tab:»■,trail:■
 " set list
 
-setl foldlevel=100    "don't folds when I open the file
-
+setlocal foldlevel=100    "don't folds when I open the file
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => keymapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map <F5> :set ts=2<CR>:set expandtab<CR>:%retab!<CR>
-map <C-F5> :set ts=2<CR>:set noexpandtab<CR>:%retab!<CR>
+noremap <F5> :set ts=2<CR>:set expandtab<CR>:%retab!<CR>
+noremap <C-F5> :set ts=2<CR>:set noexpandtab<CR>:%retab!<CR>
 
-map <silent> <leader>ev :e ~/.vimrc<CR>
-map <silent> <leader>sv :source ~/.vimrc<CR>
+noremap <silent> <leader>ev :e ~/.vimrc<CR>
+noremap <silent> <leader>sv :source ~/.vimrc<CR>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-map <silent> <leader>ez :vsp ~/.zshrc<CR>
+noremap <silent> <leader>ez :vsp ~/.zshrc<CR>
 
-map <leader>v :vsplit<CR>
+noremap <leader>v :vsplit<CR>
 
 " map <C-A> ggvGY
 " map! <C-A> <Esc>ggvGY
 
 " 去除行尾空白字符
-nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR> 
+nnoremap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR> 
 
 " 格式化整个文档
-nmap <leader>= :call Preserve("normal gg=G")<CR> 
+nnoremap <leader>= :call Preserve("normal gg=G")<CR> 
 
 
 
