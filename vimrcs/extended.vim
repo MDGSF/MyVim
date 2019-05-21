@@ -28,10 +28,8 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-set background=dark
-colorscheme badwolf
+" colorscheme badwolf
 " colorscheme peaksea
-" colorscheme solarized
 " colorscheme ir_black
 " colorscheme mayansmoke
 " colorscheme pyte

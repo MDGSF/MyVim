@@ -1,3 +1,6 @@
+set background=dark
+colorscheme solarized
+
 vnoremap <silent> <F2> :<c-u>VDv<CR>
 nnoremap <silent> <F2> :<c-u>VDn<CR>
 noremap <leader>zz :<c-u>VDe<CR>
@@ -16,3 +19,4 @@ vnoremap <silent> <C-T> :<C-u>Ydv<CR>
 nnoremap <silent> <C-T> :<C-u>Ydc<CR>
 noremap <leader>yd :<C-u>Yde<CR>
 
+nnoremap <leader>jg :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>

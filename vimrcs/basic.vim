@@ -154,14 +154,14 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 " 配色方案
-try
-  colorscheme desert
-catch
-endtry
+" try
+"   colorscheme desert
+" catch
+" endtry
 " colorscheme badwolf 会使用 ~/.vim/colors/badwolf.vim 这个文件
 " colorscheme desert
 
-set background=dark
+" set background=dark
 
 " 使用 utf-8 编码。
 " Set utf8 as standard encoding and en_US as the standard language
