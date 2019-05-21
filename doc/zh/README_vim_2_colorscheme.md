@@ -16,6 +16,13 @@ colorscheme pyte
 
 在 ubuntu 下使用 `solarized` 这个配色方案需要安装 [gnome-terminal-colors-solarized](https://github.com/Anthony25/gnome-terminal-colors-solarized) 这个修改终端颜色的工具。
 
+建议使用 `solarized` 这个配色方案。
+
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_2_colorscheme_01.gif" alt="vim_2_colorscheme_01.gif" />
+</details>
+
 * * *
 
 > 按 `gg` 回到文档顶部。
