@@ -1,3 +1,16 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-autoformat
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:formatterpath = ['/usr/bin', '']
+au BufWrite * :Autoformat  "when you save file, it will auto format your file.
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 1
+let g:formatdef_jian = '"astyle --style=google --indent=spaces=2 --indent=tab=2 -o -xk -xf -xh -xG -H -j -p -W1 -k1 -w -K -xW -c -Y -M -z2"'
+let g:formatters_cpp = ['jian']
+let g:formatters_c = ['jian']
+
+
 set background=dark
 colorscheme solarized
 
@@ -20,3 +33,5 @@ nnoremap <silent> <C-T> :<C-u>Ydc<CR>
 noremap <leader>yd :<C-u>Yde<CR>
 
 nnoremap <leader>jg :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
+
+

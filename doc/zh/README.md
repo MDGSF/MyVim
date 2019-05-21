@@ -41,6 +41,7 @@
 >         * [插件 ack.vim -- 字符串查找](README_vim_3.5_plugin_ack.md)
 >         * [插件 ctrlp.vim -- 文件查找](README_vim_3.6_plugin_ctrlp.md)
 >         * [插件 a.vim -- 头文件和源文件之前快速切换](README_vim_3.7_plugin_a.md)
+>         * [插件 lightline.vim -- 修改状态栏](README_vim_3_plugin_lightline.md)
 >         * [python 开发环境搭建](README_vim_3_plugin_python.md)
 >     * vim 8
 >         * [vim 8 源码编译](README_vim_4_build.md)

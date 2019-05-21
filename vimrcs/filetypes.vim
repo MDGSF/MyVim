@@ -10,6 +10,9 @@ augroup filetype_cpp
   autocmd FileType cpp setl foldopen-=undo    "don't open folds when I undo
   autocmd FileType cpp setl foldlevel=100    "don't folds when I open the file
   autocmd FileType cpp nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
+  autocmd FileType cpp setlocal tabstop=2
+  autocmd FileType cpp setlocal shiftwidth=2
+  autocmd FileType cpp setlocal softtabstop=2
 augroup END
 " }}}
 
@@ -108,5 +111,21 @@ augroup filetype_vim
   autocmd BufEnter *.vim setlocal tabstop=2
   autocmd BufEnter *.vim setlocal shiftwidth=2
   autocmd BufEnter *.vim setlocal softtabstop=2
+augroup END
+" }}}
+
+
+""""""""""""""""""""""""""""""
+" => Markdown file settings
+""""""""""""""""""""""""""""""
+" {{{
+augroup filetype_markdown
+  autocmd!
+  autocmd FileType *.md setlocal foldmethod=marker
+  autocmd FileType *.md setlocal foldlevelstart=100
+  autocmd FileType *.md setlocal foldlevel=100
+  autocmd BufNewFile,BufRead *.md setlocal foldmethod=marker
+  autocmd BufNewFile,BufRead *.md setlocal foldlevelstart=100
+  autocmd BufNewFile,BufRead *.md setlocal foldlevel=100
 augroup END
 " }}}

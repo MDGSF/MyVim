@@ -385,7 +385,9 @@ nnoremap E $
 " set listchars=tab:»■,trail:■
 " set list
 
-setlocal foldlevel=100    "don't folds when I open the file
+"don't folds when I open the file
+setlocal foldlevelstart=100    
+setlocal foldlevel=100    
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
