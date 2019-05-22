@@ -114,7 +114,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext 
+" Annotate strings with gettext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 autocmd FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
@@ -164,6 +164,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_fmt_command = "goimports"
 let g:go_version_warning = 0
+let g:go_def_mode = 'godef'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
