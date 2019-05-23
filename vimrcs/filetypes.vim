@@ -6,7 +6,7 @@ augroup filetype_cpp
   autocmd!
   autocmd FileType cpp setl foldenable
   autocmd FileType cpp setl foldmethod=syntax
-  autocmd FileType cpp setl foldopen-=search  "don't open folds when I search 
+  autocmd FileType cpp setl foldopen-=search  "don't open folds when I search
   autocmd FileType cpp setl foldopen-=undo    "don't open folds when I undo
   autocmd FileType cpp setl foldlevel=100    "don't folds when I open the file
   autocmd FileType cpp nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
@@ -29,14 +29,14 @@ autocmd BufNewFile,BufRead *.mako set ft=mako
 
 autocmd FileType python map <buffer> F :set foldmethod=indent<cr>
 
-autocmd FileType python inoremap <buffer> $r return 
-autocmd FileType python inoremap <buffer> $i import 
-autocmd FileType python inoremap <buffer> $p print 
+autocmd FileType python inoremap <buffer> $r return
+autocmd FileType python inoremap <buffer> $i import
+autocmd FileType python inoremap <buffer> $p print
 autocmd FileType python inoremap <buffer> $f # --- <esc>a
-autocmd FileType python map <buffer> <leader>1 /class 
-autocmd FileType python map <buffer> <leader>2 /def 
-autocmd FileType python map <buffer> <leader>C ?class 
-autocmd FileType python map <buffer> <leader>D ?def 
+autocmd FileType python map <buffer> <leader>1 /class
+autocmd FileType python map <buffer> <leader>2 /def
+autocmd FileType python map <buffer> <leader>C ?class
+autocmd FileType python map <buffer> <leader>D ?def
 autocmd FileType python set cindent
 autocmd FileType python set cinkeys-=0#
 autocmd FileType python set indentkeys-=0#
@@ -54,10 +54,10 @@ autocmd FileType javascript setl nocindent
 autocmd FileType javascript imap <c-t> $log();<esc>hi
 autocmd FileType javascript imap <c-a> alert();<esc>hi
 
-autocmd FileType javascript inoremap <buffer> $r return 
+autocmd FileType javascript inoremap <buffer> $r return
 autocmd FileType javascript inoremap <buffer> $f // --- PH<esc>FP2xi
 
-function! JavaScriptFold() 
+function! JavaScriptFold()
   setl foldmethod=syntax
   setl foldlevelstart=1
   syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
@@ -84,11 +84,11 @@ autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 """"""""""""""""""""""""""""""
 " => Shell section
 """"""""""""""""""""""""""""""
-if exists('$TMUX') 
+if exists('$TMUX')
   if has('nvim')
     set termguicolors
   else
-    set term=screen-256color 
+    set term=screen-256color
   endif
 endif
 
@@ -124,8 +124,8 @@ augroup filetype_markdown
   autocmd FileType *.md setlocal foldmethod=marker
   autocmd FileType *.md setlocal foldlevelstart=100
   autocmd FileType *.md setlocal foldlevel=100
-  autocmd BufNewFile,BufRead *.md setlocal foldmethod=marker
-  autocmd BufNewFile,BufRead *.md setlocal foldlevelstart=100
-  autocmd BufNewFile,BufRead *.md setlocal foldlevel=100
+  autocmd BufEnter,BufNewFile,BufRead *.md setlocal foldmethod=marker
+  autocmd BufEnter,BufNewFile,BufRead *.md setlocal foldlevelstart=100
+  autocmd BufEnter,BufNewFile,BufRead *.md setlocal foldlevel=100
 augroup END
 " }}}

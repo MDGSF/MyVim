@@ -1,5 +1,6 @@
 # vim 配色方案
 
+
 目前支持以下几种，可以在 `~/.MyVim/vimrcs/basic.vim` 和 `~/.MyVim/vimrcs/extended.vim` 文件里面修改。
 
 ```
@@ -18,10 +19,20 @@ colorscheme pyte
 
 建议使用 `solarized` 这个配色方案。
 
+```
+set background=dark
+colorscheme solarized
+```
+
 <details>
 <summary>展开查看图片</summary>
 <img src="../../images/vim_2_colorscheme_01.gif" alt="vim_2_colorscheme_01.gif" />
 </details>
+
+## 状态栏和标题栏颜色配置
+
+见 `~/.MyVim/vimrcs/plugins_config.vim` 里面的 `lightline`, 详细配置参考
+[lightline.vim](https://github.com/itchyny/lightline.vim)。
 
 * * *
 
