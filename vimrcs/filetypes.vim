@@ -121,11 +121,34 @@ augroup END
 " {{{
 augroup filetype_markdown
   autocmd!
-  autocmd FileType *.md setlocal foldmethod=marker
-  autocmd FileType *.md setlocal foldlevelstart=100
-  autocmd FileType *.md setlocal foldlevel=100
-  autocmd BufEnter,BufNewFile,BufRead *.md setlocal foldmethod=marker
-  autocmd BufEnter,BufNewFile,BufRead *.md setlocal foldlevelstart=100
-  autocmd BufEnter,BufNewFile,BufRead *.md setlocal foldlevel=100
+  " autocmd FileType *.md setlocal foldmethod=marker
+  " autocmd FileType *.md setlocal foldlevelstart=100
+  " autocmd FileType *.md setlocal foldlevel=100
+  autocmd FileType,BufEnter,BufNewFile,BufRead *.md setlocal foldexpr=MarkdownLevel()
+  autocmd FileType,BufEnter,BufNewFile,BufRead *.md setlocal foldmethod=expr
+  autocmd FileType,BufEnter,BufNewFile,BufRead *.md setlocal foldlevelstart=100
+  autocmd FileType,BufEnter,BufNewFile,BufRead *.md setlocal foldlevel=100
 augroup END
+
+function! MarkdownLevel()
+  if getline(v:lnum) =~ '^# .*$'
+    return ">1"
+  endif
+  if getline(v:lnum) =~ '^## .*$'
+    return ">2"
+  endif
+  if getline(v:lnum) =~ '^### .*$'
+    return ">3"
+  endif
+  if getline(v:lnum) =~ '^#### .*$'
+    return ">4"
+  endif
+  if getline(v:lnum) =~ '^##### .*$'
+    return ">5"
+  endif
+  if getline(v:lnum) =~ '^###### .*$'
+    return ">6"
+  endif
+  return "="
+endfunction
 " }}}
