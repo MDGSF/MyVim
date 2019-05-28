@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
+" Maintainer:
 "    Huang Jian (1342042894@qq.com)
 "
 " Sections:
@@ -15,7 +15,7 @@
 "    -> keymapping
 "    -> Autogroups
 "    -> Helper functions
-" 
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -23,6 +23,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 
 " Vim 需要记住多少次历史操作。
 " Sets how many lines of history VIM has to remember
@@ -46,15 +47,17 @@ let g:mapleader=","
 " Fast saving
 nnoremap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 
 " 垂直滚动时，光标距离顶部/底部的位置（单位：行）。
 " Set 5 lines to the cursor - when moving vertically using j/k
@@ -98,7 +101,7 @@ set ignorecase
 
 " 如果同时打开了ignorecase，那么对于只有一个大写字母的搜索词，将大小写敏感；
 " 其他情况都是大小写不敏感。比如，搜索Test时，将不匹配test；搜索test时，将匹配Test。
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " 搜索时，高亮显示匹配结果。
@@ -107,7 +110,7 @@ set hlsearch
 
 " 输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果。
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Faster redrawing
 set ttyfast
@@ -136,11 +139,13 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 
 " 打开语法高亮。自动识别代码，使用多种颜色显示。
 " Enable syntax highlighting
@@ -170,11 +175,14 @@ set encoding=utf-8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
+
 " 设置备份文件、交换文件、操作历史文件的保存位置。
 " 结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名。
 
@@ -200,11 +208,13 @@ set writebackup
 " set nowb
 " set noswapfile
 
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 
 " set noexpandtab : use tab
 " set expandtab : use space
@@ -240,20 +250,27 @@ set wrap
 " 指定折行处与编辑窗口的右边缘之间空出的字符数。
 set wrapmargin=2
 
+" }}}
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
+" {{{
+
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
+
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 " map <space> /
 " map <c-space> ?
@@ -282,7 +299,7 @@ noremap <leader>to :tabonly<cr>
 noremap <leader>tc :tabclose<cr>
 noremap <leader>tn :tabnext<cr>
 noremap <leader>tp :tabprev<cr>
-noremap <leader>tm :tabmove 
+noremap <leader>tm :tabmove
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -297,7 +314,7 @@ noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -307,9 +324,14 @@ endtry
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" }}}
+
+
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
+" {{{
+
 " Always show the status line
 " 是否显示状态栏。0 表示不显示，1 表示只在多窗口时显示，2 表示显示。
 set laststatus=2
@@ -317,11 +339,13 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 
 " 执行 :split 的时候，在当前窗口的下方新建窗口
 " open new windows below the current windows.
@@ -386,13 +410,16 @@ nnoremap E $
 " set list
 
 "don't folds when I open the file
-setlocal foldlevelstart=100    
-setlocal foldlevel=100    
+setlocal foldlevelstart=100
+setlocal foldlevel=100
+
+" }}}
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => keymapping
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" {{{
 
 noremap <F5> :set ts=2<CR>:set expandtab<CR>:%retab!<CR>
 noremap <C-F5> :set ts=2<CR>:set noexpandtab<CR>:%retab!<CR>
@@ -409,11 +436,12 @@ noremap <leader>v :vsplit<CR>
 " map! <C-A> <Esc>ggvGY
 
 " 去除行尾空白字符
-nnoremap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR> 
+nnoremap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 
 " 格式化整个文档
-nnoremap <leader>= :call Preserve("normal gg=G")<CR> 
+nnoremap <leader>= :call Preserve("normal gg=G")<CR>
 
+" }}}
 
 
 
@@ -482,7 +510,7 @@ endfunction
 
 function! CmdLine(str)
   call feedkeys(":" . a:str)
-endfunction 
+endfunction
 
 function! VisualSelection(direction, extra_filter) range
   let l:saved_reg = @"
@@ -511,7 +539,7 @@ function! ToggleNumber()
   endif
 endfunction
 
-" strips trailing whitespace at the end of files. 
+" strips trailing whitespace at the end of files.
 " this is called on buffer write in the autogroup above.
 function! <SID>StripTrailingWhitespaces()
   " save last search & cursor position
@@ -534,5 +562,5 @@ function! Preserve(command)
   " position
   let @/=_s
   call cursor(l, c)
-endfunction 
+endfunction
 

@@ -21,6 +21,7 @@ augroup END
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
+" {{{
 let python_highlight_all = 1
 autocmd FileType python syn keyword pythonDecorator True None False self
 
@@ -42,11 +43,13 @@ autocmd FileType python set cinkeys-=0#
 autocmd FileType python set indentkeys-=0#
 
 autocmd FileType python nnoremap <buffer> <leader>pyt ggO#!/usr/bin/env python<CR># -*- coding: UTF-8 -*-<CR><CR>def main():<CR>pass<CR><CR><CR><Backspace>if __name__ == "__main__":<CR>main()<Esc>gg
+" }}}
 
 
 """"""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
+" {{{
 autocmd FileType javascript call JavaScriptFold()
 autocmd FileType javascript setl fen
 autocmd FileType javascript setl nocindent
@@ -67,11 +70,13 @@ function! JavaScriptFold()
   endfunction
   setl foldtext=FoldText()
 endfunction
+" }}}
 
 
 """"""""""""""""""""""""""""""
 " => CoffeeScript section
 """""""""""""""""""""""""""""""
+" {{{
 function! CoffeeScriptFold()
   setlocal foldmethod=indent
   setlocal foldlevelstart=1
@@ -79,11 +84,13 @@ endfunction
 autocmd FileType coffee call CoffeeScriptFold()
 
 autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+" }}}
 
 
 """"""""""""""""""""""""""""""
 " => Shell section
 """"""""""""""""""""""""""""""
+" {{{
 if exists('$TMUX')
   if has('nvim')
     set termguicolors
@@ -91,12 +98,15 @@ if exists('$TMUX')
     set term=screen-256color
   endif
 endif
+" }}}
 
 
 """"""""""""""""""""""""""""""
 " => Twig section
 """"""""""""""""""""""""""""""
+" {{{
 autocmd BufRead *.twig set syntax=html filetype=html
+" }}}
 
 
 """"""""""""""""""""""""""""""
@@ -119,6 +129,11 @@ augroup END
 " => Markdown file settings
 """"""""""""""""""""""""""""""
 " {{{
+
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
+
 augroup filetype_markdown
   autocmd!
   " autocmd FileType *.md setlocal foldmethod=marker
