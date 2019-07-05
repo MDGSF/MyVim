@@ -34,4 +34,12 @@ noremap <leader>yd :<C-u>Yde<CR>
 
 nnoremap <leader>jg :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
 
+let g:rustfmt_autosave = 1
 
+set hidden
+let g:racer_cmd = "/home/huangjian/.cargo/bin/racer"
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
