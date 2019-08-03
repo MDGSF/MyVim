@@ -1,14 +1,14 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-autoformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:formatterpath = ['/usr/bin', '']
-au BufWrite * :Autoformat  "when you save file, it will auto format your file.
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 1
-let g:formatdef_jian = '"astyle --style=google --indent=spaces=2 --indent=tab=2 -o -xk -xf -xh -xG -H -j -p -W1 -k1 -w -K -xW -c -Y -M -z2"'
-let g:formatters_cpp = ['jian']
-let g:formatters_c = ['jian']
+"let g:formatterpath = ['/usr/bin', '']
+"au BufWrite * :Autoformat  "when you save file, it will auto format your file.
+"let g:autoformat_autoindent = 0
+"let g:autoformat_retab = 0
+"let g:autoformat_remove_trailing_spaces = 1
+"let g:formatdef_jian = '"astyle --style=google --indent=spaces=2 --indent=tab=2 -o -xk -xf -xh -xG -H -j -p -W1 -k1 -w -K -xW -c -Y -M -z2"'
+"let g:formatters_cpp = ['jian']
+"let g:formatters_c = ['jian']
 
 
 set background=dark
