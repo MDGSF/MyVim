@@ -50,7 +50,7 @@ autocmd FileType python nnoremap <buffer> <leader>pyt ggO#!/usr/bin/env python<C
 " => JavaScript section
 """""""""""""""""""""""""""""""
 " {{{
-autocmd FileType javascript call JavaScriptFold()
+" autocmd FileType javascript call JavaScriptFold()
 autocmd FileType javascript setl fen
 autocmd FileType javascript setl nocindent
 
