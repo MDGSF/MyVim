@@ -34,6 +34,8 @@ set guioptions-=L
 " colorscheme mayansmoke
 " colorscheme pyte
 
+set background=dark
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
