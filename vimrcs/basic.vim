@@ -170,7 +170,18 @@ endif
 
 " 使用 utf-8 编码。
 " Set utf8 as standard encoding and en_US as the standard language
+" vim 打开文件的时候，会根据 fileencodings 所列出的编码来一个个尝试打开文件，
+" 成功打开文件了，把对应的编码设置到 fileencoding 里面，然后把文件内容从 fileencoding 编码
+" 转换为 encoding 编码。
+" vim 保存文件的时候，会先把内存中的 encoding 编码的内容转换为 fileencoding
+" 编码的格式，然后再保存到文件中。
+" 那么，你如果想把一个文件的格式转换为 utf-8，你只要先打开文件，然后执行 set fileencoding=utf-8，再保存文件就可以了。
+" 你可以使用 `set encoding` 来查看当前的 encoding 编码。
+" 你可以使用 `set fileencoding` 来查看当前的 fileencoding 编码。
 set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,gb2312,gb18030,gbk,cp936,latin1
+set termencoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
