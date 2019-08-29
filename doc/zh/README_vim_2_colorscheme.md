@@ -24,6 +24,8 @@ set background=dark
 colorscheme solarized
 ```
 
+在 `.bashrc` 文件中添加 `export TERM=xterm-256color`
+
 <details>
 <summary>展开查看图片</summary>
 <img src="../../images/vim_2_colorscheme_01.gif" alt="vim_2_colorscheme_01.gif" />
