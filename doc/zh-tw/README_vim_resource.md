@@ -34,6 +34,10 @@
 
 [Seven habits of effective text editing](https://www.moolenaar.net/habits.html)
 
+[Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com/)
+
+[Learn Vimscript the Hard Way 中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)
+
 ## 一些圖片
 
 放在了目錄 `~/.MyVim/images/resource`

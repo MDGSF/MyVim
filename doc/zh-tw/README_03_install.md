@@ -8,8 +8,56 @@
 ## 先安裝 vim
 
 ```bash
-sudo apt-get install vim vim-scripts vim-gtk vim-gnome
+sudo apt-get install vim
 ```
+
+## 增加 Vim Features
+
+用 `vim --version` 可以看到 vim Features list。
+
+打開 vim 之後，用 `:version` 也可以看到。
+
+前麵的 **加號** 表示當前的 vim 支持該特性， **減號** 表示不支持。
+
+```
+Huge version with GTK2 GUI.  Features included (+) or not (-):
++acl               +digraphs          +lispindent        +persistent_undo   +textobjects
++arabic            +dnd               +listcmds          +postscript        +textprop
++autocmd           -ebcdic            +localmap          +printer           +timers
++autochdir         +emacs_tags        -lua               +profile           +title
+-autoservername    +eval              +menu              -python            +toolbar
++balloon_eval      +ex_extra          +mksession         +python3           +user_commands
++balloon_eval_term +extra_search      +modify_fname      +quickfix          +vartabs
++browse            -farsi             +mouse             +reltime           +vertsplit
+++builtin_terms    +file_in_path      +mouseshape        +rightleft         +virtualedit
++byte_offset       +find_in_path      +mouse_dec         +ruby              +visual
++channel           +float             -mouse_gpm         +scrollbind        +visualextra
++cindent           +folding           -mouse_jsbterm     +signs             +viminfo
++clientserver      -footer            +mouse_netterm     +smartindent       +vreplace
++clipboard         +fork()            +mouse_sgr         +startuptime       +wildignore
++cmdline_compl     +gettext           -mouse_sysmouse    +statusline        +wildmenu
++cmdline_hist      -hangul_input      +mouse_urxvt       -sun_workshop      +windows
++cmdline_info      +iconv             +mouse_xterm       +syntax            +writebackup
++comments          +insert_expand     +multi_byte        +tag_binary        +X11
++conceal           +job               +multi_lang        -tag_old_static    -xfontset
++cryptv            +jumplist          -mzscheme          -tag_any_white     +xim
++cscope            +keymap            +netbeans_intg     -tcl               +xpm
++cursorbind        +lambda            +num64             +termguicolors     +xsmp_interact
++cursorshape       +langmap           +packages          +terminal          +xterm_clipboard
++dialog_con_gui    +libcall           +path_extra        +terminfo          -xterm_save
++diff              +linebreak         -perl              +termresponse
+```
+
+有的特性默認是不開啟的，比如說 `clipboard` 剪切板，可以用下麵的命令安裝支持。
+
+`clipboard` 這個很重要，從瀏覽器複製數據到 vim 的時候，就需要用到這個，
+見 [vim,shell,tmux,瀏覽器之間互相複製數據](README_vim_2_copydata.md)。
+
+```bash
+sudo apt-get install vim-scripts vim-gtk vim-gnome
+```
+
+但是像 `python3` 這種應該就需要自己編譯，詳細見 [Vim 編譯](README_vim_4_build.md)。
 
 ## 安裝 vim 配置文件
 
@@ -34,6 +82,11 @@ cd ~/.MyVim
 那你可以先 **fork** 該倉庫，然後再把你自己的倉庫克隆到本地，
 然後修改成你自己想要的配置，再提交到你自己的倉庫中就可以了。
 
+## 配色方案
+
+安裝好了之後，建議先修改配色方案。
+
+[vim 配色方案](README_vim_2_colorscheme.md)
 
 * * *
 

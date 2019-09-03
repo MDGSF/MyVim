@@ -41,6 +41,7 @@
 >         * [插件 ack.vim -- 字符串查找](README_vim_3.5_plugin_ack.md)
 >         * [插件 ctrlp.vim -- 文件查找](README_vim_3.6_plugin_ctrlp.md)
 >         * [插件 a.vim -- 頭文件和源文件之前快速切換](README_vim_3.7_plugin_a.md)
+>         * [插件 lightline.vim -- 修改狀態欄](README_vim_3_plugin_lightline.md)
 >         * [python 開發環境搭建](README_vim_3_plugin_python.md)
 >     * vim 8
 >         * [vim 8 源碼編譯](README_vim_4_build.md)
@@ -48,6 +49,10 @@
 >         * [vim 8 插件管理器](README_vim_4_packages.md)
 >     * vim 其他
 >         * [vim 其他資源](README_vim_resource.md)
+>     * vim 技巧集錦
+>         * [vim 技巧0001](README_vim_tips_0001.md)
+>         * [vim 技巧0002](README_vim_tips_0002.md)
+>         * [vim 技巧0003](README_vim_tips_0003.md)
 >     * vim 測試題目
 >     * vim 翻譯文章
 > * tmux 文檔

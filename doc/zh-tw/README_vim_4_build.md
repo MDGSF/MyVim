@@ -34,6 +34,11 @@ LDFLAGS=-fno-lto
 
 下載下來之後，直接執行 `make install` 就可以了，這個是在 `ubuntu 16.04` 下編譯的。
 
+默認是安裝在 `/usr/local` 目錄下，如果需要修改的話，需要你自己編譯，
+用 `./configure --prefix=/usr/local` 修改 `prefix` 這個參數就可以了。
+
+還要記得把舊的備份下 `mv vim vim7`，然後建立一個新的軟鏈接 `ln -s vim8 vim`。
+
 * * *
 
 > 按 `gg` 回到文檔頂部。
