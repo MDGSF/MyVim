@@ -3,4 +3,6 @@ if has("terminal")
   tnoremap <C-k> <C-W>k
   tnoremap <C-h> <C-W>h
   tnoremap <C-l> <C-W>l
+  set termguicolors
 endif
+
