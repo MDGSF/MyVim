@@ -1,4 +1,7 @@
-# Text object selection
+# Text object selection 文本对象选择
+
+这是一系列只能在 [VISUAL 模式](README_vim_2_mode.md) 下使用的命令，或者是
+紧跟在一个操作符之后。比如：`y` 复制，`d` 删除。
 
 - `aw`: "a word"
 - `iw`: "inner word"
@@ -21,11 +24,17 @@
 - `a"`, `a'`, `` a` ``: "a quoted string"
 - `i"`, `i'`, `` i` ``: "a quoted inner string"
 
-快速文本选择。上面的操作都需要在 [VISUAL 模式](README_vim_2_mode.md)
-下使用，或者也可以在复制的时候使用。
+### 具体例子
 
-- `vaw`: 快速选中光标所在的单词
-- `yaw`: 快速复制光标所在的单词
+- `vaw`: 选中光标所在的单词
+- `yaw`: 复制光标所在的单词
+- `daw`: 删除光标所在的单词
+- `vip`: 选中光标所在的段落
+- `yip`: 复制光标所在的段落
+- `dip`: 删除光标所在的段落
+- `vi"`: 选中光标所在的双引号中的内容
+- `yi"`: 复制光标所在的双引号中的内容
+- `di"`: 删除光标所在的双引号中的内容
 
 ### 查看上述命令的详细帮助文档
 
