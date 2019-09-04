@@ -11,6 +11,8 @@
 "let g:formatters_c = ['jian']
 
 
+set colorcolumn=81,161,241,321,401,481,561,641,721,801
+
 set background=dark
 colorscheme solarized
 
