@@ -1,4 +1,3 @@
-> * [為什麼你需要學習 Vim](README_01_why_you_need_learn_vim.md)
 > * [使用說明](README_02_how_to_use_this_document.md)
 > * vim 文檔
 >     * vim 入門
