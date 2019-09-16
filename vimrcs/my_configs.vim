@@ -9,7 +9,16 @@
 "let g:formatdef_jian = '"astyle --style=google --indent=spaces=2 --indent=tab=2 -o -xk -xf -xh -xG -H -j -p -W1 -k1 -w -K -xW -c -Y -M -z2"'
 "let g:formatters_cpp = ['jian']
 "let g:formatters_c = ['jian']
+"
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" clang-format
+" sudo apt-get install clang-format
+" https://github.com/rhysd/vim-clang-format
+" clang-format -style=google -dump-config > .clang-format
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType c ClangFormatAutoEnable
 
 set colorcolumn=81,161,241,321,401,481,561,641,721,801
 
