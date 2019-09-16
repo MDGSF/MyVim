@@ -4,15 +4,15 @@
 " {{{
 augroup filetype_cpp
   autocmd!
-  autocmd FileType cpp setl foldenable
-  autocmd FileType cpp setl foldmethod=syntax
-  autocmd FileType cpp setl foldopen-=search  "don't open folds when I search
-  autocmd FileType cpp setl foldopen-=undo    "don't open folds when I undo
-  autocmd FileType cpp setl foldlevel=100    "don't folds when I open the file
-  autocmd FileType cpp nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
-  autocmd FileType cpp setlocal tabstop=2
-  autocmd FileType cpp setlocal shiftwidth=2
-  autocmd FileType cpp setlocal softtabstop=2
+  autocmd FileType c,cpp setl foldenable
+  autocmd FileType c,cpp setl foldmethod=syntax
+  autocmd FileType c,cpp setl foldopen-=search  "don't open folds when I search
+  autocmd FileType c,cpp setl foldopen-=undo    "don't open folds when I undo
+  autocmd FileType c,cpp setl foldlevel=100    "don't folds when I open the file
+  autocmd FileType c,cpp nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
+  autocmd FileType c,cpp setlocal tabstop=2
+  autocmd FileType c,cpp setlocal shiftwidth=2
+  autocmd FileType c,cpp setlocal softtabstop=2
 augroup END
 " }}}
 
