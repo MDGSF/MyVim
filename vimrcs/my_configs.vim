@@ -17,8 +17,10 @@
 " sudo apt-get install clang-format
 " https://github.com/rhysd/vim-clang-format
 " clang-format -style=google -dump-config > .clang-format
+" clang-format -style=google -dump-config test.js >> .clang-format
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType c ClangFormatAutoEnable
+autocmd FileType javascript ClangFormatAutoEnable
 
 set colorcolumn=81,161,241,321,401,481,561,641,721,801
 

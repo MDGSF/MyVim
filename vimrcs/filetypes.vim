@@ -60,6 +60,10 @@ autocmd FileType javascript imap <c-a> alert();<esc>hi
 autocmd FileType javascript inoremap <buffer> $r return
 autocmd FileType javascript inoremap <buffer> $f // --- PH<esc>FP2xi
 
+autocmd FileType javascript setlocal tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2
+autocmd FileType javascript setlocal softtabstop=2
+
 function! JavaScriptFold()
   setl foldmethod=syntax
   setl foldlevelstart=1
