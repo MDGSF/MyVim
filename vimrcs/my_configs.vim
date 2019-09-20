@@ -20,7 +20,7 @@
 " clang-format -style=google -dump-config test.js >> .clang-format
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType c ClangFormatAutoEnable
-autocmd FileType javascript ClangFormatAutoEnable
+"autocmd FileType javascript ClangFormatAutoEnable
 
 set colorcolumn=81,161,241,321,401,481,561,641,721,801
 
