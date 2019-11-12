@@ -130,6 +130,21 @@ augroup END
 
 
 """"""""""""""""""""""""""""""
+" => TeX file settings
+""""""""""""""""""""""""""""""
+" {{{
+augroup filetype_tex
+  autocmd!
+  autocmd BufEnter *.tex setlocal tabstop=2
+  autocmd BufEnter *.tex setlocal shiftwidth=2
+  autocmd BufEnter *.tex setlocal softtabstop=2
+augroup END
+" }}}
+
+
+
+
+""""""""""""""""""""""""""""""
 " => Markdown file settings
 """"""""""""""""""""""""""""""
 " {{{
