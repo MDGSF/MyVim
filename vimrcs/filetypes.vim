@@ -146,7 +146,7 @@ augroup END
 " => golang file settings
 """"""""""""""""""""""""""""""
 " {{{
-augroup filetype_tex
+augroup filetype_golang
   autocmd!
   autocmd BufEnter *.go setlocal tabstop=2
   autocmd BufEnter *.go setlocal shiftwidth=2
