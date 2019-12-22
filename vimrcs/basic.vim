@@ -482,6 +482,9 @@ augroup configgroup
   autocmd BufEnter *.sh setlocal tabstop=2
   autocmd BufEnter *.sh setlocal shiftwidth=2
   autocmd BufEnter *.sh setlocal softtabstop=2
+  autocmd BufEnter *.js setlocal tabstop=2
+  autocmd BufEnter *.js setlocal shiftwidth=2
+  autocmd BufEnter *.js setlocal softtabstop=2
 augroup END
 
 
