@@ -234,11 +234,11 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-set shiftwidth=4 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数。
+set shiftwidth=2 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数。
 set shiftround
 
-set tabstop=4 " 按下 Tab 键时，Vim 显示的空格数。
-set softtabstop=4 " Tab 转为多少个空格。
+set tabstop=2 " 按下 Tab 键时，Vim 显示的空格数。
+set softtabstop=2 " Tab 转为多少个空格。
 
 " 只有遇到指定的符号（比如空格、连词号和其他标点符号），才发生折行。也就是说，不会在单词内部折行。
 set linebreak
@@ -311,6 +311,9 @@ noremap <leader>tc :tabclose<cr>
 noremap <leader>tn :tabnext<cr>
 noremap <leader>tp :tabprev<cr>
 noremap <leader>tm :tabmove
+
+noremap <C-N> :tabnext<cr>
+noremap <C-P> :tabnext<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -420,9 +423,17 @@ nnoremap E $
 " set listchars=tab:»■,trail:■
 " set list
 
+
+setlocal foldenable
+setlocal foldmethod=syntax
+setlocal foldopen-=search  "don't open folds when I search
+setlocal foldopen-=undo    "don't open folds when I undo
+
 "don't folds when I open the file
 setlocal foldlevelstart=100
 setlocal foldlevel=100
+
+nnoremap <space> @=((foldclosed(line( '.' ))<0) ? 'zc' : 'zo')<CR>
 
 " }}}
 
