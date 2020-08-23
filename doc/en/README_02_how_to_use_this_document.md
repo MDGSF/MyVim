@@ -1,47 +1,61 @@
-# 使用说明
+# Vim Usage Instructions
 
-学习 vim 和学习`数学`，`算法`这类需要理解的东西很不一样，
-到是和学习`毛笔`，`滑冰`这类需要大量练习的比较相似。学习
-`vim`，仅仅通过阅读文档是学不会的，通过死记硬背也是没有用的，
-就算你记忆力惊人，也一样是不行的。因为 `vim` 学会了之后，
-是通过肌肉记忆来使用的，而不是通过大脑思考来使用的，因为
-肌肉记忆反应的速度要快得多。
+Learning vim is very different from learning `mathematics` and `algorithms`.
+It is similar to learning `brushes` and `skating` which require a lot of
+practice. Learn `Vim`, you can’t learn just by reading the document,
+and it’s useless by rote memorization. Even if your memory is amazing,
+it won’t work. Because `Vim` is used through muscle memory,
+not through brain thinking, because Muscle memory responds much faster.
 
-给你说个我自己的小故事。之前有一次去面试，结果有面试官就问
-“在 vim 里面，怎么跳转到行首？”。很简单的问题，但是我想了 2 秒
-左右才回答，然而那个时候我已经使用了 7 年左右的 `vim`。而我
-平时使用的时候为什么就不需要这 2 秒的思考呢？因为当你学会了
-`vim` 之后，你是使用肌肉记忆在使用 `vim`，是不需要经过大脑思考的。
+Tell you a little story of my own. I went to an interview, and I was asked
+"How to jump to the beginning of the line in vim?", Simple question,
+but I thought about it for 2 seconds and answered about it,
+but at that time I had been using `Vim` for about 7 years.
+Why don't you need these 2 seconds of thinking when you use it?
+Because when you use `Vim`, you use muscle memory to use `Vim`,
+without brain thinking.
 
-学习 `vim` 的过程，就是不断的练习，不断的使用，自然而然的就
-能够记住。所以在阅读的过程中，建议先把该仓库克隆到你电脑上，
-直接使用 `vim` 来阅读，在阅读的过程中，直接操作。
+The process of learning `Vim` is constant practice, constant use, and naturally
+you can use it. So in the process of reading this document, it is recommended
+to clone the repository to your computer first. Use `Vim` to read directly,
+and operate directly during the reading process.
 
 ```
 git clone https://github.com/MDGSF/MyVim.git ~/.MyVim
 ```
 
-请先阅读 [安装说明](README_03_install.md)　把 vim 基础配置安装好。
+Please read [Install](README_03_install.md) firstly, install `Vim` with basic
+settings.
 
-如果你从来没有接触过 `vim`，那么建议先阅读 [vimtutor 30分钟入门 vim](README_vim_tutor.md)，
-当然就算你使用过好多年的 `vim`，阅读 `vimtutor` 大概率一样会学到新的东西。
+If you have never been in contact with `Vim`, it is recommended to read
+[vimtutor 30-minute introduction to vim](README_vim_tutor.md),
+Of course, even if you have used `vim` for many years, reading `vimtutor`
+is likely to learn new things.
 
-你也可以直接进入正文 [vim 打开、退出](README_vim_1.1_open_close.md)。
 
-如果你现在是使用 `vim` 在阅读该文档，你可以把光标移动到 `README_vim_1.1_open_close.md` 上的任意一个位置，然后执行 `gf` 就会跳转到对应的文档。
+You can also directly enter the text
+[Vim open and close](README_vim_1.1_open_close.md)。
 
-也就是说只要把光标移动到文件名上，然后执行 `gf` 就会跳转到对应的文档。`gf` 就是
-`goto file` 的意思，如果有兴趣了解更多的话，可以执行 `:help gf`。
+If you are reading the document with `vim`, you can move the cursor to any
+position on `README_vim_1.1_open_close.md`, and then execute `gf` to jump to
+the corresponding document.
 
-用 `ctrl+^` 可以跳转回来。`ctrl+^` 可以在`上一个使用的文档`和`当前文档`之间跳转。
+
+In other words, as long as you move the cursor to the file name and
+execute `gf`, it will jump to the corresponding document. `gf` is the meaning
+of `goto file`, if you are interested in learning more,
+you can execute `:help gf`.
+
+Use `ctrl+^` to jump back. `ctrl+^` can jump between
+`last used document` and `current document`.
 
 * * *
 
-将光标移动到下面的文件名上，执行 `gf` 跳转。
+Move the cursor to the file name below and use `gf` to jump.
 
-[目录](README.md)
+[Table Of Contents](README.md)
 
-[下一章](README_vim_1.1_open_close.md)
+[Next Chapter](README_vim_1.1_open_close.md)
 
 <a href='https://github.com/MDGSF/MyVim'><small>↑Back to Home↑</small></a>
 
