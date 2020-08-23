@@ -15,7 +15,7 @@ colorscheme pyte
 你如果需要用其他的配色方案，可以到 Github 上面自行下载，
 然后参考 `~/.MyVim/sources_forked/badwolf` 目录来放置就可以了。
 
-在 ubuntu 下使用 `solarized` 这个配色方案需要安装 [gnome-terminal-colors-solarized](https://github.com/Anthony25/gnome-terminal-colors-solarized) 这个修改终端颜色的工具。
+在 ubuntu 16.04 下使用 `solarized` 这个配色方案需要安装 [gnome-terminal-colors-solarized](https://github.com/Anthony25/gnome-terminal-colors-solarized) 这个修改终端颜色的工具。
 
 建议使用 `solarized` 这个配色方案。
 
