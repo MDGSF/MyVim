@@ -313,7 +313,7 @@ noremap <leader>tp :tabprev<cr>
 noremap <leader>tm :tabmove
 
 noremap <C-N> :tabnext<cr>
-noremap <C-P> :tabnext<cr>
+noremap <C-P> :tabprev<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
