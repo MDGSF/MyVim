@@ -466,6 +466,14 @@ nnoremap <leader>= :call Preserve("normal gg=G")<CR>
 " }}}
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => AngleBrackets
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup AngleBrackets
+  autocmd!
+  autocmd FileType h,hpp,inl,cpp,c,cxx set matchpairs+=<:>
+augroup END
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autogroups
