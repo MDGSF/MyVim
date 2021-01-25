@@ -1,0 +1,16 @@
+:TextobjEntireDefaultKeyMappings	textobj-entire.txt	/*:TextobjEntireDefaultKeyMappings*
+<Plug>(textobj-entire-a)	textobj-entire.txt	/*<Plug>(textobj-entire-a)*
+<Plug>(textobj-entire-i)	textobj-entire.txt	/*<Plug>(textobj-entire-i)*
+g:textobj_entire_no_default_key_mappings	textobj-entire.txt	/*g:textobj_entire_no_default_key_mappings*
+textobj-entire	textobj-entire.txt	/*textobj-entire*
+textobj-entire-bugs	textobj-entire.txt	/*textobj-entire-bugs*
+textobj-entire-changelog	textobj-entire.txt	/*textobj-entire-changelog*
+textobj-entire-changelog-0.0.2	textobj-entire.txt	/*textobj-entire-changelog-0.0.2*
+textobj-entire-changelog-0.0.3	textobj-entire.txt	/*textobj-entire-changelog-0.0.3*
+textobj-entire-changelog-0.0.4	textobj-entire.txt	/*textobj-entire-changelog-0.0.4*
+textobj-entire-contents	textobj-entire.txt	/*textobj-entire-contents*
+textobj-entire-customizing	textobj-entire.txt	/*textobj-entire-customizing*
+textobj-entire-interface	textobj-entire.txt	/*textobj-entire-interface*
+textobj-entire-introduction	textobj-entire.txt	/*textobj-entire-introduction*
+textobj-entire-mappings	textobj-entire.txt	/*textobj-entire-mappings*
+textobj-entire.txt	textobj-entire.txt	/*textobj-entire.txt*
