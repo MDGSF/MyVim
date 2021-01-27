@@ -15,4 +15,8 @@ source $ProjectPath/vimrcs/small.vim
 
 cp $ProjectPath/editorconfig ~/.editorconfig
 
+mkdir -p ~/.vim/.backup
+mkdir -p ~/.vim/.swp
+mkdir -p ~/.vim/.undo
+
 echo "Installed small Vim successfully!"

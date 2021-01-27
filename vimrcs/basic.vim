@@ -244,7 +244,8 @@ set softtabstop=2 " Tab 转为多少个空格。
 set linebreak
 
 " 设置行宽
-set textwidth=80
+" set textwidth=80 这么设置的话，在超过 80 的时候，会自动在末尾添加换行符。
+set textwidth=0
 
 " set autoindent
 " set cindent
@@ -252,7 +253,7 @@ set textwidth=80
 " choose one of them
 set smartindent
 
-" 自动折行
+" 自动折行，这个是在长度超过窗口的时候，显示为两行，但是实际数据还是一行。
 set wrap
 
 " 关闭自动折行

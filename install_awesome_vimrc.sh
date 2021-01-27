@@ -21,4 +21,8 @@ source $ProjectPath/my_configs.vim
 catch
 endtry" > ~/.vimrc
 
+mkdir -p ~/.vim/.backup
+mkdir -p ~/.vim/.swp
+mkdir -p ~/.vim/.undo
+
 echo "Installed the Vim configuration successfully!"
