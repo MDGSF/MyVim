@@ -164,7 +164,7 @@ endif
 " catch
 " endtry
 " colorscheme badwolf 会使用 ~/.vim/colors/badwolf.vim 这个文件
-" colorscheme desert
+colorscheme desert
 
 " set background=dark
 
