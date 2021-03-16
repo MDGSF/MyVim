@@ -1,0 +1,27 @@
+[user]
+  name = xxx
+  email = xxx
+[push]
+  default = simple
+[core]
+  editor = vim
+[color]
+  ui = true
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+[credential]
+  helper = cache --timeout=604800
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  au = add -u .
+  ll = log --oneline --graph
+  lg = log --graph
+  d = difftool
+  pop = stash pop
+
