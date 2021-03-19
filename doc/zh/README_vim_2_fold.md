@@ -25,6 +25,11 @@ set foldmethod=diff
 **方法一：**
 进入 visual 模式，选中文本，按 `zf` 折叠代码。
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_2_fold_01.gif" alt="vim_2_fold_01.gif" />
+</details>
+
 ### indent
 
 `set foldmethod=indent` 进入缩进折叠模式。

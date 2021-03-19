@@ -10,6 +10,11 @@
 
 `q/` 用来打开搜索历史窗口。在窗口内可以执行任意 Vim 操作。
 
+<details>
+<summary>展开查看图片</summary>
+<img src="../../images/vim_tips_0004_01.gif" alt="vim_tips_0004_01.gif" />
+</details>
+
 * * *
 
 > 按 `gg` 回到文档顶部。

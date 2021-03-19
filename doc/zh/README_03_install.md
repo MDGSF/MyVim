@@ -72,10 +72,14 @@ cd ~/.MyVim
 
 `install_basic_vimrc.sh` 只有一些最基础的配置。
 
-`install_awesome_vimrc.sh` 会带有一些常用的插件（建议安装）。
+`install_small_vimrc.sh` 只有一些最基础的配置，和几个常用的插件，
+插件放在 sources_small 目录下（建议使用）。
+
+`install_awesome_vimrc.sh` 会带有许多常用的插件。
 
 如果使用 `install_awesome_vimrc.sh` 安装之后，有插件报错了，
-那就使用 `install_basic_vimrc.sh` 来安装基本的版本就好了。
+那就使用 `install_basic_vimrc.sh` 或 `install_small_vimrc.sh`
+来安装基本的版本就好了。
 
 **如果你想要自己定制属于自己的配置**
 

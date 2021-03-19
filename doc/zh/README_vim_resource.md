@@ -38,6 +38,8 @@
 
 [Learn Vimscript the Hard Way 中文版](http://learnvimscriptthehardway.onefloweroneworld.com/)
 
+Practical Vim
+
 ## 一些图片
 
 放在了目录 `~/.MyVim/images/resource`
