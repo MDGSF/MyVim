@@ -7,7 +7,7 @@ max_line_length = 80
 indent_style = tab
 indent_size = 4
 
-[*.{rs,js,py,vim,sh,rb,nim,tex,h,hpp,inl,c,cpp,cxx,cc,gyp,lua}]
+[*.{rs,js,py,vim,sh,rb,nim,tex,h,hpp,inl,c,cpp,cxx,cc,gyp,lua,erl}]
 indent_style = space
 indent_size = 2
 insert_final_newline = true
