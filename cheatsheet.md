@@ -68,10 +68,36 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 ## aws s3
 
 
+## git
+
+```sh
+git clone git@git.minieye.tech:huangjian/demo.git
+git clone https://git.minieye.tech/huangjian/demo.git
+git clone git@github.com:MDGSF/RustPractice.git
+git clone https://github.com/MDGSF/RustPractice.git
+git push
+git pull
+
+创建一个新的分支，并且切换到新的分支
+git checkout -b newbranch
+
+切换到 branchname 对应的分支
+git checkout branchname
+
+合并 branchname 分支到当前分支
+git merge branchname
+
+查看当前分支状态
+git status | git st | gst
+
+git diff
+```
+
 ## python
 
 ```sh
-安装 conda，使用 conda 来安装不同版本的 python
+安装 conda，到清华源去下载 anaconda，并配置 conda 从清华源镜像下载
+使用 conda 来安装不同版本的 python
 conda create -n hello python=3.7.2
 conda activate hello
 
