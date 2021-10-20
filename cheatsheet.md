@@ -1,5 +1,21 @@
 # cheatsheet
 
+## grep查找
+
+```sh
+-r 递归查找
+-n 显示行号
+-i 忽略大小写
+-w 查找完整单词
+
+指定查找文件的后缀类型
+--include \*.h --include \*.cpp
+
+grep -rn "text"
+grep -rnw "text"
+grep -rnw "PermanentDelete" --include \*.go
+```
+
 ## 压缩 解压
 
 ```sh
@@ -158,5 +174,14 @@ docker run -it --rm \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   firefox
 xhost -
+
+在 docker 中运行 mysql
+docker run -it --rm mysql:tag --verbose --help
+docker run --name mysql5.7 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql:5.7.36
+docker run --name mysql5.7 \
+  -e MYSQL_ROOT_PASSWORD=1234567890 -d \
+  -p 3306:3306 \
+  mysql:5.7.36 \
+  --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 ```
 
