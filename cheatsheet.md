@@ -106,6 +106,13 @@ git merge branchname
 git status | git st | gst
 
 git diff
+
+git remote -v
+origin  https://github.com/MDGSF/RPractice.git (fetch)
+origin  https://github.com/MDGSF/RPractice.git (push)
+
+git remote rm origin
+git remote add origin https://github.com/MDGSF/RPractice.git
 ```
 
 ## python
@@ -137,5 +144,19 @@ pip freeze > requirements.txt
 docker --help
 docker image ls | docker images
 docker container ls | docker ps
+
+docker run hello-world
+docker run -it ubuntu bash
+
+docker build -t myubuntu16 .
+
+在 docker 中使用 firefox
+export DISPLAY=:0
+xhost +
+docker run -it --rm \
+  -e DISPLAY=$DISPLAY \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  firefox
+xhost -
 ```
 
