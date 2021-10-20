@@ -9,8 +9,20 @@ tar -zcvf xxx.tar.gz xxx
 解压 xxx.tar.gz 到当前目录
 tar -zxvf xxx.tar.gz
 
-解压 xxx.zip
+
+Zip command provides 10 levels of compression ( 0-9 ).
+-6 is used as default compression level.
+-0 is used for lowest level compression.
+-9 is used for hightest level comression
+把目录 xxx 压缩为 xxx.zip
+zip -0 -r xxx.zip xxx
+zip -r xxx.zip xxx
+
+解压 xxx.zip 到当前目录
 unzip xxx.zip
+
+解压 xxx.zip 到 outputdir 目录
+unzip -d outputdir xxx.zip
 ```
 
 ## 数据库 MySQL
@@ -71,6 +83,9 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 ## git
 
 ```sh
+git 使用代理
+export ALL_PROXY="socks5://127.0.0.1:1080"
+
 git clone git@git.minieye.tech:huangjian/demo.git
 git clone https://git.minieye.tech/huangjian/demo.git
 git clone git@github.com:MDGSF/RustPractice.git
@@ -111,5 +126,16 @@ pip install -r requirements.txt
 
 pip 使用清华源
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+生成 requirements.txt 文件
+pip freeze > requirements.txt
+```
+
+## docker
+
+```sh
+docker --help
+docker image ls | docker images
+docker container ls | docker ps
 ```
 
