@@ -1,5 +1,12 @@
 # cheatsheet
 
+## find查找
+
+```sh
+删除当前目录，子目录下的所有 target 目录
+find . -name "target" -type d -print -exec rm -rf {} \;
+```
+
 ## grep查找
 
 ```sh
@@ -14,6 +21,22 @@
 grep -rn "text"
 grep -rnw "text"
 grep -rnw "PermanentDelete" --include \*.go
+```
+
+## ripgrep查找
+
+```sh
+cargo install ripgrep
+rg -h
+
+-i 忽略大小写
+-w 查找完整单词
+
+rg Rust 查找 Rust
+rg Rust -i 忽略大小写
+
+指定文件后缀查找
+rg pcs-agent -w -g '*.go'
 ```
 
 ## 压缩 解压
@@ -94,7 +117,6 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 ## obs
 
 ## aws s3
-
 
 ## git
 
@@ -183,5 +205,17 @@ docker run --name mysql5.7 \
   -p 3306:3306 \
   mysql:5.7.36 \
   --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+```
+
+## keychain
+
+```text
+添加 keychain，不用一直输密码
+$ sudo apt install keychain
+$ hostname
+
+放入 ~/.zshrc
+/usr/bin/keychain --nogui ~/.ssh/id_rsa
+source $HOME/.keychain/[Put-Your-Hostname-Here]-sh
 ```
 
