@@ -3,7 +3,7 @@
 ## find查找
 
 ```sh
-删除当前目录，子目录下的所有 target 目录
+# 删除当前目录，子目录下的所有 target 目录
 find . -name "target" -type d -print -exec rm -rf {} \;
 ```
 
@@ -104,13 +104,13 @@ accessKeySecret=xxx
 ```sh
 ossutil ls
 
-复制文件 sil.tar.gz 到当前目录
+# 复制文件 sil.tar.gz 到当前目录
 ossutil cp oss://minieye-anno/test/sil.tar.gz .
 
-复制目录 one 到当前目录，包括 one
+# 复制目录 one 到当前目录，包括 one
 ossutil cp -r oss://minieye-anno/test/tasks/one .
 
-复制目录 one 到当前目录，不包括 one，只复制 one 目录下的文件和子目录
+# 复制目录 one 到当前目录，不包括 one，只复制 one 目录下的文件和子目录
 ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 ```
 
@@ -121,7 +121,7 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 ## git
 
 ```sh
-git 使用代理
+# git 使用代理
 export ALL_PROXY="socks5://127.0.0.1:1080"
 
 git clone git@git.minieye.tech:huangjian/demo.git
@@ -131,16 +131,16 @@ git clone https://github.com/MDGSF/RustPractice.git
 git push
 git pull
 
-创建一个新的分支，并且切换到新的分支
+# 创建一个新的分支，并且切换到新的分支
 git checkout -b newbranch
 
-切换到 branchname 对应的分支
+# 切换到 branchname 对应的分支
 git checkout branchname
 
-合并 branchname 分支到当前分支
+# 合并 branchname 分支到当前分支
 git merge branchname
 
-查看当前分支状态
+# 查看当前分支状态
 git status | git st | gst
 
 git diff
@@ -151,6 +151,28 @@ origin  https://github.com/MDGSF/RPractice.git (push)
 
 git remote rm origin
 git remote add origin https://github.com/MDGSF/RPractice.git
+```
+
+## ruby
+
+```sh
+# 使用 rbenv 进行版本管理
+# https://github.com/rbenv/rbenv
+rbenv install -l
+rbenv install 3.0.2
+rbenv versions
+rbenv global 3.0.2
+rbenv global
+rbenv local 2.7.4
+rbenv local
+rbenv rehash # 切换ruby版本之后必须执行这个命令
+```
+
+## javascript nodejs
+
+```sh
+# 使用 nvm 进行版本管理
+# https://github.com/nvm-sh/nvm
 ```
 
 ## python
@@ -188,7 +210,53 @@ docker run -it ubuntu bash
 
 docker build -t myubuntu16 .
 
-在 docker 中使用 firefox
+# export 用于容器，save 和 push 用于镜像
+# export 和 import 会丢失历史，save 和 load 则不会
+docker export # Export a container's filesystem as a tar archive
+docker import # Import the contents from a tarball to create a filesystem image
+docker save # Save one or more images to a tar archive
+docker load # Load an image from a tar archive or STDIN
+docker push
+docker pull
+
+# 数据卷
+docker volume ls
+
+# 创建了一个随机名字的 volume，并挂载到容器的 /data 目录下。
+docker run -it --rm -v /data ubuntu bash
+
+# 创建了一个指定名字的 volume，并挂载到容器的 /data 目录下。
+docker volume create vol_simple
+docker run -it --rm -v vol_simple:/data ubuntu bash
+
+# 将宿主机上的目录 /home/huangjian/git 挂载到容器的 /data 目录下。
+docker run -it --rm -v /home/huangjian/git:/data ubuntu bash
+
+# 先创建一个作为数据共享的容器
+# 然后再创建两个容器，使用第一个容器作为数据共享
+docker run --name vol_data -v /data ubuntu echo "This is data-only container"
+docker run -it --name vol_share1 --volumes-from vol_data ubuntu bash
+docker run -it --name vol_share2 --volumes-from vol_data ubuntu bash
+
+# docker run --rm
+# --rm 会在容器停止时删除容器，和容器所挂载的 volume
+# -v vol_simple:/containerdir    volume名字是vol_simple，可读写
+# -v /container                  volume名字是随机ID，可读写
+# -v /hostdir:/containerdir:ro   只读
+
+# 备份 volume，挂载了两个 volume
+# 第一个 volume：来自 vol_data 容器共享的 /data
+# 第二个 volume：将宿主机的当前目录挂载到 /backup
+docker run --rm --volumes-from vol_data -v $(pwd):/backup ubuntu tar cvf
+/backup/data.tar /data
+
+# 恢复 volume
+docker run -it --name vol_bck -v /data ubuntu bash
+docker run --rm --volumes-from vol_bck -v $(pwd):/backup ubuntu tar xvf
+/backup/data.tar -C /
+
+
+# 在 docker 中使用 firefox
 export DISPLAY=:0
 xhost +
 docker run -it --rm \
@@ -197,7 +265,8 @@ docker run -it --rm \
   firefox
 xhost -
 
-在 docker 中运行 mysql
+
+# 在 docker 中运行 mysql
 docker run -it --rm mysql:tag --verbose --help
 docker run --name mysql5.7 -e MYSQL_ROOT_PASSWORD=1234567890 -d mysql:5.7.36
 docker run --name mysql5.7 \
