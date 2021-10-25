@@ -256,6 +256,17 @@ docker run --rm --volumes-from vol_bck -v $(pwd):/backup ubuntu tar xvf
 /backup/data.tar -C /
 
 
+# docker 网络
+docker network create backend
+docker network create frontend
+docker network ls
+docker run -it --rm --name container1 --net backend busybox
+docker run -it --rm --name container2 --net backend busybox
+docker run -it --rm --name container3 --net frontend busybox
+# 把 container2 加入 frontend 的网络中
+docker network connect frontend container2
+
+
 # 在 docker 中使用 firefox
 export DISPLAY=:0
 xhost +
