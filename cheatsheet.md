@@ -76,11 +76,17 @@ shutdown
 # 10分钟后自动关机
 shutdown +10
 
+# 指定在 14:09 这个时间点自动关机
+shutdown 14:09
+
 # 取消之前定义的shutdown任务
 shutdown -c
 
 # 立马重启
 shutdown -r now
+
+# 指定在 14:09 这个时间点自动重启
+shutdown -r 14:15
 ```
 
 ## 数据库 MySQL
