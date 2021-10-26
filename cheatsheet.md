@@ -64,6 +64,25 @@ unzip xxx.zip
 unzip -d outputdir xxx.zip
 ```
 
+## 关机
+
+```sh
+# 立马关机
+shutdown -h now
+
+# 一分钟后自动关机，等价于 shutdown +1
+shutdown
+
+# 10分钟后自动关机
+shutdown +10
+
+# 取消之前定义的shutdown任务
+shutdown -c
+
+# 立马重启
+shutdown -r now
+```
+
 ## 数据库 MySQL
 
 ```sql
@@ -265,6 +284,12 @@ docker run -it --rm --name container2 --net backend busybox
 docker run -it --rm --name container3 --net frontend busybox
 # 把 container2 加入 frontend 的网络中
 docker network connect frontend container2
+
+# 可以在 container1 里面执行 ping c2
+docker network create isolated_nw
+docker run -it --rm --net=isolated_nw --name=container1 --link container2:c2 busybox
+docker run -it --rm --net=isolated_nw --name container2 busybox
+
 
 
 # 在 docker 中使用 firefox
