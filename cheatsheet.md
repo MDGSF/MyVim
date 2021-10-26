@@ -96,6 +96,85 @@ shutdown -r 14:15
 dd if=/dev/zero of=4G.txt count=4096 bs=1MB
 ```
 
+## ip 命令
+
+```sh
+# 主机: veth-a
+# nstest: veth-b
+
+# 创建一个名为nstest的network namespace
+sudo ip netns add nstest
+# 列出系统中已经存在的network namespace
+sudo ip netns list
+# 删除nstest
+sudo ip netns delete nstest
+
+# 在network namespace中执行一条命令：
+# sudo ip netns exec <network namespace name> <command>
+
+# 显示nstest namespace中的网卡信息
+sudo ip netns exec nstest ip addr
+# 启动一个nstest namespace的终端shell
+sudo ip netns exec nstest bash
+
+# 启动nstest namespace中的回环设备
+sudo ip netns exec ip link set dev lo up
+
+# 在主机上创建两张虚拟网卡veth-a和veth-b，可以通过 ip link 查看
+sudo ip link add veth-a type veth peer name veth-b
+
+# 将veth-b设备添加到nstest namespace中
+sudo ip link set veth-b netns nstest
+
+# 查看主机的网卡信息
+ip link
+
+# 查看nstest namespace的网卡信息
+sudo ip netns exec nstest ip link
+
+# 在主机上为veth-a配置IP并启动
+sudo ip addr add 10.0.0.1/24 dev veth-a
+sudo ip link set dev veth-a up
+
+# 为nstest namespace中的veth-b配置IP并启动
+sudo ip netns exec nstest ip addr add 10.0.0.2/24 dev veth-b
+sudo ip netns exec nstest ip link set dev veth-b up
+
+# 查看veth-a和veth-b之间的连通性
+sudo ip route
+ping 10.0.0.2
+sudo ip netns exec nstest ping 10.0.0.1
+```
+
+```sh
+# ns1: veth-a
+# ns2: veth-b
+
+# 创建两个network namespace
+sudo ip netns add ns1
+sudo ip netns add ns2
+sudo ip netns list
+
+# 创建veth pair设备veth-a, veth-b
+sudo ip link add veth-a type veth peer name veth-b
+
+# 将网卡分别放到两个network namespace中
+sudo ip link set veth-a netns ns1
+sudo ip link set veth-b netns ns2
+
+# 启动两张网卡
+sudo ip netns exec ns1 ip link set dev veth-a up
+sudo ip netns exec ns2 ip link set dev veth-b up
+
+# 分配IP
+sudo ip netns exec ns1 ip addr add 10.0.0.1/24 dev veth-a
+sudo ip netns exec ns2 ip addr add 10.0.0.2/24 dev veth-b
+
+# 验证连通
+sudo ip netns exec ns1 ping 10.0.0.2
+sudo ip netns exec ns2 ping 10.0.0.1
+```
+
 ## 数据库 MySQL
 
 ```sql
@@ -205,6 +284,7 @@ rbenv rehash # 切换ruby版本之后必须执行这个命令
 ```sh
 # 使用 nvm 进行版本管理
 # https://github.com/nvm-sh/nvm
+nvm ls
 ```
 
 ## python
