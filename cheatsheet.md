@@ -89,6 +89,13 @@ shutdown -r now
 shutdown -r 14:15
 ```
 
+## dd 命令
+
+```sh
+# 创建一个 4G 大小的空文件
+dd if=/dev/zero of=4G.txt count=4096 bs=1MB
+```
+
 ## 数据库 MySQL
 
 ```sql
