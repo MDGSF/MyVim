@@ -287,6 +287,13 @@ rbenv global
 rbenv local 2.7.4
 rbenv local
 rbenv rehash # 切换ruby版本之后必须执行这个命令
+
+# 查看文档
+# https://ruby-doc.org/
+ri Array
+ri Array.sort
+ri Hash#each
+ri Math::sqrt
 ```
 
 ## javascript nodejs
