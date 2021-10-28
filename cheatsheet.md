@@ -1,5 +1,15 @@
 # cheatsheet
 
+## 获取 bash 版本号
+
+```sh
+# 方法一
+bash --version
+
+# 方法二
+echo "${BASH_VERSION}"
+```
+
 ## find查找
 
 ```sh
