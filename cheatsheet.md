@@ -106,6 +106,12 @@ shutdown -r 14:15
 dd if=/dev/zero of=4G.txt count=4096 bs=1MB
 ```
 
+## passwd 重置密码
+
+```sh
+passwd username
+```
+
 ## ip 命令
 
 ```sh
