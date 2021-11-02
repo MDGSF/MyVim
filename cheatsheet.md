@@ -357,6 +357,8 @@ docker run -it ubuntu bash
 
 docker build -t myubuntu16 .
 
+docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
+
 # export 用于容器，save 和 push 用于镜像
 # export 和 import 会丢失历史，save 和 load 则不会
 docker export # Export a container's filesystem as a tar archive
