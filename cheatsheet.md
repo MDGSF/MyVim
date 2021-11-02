@@ -300,6 +300,18 @@ ri Array
 ri Array.sort
 ri Hash#each
 ri Math::sqrt
+
+# 执行 ruby 脚本
+ruby hello.rb
+# 启动交互式环境
+irb
+
+# 指定编码
+ruby -E UTF-8 hello.rb
+irb -E UTF-8
+
+# 简化 irb 的输出结果
+irb --simple-prompt
 ```
 
 ## javascript nodejs
