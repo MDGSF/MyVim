@@ -243,7 +243,19 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 
 ## obs
 
-## aws s3
+## aws
+
+```sh
+# https://github.com/aws/aws-cli
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html
+# 安装方法：从 github 上面下载压缩包，解压后按照 README 的方法即可安装成功。
+# s3：对象云存储，类似于 oss，obs
+# ECR：Docker Registry，用来保存 Docker 镜像
+
+# 上传本地的 docker 镜像到 aws
+# https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html
+
+```
 
 ## git
 
@@ -355,6 +367,9 @@ docker container ls | docker ps
 docker run hello-world
 docker run -it ubuntu bash
 
+# docker run 带环境变量
+docker run -it --rm -e TASK_COUNT=250 -e TASK_INDEX=0 render3d_v2
+
 docker build -t myubuntu16 .
 
 docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
@@ -367,6 +382,10 @@ docker save # Save one or more images to a tar archive
 docker load # Load an image from a tar archive or STDIN
 docker push
 docker pull
+
+# 重命名镜像
+docker image tag old_name:latest new_name:latest
+docker rmi old_name
 
 # 数据卷
 docker volume ls
