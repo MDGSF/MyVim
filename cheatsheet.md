@@ -205,6 +205,9 @@ select * from mysql.user\G
 
 select * from table_name;
 select count(*) from table_name;
+
+" 把某个数据库的所有权限，授权给某个用户
+GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'%';
 ```
 
 ## 挂载
@@ -439,6 +442,9 @@ docker network create isolated_nw
 docker run -it --rm --net=isolated_nw --name=container1 --link container2:c2 busybox
 docker run -it --rm --net=isolated_nw --name container2 busybox
 
+
+# 删除 15 天前创建的，并且没有被使用的镜像
+docker image prune -a --filter "until=$(date +'%Y-%m-%dT%H:%M:%S' --date='-15 days')"
 
 
 # 在 docker 中使用 firefox
