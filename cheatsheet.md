@@ -10,6 +10,15 @@ bash --version
 echo "${BASH_VERSION}"
 ```
 
+## 从 bash 切换为 zsh
+
+```sh
+sudo apt install zsh
+
+# 设置默认 shell 为 zsh
+chsh -s /usr/bin/zsh
+```
+
 ## find查找
 
 ```sh
@@ -293,6 +302,28 @@ origin  https://github.com/MDGSF/RPractice.git (push)
 
 git remote rm origin
 git remote add origin https://github.com/MDGSF/RPractice.git
+
+# 查看所有 tag
+git tag
+
+# 添加新的标签
+git tag <tagName>
+git tag v1.0.0
+
+# 将本地 tag 推送到服务器
+git push --tags
+
+# 从指定 tag 检出代码到新的 branch
+git checkout -b <newBranchName> <tagName>
+
+# 删除远程 tag
+git push origin --delete tag <tagName>
+
+# 删除本地 tag
+git tag -d <tagName>
+
+# 指定 commitID 打 tag
+git tag <tagName> <commitID>
 ```
 
 ## ruby
