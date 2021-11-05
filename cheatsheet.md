@@ -121,6 +121,17 @@ dd if=/dev/zero of=4G.txt count=4096 bs=1MB
 passwd username
 ```
 
+## vimdiff
+
+```sh
+# do - Get changes from other window into the current window.
+# dp - Put the changes from current window into the other window.
+# ]c - Jump to the next change.
+# [c - Jump to the previous change.
+# zo – open folded text
+# zc – close folded text
+```
+
 ## ip 命令
 
 ```sh
