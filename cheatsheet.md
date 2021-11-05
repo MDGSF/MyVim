@@ -530,3 +530,10 @@ pm2 set pm2-logrotate:retain 7
 pm2 set pm2-logrotate:compress true
 ```
 
+## load average 系统负载
+
+```sh
+# 可以用 top, uptime 命令获取到该信息，也可以读取 /proc/loadavg 文件
+# 3 个数字表示过去 1 分钟，5 分钟，15 分钟的系统负载
+load average: 0.00, 0.00, 0.00
+```
