@@ -324,6 +324,9 @@ git tag -d <tagName>
 
 # 指定 commitID 打 tag
 git tag <tagName> <commitID>
+
+# 配置 git ls 命令，获取日志
+git config --global alias.ls "log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
 ## ruby

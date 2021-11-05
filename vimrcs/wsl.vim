@@ -18,3 +18,6 @@ if executable(s:clip)
   augroup END
 endif
 
+
+nnoremap <Leader>v <c-v>
+
