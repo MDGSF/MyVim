@@ -10,6 +10,12 @@ bash --version
 echo "${BASH_VERSION}"
 ```
 
+## 查看 ubuntu 版本信息
+
+```sh
+lsb_release -a
+```
+
 ## 从 bash 切换为 zsh
 
 ```sh
@@ -548,3 +554,14 @@ pm2 set pm2-logrotate:compress true
 # 3 个数字表示过去 1 分钟，5 分钟，15 分钟的系统负载
 load average: 0.00, 0.00, 0.00
 ```
+
+## 系统服务 systemd
+
+```sh
+# 去掉开机启动
+systemctl disable pcs-agent
+
+# 立刻停掉
+systemctl stop pcs-agent
+```
+
