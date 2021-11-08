@@ -138,6 +138,21 @@ passwd username
 # zc – close folded text
 ```
 
+## nc 命令
+
+```sh
+# 在本地启动一个 TCP 服务器
+nc -l 127.0.0.1 1234
+# TCP 客户端去连接本地的 TCP 服务器
+nc 127.0.0.1 1234
+
+# 启动一个远程 bash 终端，在服务端执行如下命令
+rm -f /tmp/f; mkfifo /tmp/f
+cat /tmp/f | /bin/sh -i 2>&1 | nc -l 127.0.0.1 1234 > /tmp/f
+# 在客户端执行
+nc 127.0.0.1 1234
+```
+
 ## ip 命令
 
 ```sh
