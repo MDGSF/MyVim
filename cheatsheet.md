@@ -440,6 +440,7 @@ docker run -it ubuntu bash
 docker run -it --rm -e TASK_COUNT=250 -e TASK_INDEX=0 render3d_v2
 
 docker build -t myubuntu16 .
+docker build --build-arg ALL_PROXY="socks5://172.26.96.1:1080" -t ruby-hello .
 
 docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 
