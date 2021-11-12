@@ -580,16 +580,29 @@ source $HOME/.keychain/[Put-Your-Hostname-Here]-sh
 ## pm2
 
 ```sh
+# 查看列表
+pm2 list
+
+# 启动进程
+pm2 start pm2.json
+
+# 停止进程
+pm2 stop name|id
+
+# 删除进程
+pm2 delete name|id
+
+# 重新加载
+pm2 reload name|id
+
 # 重命名
 pm2 restart <id> --name <newName>
 
 # pm2 日志管理
 # https://www.npmjs.com/package/pm2-logrotate
 pm2 install pm2-logrotate
-
 # 保留 7 份日志文件
 pm2 set pm2-logrotate:retain 7
-
 # 开启日志压缩
 pm2 set pm2-logrotate:compress true
 ```
