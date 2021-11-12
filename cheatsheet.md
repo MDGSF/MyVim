@@ -114,6 +114,16 @@ shutdown -r now
 shutdown -r 14:15
 ```
 
+## touch 命令
+
+```sh
+# 在当前目录下创建一个 text.txt 的文件
+touch test.txt
+
+# 在当前文件夹下创建 100 个文件：file1, file2, ..., file99, file100
+touch file{1..100}
+```
+
 ## dd 命令
 
 ```sh
@@ -136,6 +146,27 @@ passwd username
 # [c - Jump to the previous change.
 # zo – open folded text
 # zc – close folded text
+```
+
+## rsync 复制文件目录
+
+```sh
+# -a 等价于 -rlptgoD
+# -r 递归复制目录
+# -v 显示复制的过程
+# -l 同步软链接
+# -H 同步硬链接
+# -t 保留修改时间
+# -z 传输数据的时候会对数据进行压缩
+# -P 可以看到进度条
+# --daemon 后台运行
+
+# 把 source 目录下的文件包括子目录都复制到 destination 目录下
+# 要记得在 source 后面加上 /，
+# 如果没有加的话，会把 source 目录复制到 destination 目录下
+rsync -rvlt source/ destination
+
+rsync -avP source/ destination
 ```
 
 ## nc 命令
