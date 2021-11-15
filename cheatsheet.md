@@ -64,6 +64,10 @@ rg Rust -i 忽略大小写
 rg pcs-agent -w -g '*.go'
 ```
 
+## awk
+
+## sed
+
 ## 压缩 解压
 
 ```sh
@@ -131,6 +135,16 @@ touch file{1..100}
 dd if=/dev/zero of=4G.txt count=4096 bs=1MB
 ```
 
+## 切换用户
+
+```sh
+# 切换到 root 用户
+sudo su
+
+# 切换到普通用户
+su username
+```
+
 ## passwd 重置密码
 
 ```sh
@@ -151,6 +165,8 @@ passwd username
 ## rsync 复制文件目录
 
 ```sh
+# 这个工具复制速度似乎不是很快，感觉像是单线程在复制。
+
 # -a 等价于 -rlptgoD
 # -r 递归复制目录
 # -v 显示复制的过程
