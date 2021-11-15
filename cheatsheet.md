@@ -68,6 +68,25 @@ rg pcs-agent -w -g '*.go'
 
 ## sed
 
+## 重定向
+
+```sh
+# 0 标准输入 stdin
+# 1 标准输出 stdout
+# 2 标准错误输出 stderr
+
+# 重定向标准输出到 log.txt 文件
+# 那标准错误输出仍然是屏幕
+exe > log.txt
+
+# 把 input.txt 文件作为 exe 程序的标准输入
+exe < input.txt
+
+# 管道，把第一个程序的标准输出，重定向到第二个程序的标准输入
+# 第一个程序的标准错误输出？好像还是屏幕
+firstExe | secondExe
+```
+
 ## 压缩 解压
 
 ```sh
