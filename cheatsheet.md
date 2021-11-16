@@ -17,6 +17,9 @@
 # ctrl + d 删除光标处的字符
 # ctrl + h 删除光标前的字符
 
+# ctrl + l 清屏
+# clear 清屏
+
 # ctrl + y 粘贴至光标前
 # ctrl + shift + v 粘贴至光标前
 
@@ -497,6 +500,14 @@ irb -E UTF-8
 
 # 简化 irb 的输出结果
 irb --simple-prompt
+
+# https://mirror.tuna.tsinghua.edu.cn/help/rubygems/
+# 添加 TUNA 源并移除默认源
+gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https://rubygems.org/
+# 列出已有源，应该只有 TUNA 一个
+gem sources -l
+# 使用以下命令替换 bundler 默认源
+bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
 ```
 
 ## javascript nodejs
