@@ -508,6 +508,11 @@ gem sources --add https://mirrors.tuna.tsinghua.edu.cn/rubygems/ --remove https:
 gem sources -l
 # 使用以下命令替换 bundler 默认源
 bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+
+gem list # 列出本地已经安装的
+gem search redis # 搜索远程
+gem search -l sqlite # 搜索本地
+gem install sqlite3 # 安装
 ```
 
 ## javascript nodejs
