@@ -358,6 +358,12 @@ select count(*) from table_name;
 GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'%';
 ```
 
+## redis
+
+```sh
+./redis-cli -h 127.0.0.1 -p 6379
+```
+
 ## 挂载
 
 ```sh
@@ -712,5 +718,12 @@ systemctl disable pcs-agent
 
 # 立刻停掉
 systemctl stop pcs-agent
+```
+
+## android
+
+```sh
+# 重新挂载系统路径为读写
+mount -o rw,remount,rw /system
 ```
 
