@@ -245,6 +245,16 @@ rsync -rvlt source/ destination
 rsync -avP source/ destination
 ```
 
+## ifstat 查看网卡进出流量
+
+```sh
+# 安装
+sudo apt install ifstat
+
+# 查看网卡进出流量
+ifstat
+```
+
 ## tcpdump 抓包
 
 ```sh
@@ -672,6 +682,11 @@ docker run --name mysql5.7 \
   -p 3306:3306 \
   mysql:5.7.36 \
   --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+
+# 统计容器状态信息
+docker stats
+docker stats --no-stream
 ```
 
 ## keychain
