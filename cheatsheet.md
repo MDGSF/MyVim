@@ -245,6 +245,13 @@ rsync -rvlt source/ destination
 rsync -avP source/ destination
 ```
 
+## tcpdump 抓包
+
+```sh
+# 指定网卡，指定 IP 地址，保存到 log.cap 文件
+sudo tcpdump -i eth0 host 192.168.1.233 -w log.cap
+```
+
 ## nc 命令
 
 ```sh
@@ -472,6 +479,13 @@ git tag <tagName> <commitID>
 
 # 配置 git ls 命令，获取日志
 git config --global alias.ls "log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+## Rust
+
+```sh
+# 在当前目录使用 nightly 版本的 rust
+rustup override add nightly
 ```
 
 ## ruby
