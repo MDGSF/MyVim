@@ -151,6 +151,9 @@ tar -zcvf xxx.tar.gz xxx
 解压 xxx.tar.gz 到当前目录
 tar -zxvf xxx.tar.gz
 
+解压 xxx.tar 到当前目录
+tar -xvf xxx.tar
+
 
 Zip command provides 10 levels of compression ( 0-9 ).
 -6 is used as default compression level.
