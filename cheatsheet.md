@@ -54,7 +54,21 @@ echo "${BASH_VERSION}"
 ## 查看 ubuntu 版本信息
 
 ```sh
+# No LSB modules are available.
+# Distributor ID: Ubuntu
+# Description:    Ubuntu 20.04.3 LTS
+# Release:        20.04
+# Codename:       focal
 lsb_release -a
+
+# Linux DESKTOP-7ATE1QU 5.10.16.3-microsoft-standard-WSL2 #1 SMP Fri Apr 2 22:23:49 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+uname -a
+
+# Linux
+uname -s
+
+# x86_64
+uname -m
 ```
 
 ## 从 bash 切换为 zsh
@@ -243,6 +257,24 @@ passwd username
 rsync -rvlt source/ destination
 
 rsync -avP source/ destination
+```
+
+## iperf 测试网络性能
+
+```sh
+# 安装 iperf
+sudo apt-get install iperf3
+
+# 启动服务端监听
+iperf3 -s
+# 启动客户端测试
+iperf3 -c 127.0.0.1
+
+# -c 指定 host，就是服务端的IP地址
+# -t 指定测试时间长度（单位：秒），默认是测试 10 秒
+
+# 测试 30 秒
+iperf3 -c 127.0.0.1 -t 30
 ```
 
 ## ifstat 查看网卡进出流量
