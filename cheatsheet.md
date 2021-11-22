@@ -71,6 +71,26 @@ uname -s
 uname -m
 ```
 
+## 获取 IP 地址
+
+```sh
+# 这个在不同电脑上可能需要调整
+ifconfig eth0 | grep "inet" | grep "netmask" | awk '{print $2}'
+
+# 这个会同时返回多个 IP 地址
+hostname -I
+```
+
+## 获取当前用户信息
+
+```sh
+# 获取当前用户信息
+id
+
+# 获取当前用户的 uid
+id -u
+```
+
 ## 从 bash 切换为 zsh
 
 ```sh
@@ -120,6 +140,18 @@ rg pcs-agent -w -g '*.go'
 ```
 
 ## awk
+
+```sh
+# $0 整行文本
+# $1 第 1 部分文本
+# $2 第 2 部分文本
+# $n 第 n 部分文本
+# 默认应该是以空白字符作为分隔符
+xxx | grep "xxx" | awk '{print $0}'
+
+# -F 用来指定分隔符
+awk -F '.' '{print $0}'
+```
 
 ## sed
 
