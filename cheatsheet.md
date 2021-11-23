@@ -756,6 +756,36 @@ docker stats
 docker stats --no-stream
 ```
 
+## k8s
+
+```sh
+# 根据 labels { key: value } 进行过滤
+
+# key值等于environment并且value值等于production
+# environment = production
+
+# key值等于tier并且value值不等于fronted
+# tier != fronted
+
+# 过滤出位于production环境但非前端的资源对象
+# 使用逗号分隔
+# environment=production,tier!=fronted
+
+# key值等于environment并且value值等于production或qa的资源对象
+# environment in (production, qa)
+
+# key值等于tier并且value值不等于fronted且backend的资源对象
+# tier notin (fronted, backend)
+
+# key值等于partition的资源对象，不需要检查value值
+# partition
+
+# 过滤出key值partition且不处于qa环境的资源对象
+# partition,environment notin (qa)
+
+# partition in (customerA, customerB),environment!=qa
+```
+
 ## keychain
 
 ```text
