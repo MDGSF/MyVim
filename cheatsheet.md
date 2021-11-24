@@ -784,6 +784,15 @@ docker stats --no-stream
 # partition,environment notin (qa)
 
 # partition in (customerA, customerB),environment!=qa
+
+
+# 定义客户端上下文
+kubectl config set-context dev --namespace=development
+kubectl config set-context prod --namespace=production
+# 切换到你希望进行操作的namespace
+kubectl config use-context dev
+# 查看当前所处的上下文
+kubectl config view
 ```
 
 ## keychain
