@@ -840,6 +840,7 @@ kubectl exec $POD_NAME -- env
 kubectl exec -ti $POD_NAME -- bash
 
 
+# 应用外部可见
 # 查看 pods 列表
 kubectl get pods
 # 查看 services 列表
@@ -876,6 +877,66 @@ kubectl delete service -l app=kubernetes-bootcamp
 kubectl get services
 # 从外部访问服务，删掉 service 之后就没法访问了
 curl $(minikube ip):$NODE_PORT
+
+
+# 应用可扩展
+# 查看 deployments 列表
+kubectl get deployments
+# 查看 Deployment 创建的 ReplicaSet
+# ReplicaSet 名字的格式 [DEPLOYMENT-NAME]-[RANDOM-STRING]
+kubectl get rs
+# 扩展 kubernetes-bootcamp 这个 deployment 为 4 个副本
+kubectl scale deployments/kubernetes-bootcamp --replicas=4
+# 再次查看 deployments 列表
+kubectl get deployments
+# 查看下 pods 列表
+kubectl get pods -o wide
+# 查看 kubernetes-bootcamp 这个 deployment 的详细信息
+kubectl describe deployments/kubernetes-bootcamp
+# 查看 kubernetes-bootcamp 这个 service 的详细信息
+kubectl describe services/kubernetes-bootcamp
+# 获取 kubernetes-bootcamp 这个 service 的对外 port 端口号
+export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+# 从外部访问服务，因为有4个副本，所以每次访问都会被自动分配到不同的副本上
+curl $(minikube ip):$NODE_PORT
+# 把 kubernetes-bootcamp 这个 deployment 的副本修改为 2
+kubectl scale deployments/kubernetes-bootcamp --replicas=2
+# 再次查看 deployments 列表
+kubectl get deployments
+# 查看下 pods 列表，可以看到只有两个 pod 了
+kubectl get pods -o wide
+
+
+# 应用更新
+# 查看 deployments 列表
+kubectl get deployments
+# 查看 pods 列表
+kubectl get pods
+# 查看 pods 的详细信息
+kubectl describe pods
+# 更新 kubernetes-bootcamp 这个 deployments 的 image 镜像
+kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2
+# 查看 pods 列表
+kubectl get pods
+# 查看 kubernetes-bootcamp 这个 service 的详细信息
+kubectl describe services/kubernetes-bootcamp
+# 获取 kubernetes-bootcamp 这个 service 的对外 port 端口号
+export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+# 从外部访问服务
+curl $(minikube ip):$NODE_PORT
+# ?? 看着像是查看下是不是更新成功了
+kubectl rollout status deployments/kubernetes-bootcamp
+# 查看 pods 的详细信息
+kubectl describe pods
+
+# 更新了一个错误的 v10 不存在的版本
+kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=gcr.io/google-samples/kubernetes-bootcamp:v10
+kubectl get deployments
+kubectl get pods
+kubectl describe pods
+kubectl rollout undo deployments/kubernetes-bootcamp # 回退版本
+kubectl get pods
+kubectl describe pods
 
 
 # 定义客户端上下文
