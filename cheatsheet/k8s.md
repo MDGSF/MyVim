@@ -220,8 +220,30 @@ Cluster，如何将他们创建的Controller、Pod等资源分开呢？答案就
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
+```sh
+# kubeadm 安装
 
+Your Kubernetes control-plane has initialized successfully!
 
+To start using your cluster, you need to run the following as a regular user:
 
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following
+on each as root:
+
+kubeadm join 172.31.9.32:6443 --token cvi0eu.gt3gnrvxroajt9ru \
+  --discovery-token-ca-cert-hash sha256:212a77035fd2652d97b3905ac8bcb0cfbd2244a337c807d8ca3698a0637d943e
+```
 
 
