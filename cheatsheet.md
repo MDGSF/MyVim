@@ -186,6 +186,8 @@ tar -zxvf xxx.tar.gz
 解压 xxx.tar 到当前目录
 tar -xvf xxx.tar
 
+解压 xxx.gz 到当前目录
+gunzip xxx.gz
 
 Zip command provides 10 levels of compression ( 0-9 ).
 -6 is used as default compression level.

@@ -1,0 +1,21 @@
+# kubectl create -f nginx.yaml
+
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx-controller
+spec:
+  replicas: 2
+  selector:
+    name: nginx
+  template:
+    metadata:
+      labels:
+        name: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+
