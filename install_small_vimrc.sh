@@ -11,6 +11,7 @@ echo "set runtimepath+=${ProjectPath}
 
 source $ProjectPath/vimrcs/basic.vim
 source $ProjectPath/vimrcs/small.vim
+source $ProjectPath/vimrcs/wsl.vim
 " > ~/.vimrc
 
 cp $ProjectPath/editorconfig ~/.editorconfig

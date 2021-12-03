@@ -168,6 +168,8 @@ colorscheme desert
 
 " set background=dark
 
+set colorcolumn=80
+
 " 使用 utf-8 编码。
 " Set utf8 as standard encoding and en_US as the standard language
 " vim 打开文件的时候，会根据 fileencodings 所列出的编码来一个个尝试打开文件，

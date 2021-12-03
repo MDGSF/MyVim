@@ -17,3 +17,8 @@ let g:NERDTreeWinSize=35
 noremap <leader>nn :NERDTreeToggle<cr>
 noremap <leader>nb :NERDTreeFromBookmark<Space>
 noremap <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EditorConfig_disable_rules = ['max_line_length']
