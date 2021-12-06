@@ -132,11 +132,38 @@ rg -h
 -i 忽略大小写
 -w 查找完整单词
 
-rg Rust 查找 Rust
-rg Rust -i 忽略大小写
+# 在当前目录下递归查找包含 Rust 的行
+rg Rust
 
-指定文件后缀查找
+# 在当前目录下递归查找包含 Rust 的行，忽略大小写
+rg Rust -i
+
+# 在当前目录下递归查找包含 pcs-agent 的行，
+# -w 查找完整单词
+# -g '*.go' 指定文件后缀查找
 rg pcs-agent -w -g '*.go'
+
+# 在 utils.py 文件中查找包含 image 的行
+rg image utils.py
+
+# 在 src 目录下递归查找包含 image 的行
+rg image src/
+
+# 不包含 dir1 和 dir2 目录
+rg pattern -g '!dir1/' -g '!dir2/'
+
+# 反向查找，查找不包含 image 的行
+rg -v image
+
+# 查找以 We 开头的行
+rg '^We' test.txt
+
+# 按字面量查找，不使用正则表达式查找
+rg -F '(test)'
+
+# -g 参数可以多次使用
+rg image -g '*.py'    # 指定文件类型查找
+rg image -g '!*.py'   # 和上面的相反
 ```
 
 ## awk

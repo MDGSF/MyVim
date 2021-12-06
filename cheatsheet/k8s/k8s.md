@@ -2,6 +2,19 @@
 
 https://yeasy.gitbook.io/docker_practice/
 
+## 常用命令
+
+### 删除资源
+
+```sh
+kubectl delete TYPE RESOURCE -n NS  删除指定名称空间内的指定资源
+kubectl delete TYPE --all -n NS  删除指定名称空间内的指定类型的所有资源
+kubectl delete all -n NS 删除指定名称空间内的所有资源
+kubectl delete all --all 删除所有名称空间内的所有资源
+```
+
+## 标签
+
 ```sh
 # 根据 labels { key: value } 进行过滤
 
