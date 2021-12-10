@@ -273,6 +273,67 @@ touch file{1..100}
 dd if=/dev/zero of=4G.txt count=4096 bs=1MB
 ```
 
+## ssh 登录
+
+```sh
+# 登录服务器
+ssh username@ip_address
+
+# ssh禁用密码登录和root用户登录
+# 修改 /etc/ssh/sshd_config 文件
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+PermitRootLogin no
+PermitRootLogin prohibit-password
+
+# 重启服务
+/etc/init.d/ssh reload
+sudo systemctl reload ssh
+```
+
+## 用户组相关命令
+
+```sh
+# 查看所有用户组
+cat /etc/group
+
+# 创建用户组
+sudo addgroup <groupname>
+
+# 删除用户组
+sudo delgroup <groupname>
+
+# 用户组添加用户
+sudo adduser <username> <groupname>
+
+# 用户组移除用户
+sudo deluser <username> <groupname>
+
+# 查看用户组中的用户
+cat /etc/group | grep <groupname>
+getent group <groupname>
+getent group <groupname> | awk -F: '{print $4}'
+```
+
+## 创建删除用户
+
+```sh
+# 创建用户前修改配置文件 /etc/adduser.conf
+DIR_MODE=0750  表示用户HOME目录不允许其他用户查看
+
+# 使用 /etc/adduser.conf 配置创建用户
+sudo adduser <username>
+# 指定参数创建用户
+sudo adduser --home /home/<username> --shell /bin/bash <username>
+
+# 删除用户及其 HOME 目录
+# 删除用户的时候，对应的用户组也会一起被删除
+sudo deluser --remove-home <username>
+# 删除用户及其 HOME 目录，并备份 HOME 到当前目录
+sudo deluser --remove-home --backup <username>
+```
+
 ## 切换用户
 
 ```sh
@@ -281,6 +342,9 @@ sudo su
 
 # 切换到普通用户
 su username
+
+# 切换用户
+sudo -iu username
 ```
 
 ## passwd 重置密码
@@ -783,6 +847,9 @@ docker run --name mysql5.7 \
 # 统计容器状态信息
 docker stats
 docker stats --no-stream
+
+# 查看容器信息
+docker inspect <containerID>
 ```
 
 ## keychain
