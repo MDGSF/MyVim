@@ -132,16 +132,16 @@ rg -h
 -i 忽略大小写
 -w 查找完整单词
 
-# 在当前目录下递归查找包含 Rust 的行
-rg Rust
+# 在当前目录下递归查找包含 foo 的行
+rg foo
 
-# 在当前目录下递归查找包含 Rust 的行，忽略大小写
-rg Rust -i
+# 在当前目录下递归查找包含 foo 的行，忽略大小写
+rg foo -i
 
-# 在当前目录下递归查找包含 pcs-agent 的行，
+# 在当前目录下递归查找包含 foo 的行，
 # -w 查找完整单词
 # -g '*.go' 指定文件后缀查找
-rg pcs-agent -w -g '*.go'
+rg foo -w -g '*.go'
 
 # 在 utils.py 文件中查找包含 image 的行
 rg image utils.py
@@ -209,6 +209,9 @@ tar -zcvf xxx.tar.gz xxx
 
 解压 xxx.tar.gz 到当前目录
 tar -zxvf xxx.tar.gz
+
+解压 xxx.tar.xz 到当前目录
+tar -xvJf xxx.tar.xz
 
 解压 xxx.tar 到当前目录
 tar -xvf xxx.tar
@@ -351,6 +354,26 @@ sudo -iu username
 
 ```sh
 passwd username
+```
+
+## sudoers
+
+```sh
+# 在 /etc/sudoers.d/ 目录下创建文件 admin，内容如下：
+%admin ALL=(ALL) ALL
+
+# 在 /etc/sudoers.d/ 目录下创建文件 s0，内容如下：
+%s0 ALL=(s0:s0) NOPASSWD:ALL
+```
+
+## tree
+
+```sh
+# 以树状形式查看当前目录
+tree
+
+# 以树状形式查看 /opt/node 目录，只查看两个层级
+tree -L 2 /opt/node
 ```
 
 ## vimdiff
@@ -711,6 +734,9 @@ gem install sqlite3 # 安装
 # 使用 nvm 进行版本管理
 # https://github.com/nvm-sh/nvm
 nvm ls
+
+# 安装指定版本到全局环境
+https://github.com/nodesource/distributions
 ```
 
 ## python
@@ -917,5 +943,27 @@ systemctl stop pcs-agent
 ```sh
 # 重新挂载系统路径为读写
 mount -o rw,remount,rw /system
+```
+
+## ufw 防火墙
+
+```sh
+# 查看帮助文档
+ufw --help
+# 启用 ufw
+ufw enable
+# 禁用 ufw
+ufw disable
+# 查看状态
+ufw status
+# 允许IP地址172.18.225.45来源的流量访问端口6379
+ufw allow from 172.18.225.45 to any port 6379
+
+# 查看 ufw 默认策略
+ufw status verbose
+# 修改 ufw 默认策略为 allow
+ufw default allow
+# 修改 ufw 默认策略为 deny
+ufw default deny
 ```
 
