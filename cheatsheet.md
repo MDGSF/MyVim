@@ -293,6 +293,8 @@ PermitRootLogin prohibit-password
 # 重启服务
 /etc/init.d/ssh reload
 sudo systemctl reload ssh
+
+# 公钥放到服务器上的 ~/.ssh/authorized_keys 中
 ```
 
 ## 用户组相关命令
