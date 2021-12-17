@@ -41,6 +41,28 @@
 # !! 执行上一条命令
 ```
 
+## 查看当前 shell
+
+```sh
+# 输出当前 shell 的名字
+echo $0
+```
+
+## 切换为 bash
+
+```sh
+chsh -s /usr/bin/bash
+```
+
+## 从 bash 切换为 zsh
+
+```sh
+sudo apt install zsh
+
+# 设置默认 shell 为 zsh
+chsh -s /usr/bin/zsh
+```
+
 ## 获取 bash 版本号
 
 ```sh
@@ -89,15 +111,6 @@ id
 
 # 获取当前用户的 uid
 id -u
-```
-
-## 从 bash 切换为 zsh
-
-```sh
-sudo apt install zsh
-
-# 设置默认 shell 为 zsh
-chsh -s /usr/bin/zsh
 ```
 
 ## find查找
@@ -967,5 +980,18 @@ ufw status verbose
 ufw default allow
 # 修改 ufw 默认策略为 deny
 ufw default deny
+```
+
+## sqlite
+
+```sh
+# 查看版本
+sqlite3 --version
+# 打开一个数据库
+sqlite3 data.db
+# 查看所有的表格，前面需要一个点
+.tables
+# 查询表格数据
+select * from tablename;
 ```
 
