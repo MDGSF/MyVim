@@ -4,6 +4,19 @@ https://yeasy.gitbook.io/docker_practice/
 
 ## 常用命令
 
+### 常用资源
+
+```sh
+kubectl get nodes
+kubectl get deployments
+kubectl get pods
+kubectl get services
+
+# 获取 Ingress 信息
+kubectl get ing
+kubectl get ingress
+```
+
 ### 删除资源
 
 ```sh
