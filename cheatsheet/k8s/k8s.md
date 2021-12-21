@@ -1,5 +1,6 @@
 # k8s
 
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 https://yeasy.gitbook.io/docker_practice/
 
 ## 常用命令
@@ -7,14 +8,24 @@ https://yeasy.gitbook.io/docker_practice/
 ### 常用资源
 
 ```sh
+kubectl version # 查看版本号
+kubectl cluster-info # 查看集群信息
+
 kubectl get nodes
 kubectl get deployments
 kubectl get pods
 kubectl get services
+kubectl get jobs
 
 # 获取 Ingress 信息
 kubectl get ing
 kubectl get ingress
+
+# 根据 job 名字获取所有的 pods
+kubectl get pods --selector=job-name=bash-for-loop
+kubectl get pods --selector=job-name=bash-for-loop -o json
+# 查询 pods 的时候，显示标签
+kubectl get pods --show-labels
 ```
 
 ### 删除资源
