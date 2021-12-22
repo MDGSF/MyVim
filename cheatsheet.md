@@ -634,6 +634,8 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 ```sh
 # git 使用代理
 export ALL_PROXY="socks5://127.0.0.1:1080"
+ALL_PROXY="socks5://127.0.0.1:1080" git clone https://xxx
+ALL_PROXY="socks5://127.0.0.1:1080" git pull
 
 git clone git@git.minieye.tech:huangjian/demo.git
 git clone https://git.minieye.tech/huangjian/demo.git
