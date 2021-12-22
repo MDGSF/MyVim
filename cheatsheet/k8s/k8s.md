@@ -10,16 +10,22 @@ https://yeasy.gitbook.io/docker_practice/
 ```sh
 kubectl version # 查看版本号
 kubectl cluster-info # 查看集群信息
+kubectl api-resources
 
 kubectl get nodes
-kubectl get deployments
-kubectl get pods
+kubectl get pod/pods
 kubectl get pods --show-labels # 查询 pods 的时候，显示标签
+kubectl get pods <pod_name>
+kubectl get pods <pod_name> -o yaml | less
 kubectl get services
-kubectl get jobs
-kubectl get replicasets
+kubectl get job/jobs
+kubectl get cronjobs
+kubectl get deploy/deployment/deployments
+kubectl get replicaset/replicasets
 kubectl get replicasets <replicaset_name> -o yaml | less
+kubectl get ds/daemonsets
 kubectl get ing/ingress # 获取 Ingress 信息
+kubectl get cm/configmap
 ```
 
 ## kubectl delete
@@ -29,6 +35,26 @@ kubectl delete TYPE RESOURCE -n NS  删除指定名称空间内的指定资源
 kubectl delete TYPE --all -n NS  删除指定名称空间内的指定类型的所有资源
 kubectl delete all -n NS 删除指定名称空间内的所有资源
 kubectl delete all --all 删除所有名称空间内的所有资源
+
+kubectl delete pods <pod_name>
+kubectl delete jobs <job_name>
+kubectl delete cronjobs <cronjob_name>
+kubectl delete ds <ds_name>
+kubectl delete cm <configmap_name>
+```
+
+## kubectl edit
+
+```sh
+kubectl edit deployment <deployment_name>
+kubectl edit pods <pod_name>
+```
+
+## 使用 yaml 文件
+
+```sh
+kubectl apply -f xxx.yaml
+kubectl create -f xxx.yaml
 ```
 
 ## 标签
@@ -103,6 +129,25 @@ kubectl get pods <pod_name> -o yaml | less
 kubectl annotate pods <pod_name> key=value
 ```
 
+## deployments
+
+```sh
+# 更新 deployments 中的镜像
+# set image 设置镜像
+# deployment.v1.apps 资源类型，也可写为 deployment 或 deployment.apps
+# nginx-deployment 要更新的 deployment 名字
+# nginx= 要更新的容器名字
+# nginx:1.9.1 新的镜像
+kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1
+
+# 快速回滚到上一个版本
+kubectl rollout undo deployment/nginx-deployment
+kubectl rollout undo deployment nginx-deployment
+# 回滚 deployment 到某一个版本，需要先查询版本列表：
+kubectl rollout history deployment.v1.apps/nginx-deployment
+kubectl rollout undo deployment.v1.apps/nginx-deployment --to-revision=2
+```
+
 ## job
 
 ```sh
@@ -110,5 +155,22 @@ kubectl annotate pods <pod_name> key=value
 kubectl get pods --selector=job-name=bash-for-loop
 kubectl get pods --selector=job-name=bash-for-loop -o json
 kubectl get pods -l job-name=bash-for-loop -o yaml | less
+```
+
+## DaemonSet
+
+```sh
+# 更新 daemonset
+kubectl set image ds/fluentd-elasticsearch fluentd-elasticsearch=fluent/fluentd:v1.4
+# 查看更新 daemonset 的过程
+kubectl rollout status ds/fluentd-elasticsearch
+```
+
+## ConfigMap
+
+```sh
+kubectl create configmap [NAME] [DATA]
+kubectl create configmap <configmap_name> --from-file=filename.json
+kubectl create configmap <configmap_name> --from-literal=key1=value1 --from-literal=key2=value2
 ```
 
