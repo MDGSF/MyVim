@@ -223,6 +223,9 @@ tar -zcvf xxx.tar.gz xxx
 解压 xxx.tar.gz 到当前目录
 tar -zxvf xxx.tar.gz
 
+解压 xxx.tar.gz 到指定目录
+tar -zxvf xxx.tar.gz -C /target_dir
+
 解压 xxx.tar.xz 到当前目录
 tar -xvJf xxx.tar.xz
 
