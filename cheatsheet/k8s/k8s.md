@@ -53,7 +53,9 @@ kubectl edit pods <pod_name>
 ## 使用 yaml 文件
 
 ```sh
+# 申明式
 kubectl apply -f xxx.yaml
+# 命令式
 kubectl create -f xxx.yaml
 ```
 
