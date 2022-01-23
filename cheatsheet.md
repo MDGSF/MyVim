@@ -762,6 +762,12 @@ https://github.com/nodesource/distributions
 ## python
 
 ```sh
+python -m venv .env
+source .env/bin/activate
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+```
+
+```sh
 安装 conda，到清华源去下载 anaconda，并配置 conda 从清华源镜像下载
 使用 conda 来安装不同版本的 python
 conda create -n hello python=3.7.2
