@@ -638,7 +638,11 @@ ossutil cp -r oss://minieye-anno/test/tasks/one/ .
 
 ```sh
 # git 使用代理
+
+export https_proxy=http://127.0.0.1:1080 http_proxy=http://127.0.0.1:1080 all_proxy=socks5://127.0.0.1:1080
+
 export ALL_PROXY="socks5://127.0.0.1:1080"
+
 ALL_PROXY="socks5://127.0.0.1:1080" git clone https://xxx
 ALL_PROXY="socks5://127.0.0.1:1080" git pull
 
@@ -694,6 +698,9 @@ git tag <tagName> <commitID>
 
 # 配置 git ls 命令，获取日志
 git config --global alias.ls "log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# 删除仓库下不在 git 管理下的文件
+git clean -ffxd
 ```
 
 ## Rust
