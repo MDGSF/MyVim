@@ -1028,3 +1028,14 @@ ab -n 1000 -c 10 http://127.0.0.1:8080/hello
 # 深度测试可以考虑 JMeter
 ```
 
+## vim
+
+```
+# 关闭颜色
+:syntax off
+
+# 设置复制的时候不会缩进
+:set paste
+:set nopaste
+```
+
