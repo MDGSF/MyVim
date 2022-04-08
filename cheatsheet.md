@@ -232,6 +232,9 @@ tar -xvJf xxx.tar.xz
 解压 xxx.tar 到当前目录
 tar -xvf xxx.tar
 
+把 xxx 打包为 xxx.tar
+tar -cvf xxx.tar xxx
+
 解压 xxx.gz 到当前目录
 gunzip xxx.gz
 
@@ -701,6 +704,11 @@ git config --global alias.ls "log --color --graph --date=format:'%Y-%m-%d %H:%M:
 
 # 删除仓库下不在 git 管理下的文件
 git clean -ffxd
+
+# git 乱码问题
+git config --global core.quotepath false
+git config --global i18n.commitencoding utf-8
+git config --global i18n.logoutputencoding utf-8
 ```
 
 ## Rust
