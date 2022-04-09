@@ -1039,3 +1039,9 @@ ab -n 1000 -c 10 http://127.0.0.1:8080/hello
 :set nopaste
 ```
 
+## 镜像源
+
+https://developer.aliyun.com/mirror/
+https://mirrors.tuna.tsinghua.edu.cn/
+https://mirrors.ustc.edu.cn/
+
