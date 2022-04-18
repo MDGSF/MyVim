@@ -1036,6 +1036,22 @@ ab -n 1000 -c 10 http://127.0.0.1:8080/hello
 # 深度测试可以考虑 JMeter
 ```
 
+## clangformat
+
+```
+clang-format -style=google -dump-config > .clang-format
+```
+
+忽略部分代码：
+
+```cpp
+int formatted_code;
+// clang-format off
+   void    unformatted_code  ;
+// clang-format on
+void formatted_code_again;
+```
+
 ## vim
 
 ```
