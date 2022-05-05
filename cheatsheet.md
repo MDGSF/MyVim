@@ -63,6 +63,13 @@ sudo apt install zsh
 chsh -s /usr/bin/zsh
 ```
 
+## oh my zsh
+
+```
+更新版本
+omz update
+```
+
 ## 获取 bash 版本号
 
 ```sh
