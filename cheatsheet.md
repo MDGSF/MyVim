@@ -1047,6 +1047,7 @@ ab -n 1000 -c 10 http://127.0.0.1:8080/hello
 
 ```
 clang-format -style=google -dump-config > .clang-format
+find src/ -iname '*.h' -o -iname '*.cpp' -o -iname '*.c' | xargs clang-format -i
 ```
 
 忽略部分代码：
