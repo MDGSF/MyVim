@@ -684,6 +684,21 @@ origin  https://github.com/MDGSF/RPractice.git (push)
 git remote rm origin
 git remote add origin https://github.com/MDGSF/RPractice.git
 
+
+# 查看本地分支
+git branch
+
+# 查看远程分支
+git branch -r
+
+# 删除本地分支
+git branch -d local_test
+git branch -D local_test
+
+# 删除远程分支
+git branch -r -d origin/huangjian_test
+git push origin :huangjian_test
+
 # 查看所有 tag
 git tag
 
