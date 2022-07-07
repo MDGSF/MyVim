@@ -5,6 +5,17 @@
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 https://yeasy.gitbook.io/docker_practice/
 
+## 常用命令
+
+```sh
+# 按创建时间排序 jobs
+kubectl get jobs --sort-by=.status.startTime
+kubectl get jobs --show-labels -l pcs=pcs --sort-by=.status.startTime | head
+
+# 删除指定标签的 jobs
+kubectl delete jobs `kubectl get jobs -l batch_name=${batchName} -o custom-columns=:.metadata.name`
+```
+
 ## kubectl get
 
 ```sh
