@@ -825,6 +825,11 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
 生成 requirements.txt 文件
 pip freeze > requirements.txt
+
+# 清华源
+https://pypi.tuna.tsinghua.edu.cn/simple
+# 中国科学技术大学
+https://pypi.mirrors.ustc.edu.cn/simple
 ```
 
 ## docker
