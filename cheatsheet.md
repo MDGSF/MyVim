@@ -854,6 +854,8 @@ docker load # Load an image from a tar archive or STDIN
 docker push
 docker pull
 
+docker save d1:v1.0.0 -o d1_v1.0.0.tar
+
 # 重命名镜像
 docker image tag old_name:latest new_name:latest
 docker rmi old_name
