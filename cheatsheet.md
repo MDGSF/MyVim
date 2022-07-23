@@ -825,6 +825,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
 生成 requirements.txt 文件
 pip freeze > requirements.txt
+pip list --format=freeze > requirements.txt
 
 # 清华源
 https://pypi.tuna.tsinghua.edu.cn/simple
