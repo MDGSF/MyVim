@@ -1119,3 +1119,20 @@ https://developer.aliyun.com/mirror/
 https://mirrors.tuna.tsinghua.edu.cn/
 https://mirrors.ustc.edu.cn/
 
+## cert
+
+```sh
+# cacert.pem
+# 下载地址：https://curl.se/docs/caextract.html
+
+# 生成 rsa 私钥
+openssl genrsa -out server.key 2048
+# 生成私钥对应的公钥
+openssl rsa -in server.key -pubout -out server.pubkey
+# 生成证书
+openssl req -new -x509 -key server.key -out server.crt -days 3650
+# 查看证书内容
+openssl x509 -in cacert.pem -noout -text
+openssl x509 -in server.crt -noout -text
+```
+
