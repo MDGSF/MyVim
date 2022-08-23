@@ -1136,3 +1136,13 @@ openssl x509 -in cacert.pem -noout -text
 openssl x509 -in server.crt -noout -text
 ```
 
+## ssh-gen
+
+```sh
+ssh-keygen -m PEM -t rsa -b 4096 -C "your.email@example.com"
+ssh -T git@e.coding.net
+
+# --global表示全局配置，不加则只对当前Git项目生效。
+git config [--global] core.sshCommand "ssh -i /path/to/your/privateKey"
+```
+
