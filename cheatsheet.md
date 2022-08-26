@@ -125,6 +125,9 @@ id -u
 ```sh
 # 删除当前目录，子目录下的所有 target 目录
 find . -name "target" -type d -print -exec rm -rf {} \;
+
+# 查找并替换
+find . -type f -exec sed -i 's/camera0/camera30/g' {} \;
 ```
 
 ## grep查找
@@ -1144,5 +1147,24 @@ ssh -T git@e.coding.net
 
 # --global表示全局配置，不加则只对当前Git项目生效。
 git config [--global] core.sshCommand "ssh -i /path/to/your/privateKey"
+```
+
+## shadowsocks
+
+```sh
+pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+sslocal -c ~/opt/shadowsocks.json
+
+shadowsocks.json 格式：
+{
+  "server": "服务器IP地址",
+  "server_port": 服务器端口号,
+  "local_address": "127.0.0.1",
+  "local_port": 1080,
+  "password": "密码",
+  "timeout":300,
+  "method":"chacha20-ietf-poly1305 或 aes-256-cfb",
+  "fast_open": false
+}
 ```
 
