@@ -1168,3 +1168,10 @@ shadowsocks.json 格式：
 }
 ```
 
+## ldd
+
+```sh
+# 复制依赖库
+ldd test.exe | awk '{print $3}' | grep "^/" | xargs -d "\n" cp -t .
+```
+
