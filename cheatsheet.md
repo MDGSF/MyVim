@@ -1088,6 +1088,12 @@ sudo apt install wrk
 wrk -t12 -c400 -d30s http://127.0.0.1:8080
 ```
 
+## rewrk
+
+```sh
+# https://github.com/lnx-search/rewrk
+```
+
 ## clangformat
 
 ```
