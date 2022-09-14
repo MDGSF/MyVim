@@ -1,3 +1,0 @@
-# systemd
-
-https://systemd.io/
