@@ -7,6 +7,8 @@ rustup override add nightly
 
 ### Rust 终端工具
 
+https://old.reddit.com/r/rust/comments/oygrp1/your_favorite_rust_cli_utility_i_have_my_top_10/
+
 - fd：另一个find
 - pastel：终端颜色显示
 - as-tree：另一个tree
