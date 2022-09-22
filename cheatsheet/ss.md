@@ -15,5 +15,8 @@ shadowsocks.json 格式：
   "method":"chacha20-ietf-poly1305 或 aes-256-cfb",
   "fast_open": false
 }
+
+export ss=192.168.2.102:1080
+export https_proxy=http://$ss http_proxy=http://$ss all_proxy=socks5://$ss
 ```
 
