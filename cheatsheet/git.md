@@ -87,3 +87,23 @@ git config --global i18n.commitencoding utf-8
 git config --global i18n.logoutputencoding utf-8
 ```
 
+## 大文件 git lfs
+
+```sh
+git lfs install
+git lfs clone git@bitbucket.org:tpettersen/Atlasteroids.git
+git lfs pull
+
+# track all .ogg files in any directory
+git lfs track "*.ogg"
+# track files named music.ogg in any directory
+git lfs track "music.ogg"
+# track all files in the Assets directory and all subdirectories
+git lfs track "Assets/"
+# track all files in the Assets directory but not subdirectories
+git lfs track "Assets/*"
+
+# list all track
+git lfs track
+```
+
