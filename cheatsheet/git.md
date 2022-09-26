@@ -3,6 +3,8 @@
 ```sh
 # git 使用代理
 
+export ss=192.168.2.100:1080; export https_proxy=http://$ss http_proxy=http://$ss all_proxy=socks5://$ss
+
 export https_proxy=http://127.0.0.1:1080 http_proxy=http://127.0.0.1:1080 all_proxy=socks5://127.0.0.1:1080
 
 export ALL_PROXY="socks5://127.0.0.1:1080"
