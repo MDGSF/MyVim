@@ -590,6 +590,8 @@ ufw disable
 ufw status
 # 允许IP地址172.18.225.45来源的流量访问端口6379
 ufw allow from 172.18.225.45 to any port 6379
+# 开放端口6379
+sudo ufw allow 6379
 
 # 查看 ufw 默认策略
 ufw status verbose
