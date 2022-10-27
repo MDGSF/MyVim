@@ -669,3 +669,15 @@ git config [--global] core.sshCommand "ssh -i /path/to/your/privateKey"
 ldd test.exe | awk '{print $3}' | grep "^/" | xargs -d "\n" cp -t .
 ```
 
+## 火焰图
+
+```sh
+# https://github.com/brendangregg/FlameGraph
+
+# 采样 60 秒，采集频率 99 Hertz，[pid]就是要采集的进程 ID 号
+perf record -F 99 -p [pid] -g -- sleep 60
+perf script > out.perf
+./stackcollapse-perf.pl out.perf > out.folded
+./flamegraph.pl out.folded > out.svg
+```
+
