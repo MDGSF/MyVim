@@ -681,3 +681,12 @@ perf script > out.perf
 ./flamegraph.pl out.folded > out.svg
 ```
 
+## 加密文件夹
+
+```sh
+# 加密
+tar -zcvf - [dirname] | openssl aes256 -salt -k [password] | dd of=[dirname].bin
+# 解密
+dd if=[dirname].bin | openssl aes256 -d -k [password] | tar -zxf -
+```
+
