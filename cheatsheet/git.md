@@ -89,6 +89,14 @@ git config --global i18n.commitencoding utf-8
 git config --global i18n.logoutputencoding utf-8
 ```
 
+## 拉取所有分支
+
+```sh
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+git fetch --all
+git pull --all
+```
+
 ## 大文件 git lfs
 
 ```sh

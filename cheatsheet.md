@@ -690,3 +690,5 @@ tar -zcvf - [dirname] | openssl aes256 -salt -k [password] | dd of=[dirname].bin
 dd if=[dirname].bin | openssl aes256 -d -k [password] | tar -zxf -
 ```
 
+##
+
