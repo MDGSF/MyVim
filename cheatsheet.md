@@ -690,5 +690,11 @@ tar -zcvf - [dirname] | openssl aes256 -salt -k [password] | dd of=[dirname].bin
 dd if=[dirname].bin | openssl aes256 -d -k [password] | tar -zxf -
 ```
 
-##
+## WSL ping 不通 windows 主机
+
+```sh
+以管理员权限打开 powershell，执行下面命令：
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
+
 
