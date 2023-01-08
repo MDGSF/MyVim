@@ -601,6 +601,13 @@ ufw default allow
 ufw default deny
 ```
 
+## clang环境配置
+
+```
+export LLVM_HOME=/home/huangjian/opt/toolchains/clang+llvm-13.0.0-x86_64-linux-gnu-ubuntu-20.04/bin
+export PATH=$PATH:$LLVM_HOME
+```
+
 ## clangformat
 
 ```
