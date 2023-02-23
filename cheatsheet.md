@@ -697,4 +697,13 @@ dd if=[dirname].bin | openssl aes256 -d -k [password] | tar -zxf -
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
 ```
 
+## xlaunch
+
+```sh
+$ export DISPLAY=localhost:0
+$ export DISPLAY=192.168.2.102:0
+$ export DISPLAY=[xlaunch设备的IP地址]:0
+$ xhost +
+$ startxfce4
+```
 
