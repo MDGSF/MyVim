@@ -55,6 +55,9 @@ git branch -D local_test
 git branch -r -d origin/huangjian_test
 git push origin :huangjian_test
 
+# 删除远程分支
+git push origin --delete [branch name]
+
 # 查看所有 tag
 git tag
 
