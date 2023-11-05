@@ -55,6 +55,9 @@ git branch -D local_test
 git branch -r -d origin/huangjian_test
 git push origin :huangjian_test
 
+# 删除远程分支
+git push origin --delete [branch name]
+
 # 查看所有 tag
 git tag
 
@@ -87,6 +90,13 @@ git clean -ffxd
 git config --global core.quotepath false
 git config --global i18n.commitencoding utf-8
 git config --global i18n.logoutputencoding utf-8
+
+# git commit 回退
+git reset --soft HEAD^
+# git add 回退
+git restore --staged .
+# modified 回退
+git restore .
 ```
 
 ## 拉取所有分支
