@@ -152,4 +152,6 @@ git push -u origin master:main
 
 git pull <远程仓库别名> <远程分支名>:<本地分支名>
 git pull origin main:master
+
+git push --all origin
 ```
