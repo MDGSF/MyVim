@@ -117,3 +117,29 @@ git lfs track "Assets/*"
 git lfs track
 ```
 
+## git remote
+
+
+```sh
+$ git remote
+origin
+
+$ git remote -v
+origin  https://github.com/MDGSF/MyVim.git (fetch)
+origin  https://github.com/MDGSF/MyVim.git (push)
+
+$ git remote get-url origin
+https://github.com/MDGSF/MyVim.git
+
+git remote rm origin
+git remote add origin https://github.com/MDGSF/MyVim.git
+
+git remote rename origin github
+git remote add codeberg https://github.com/MDGSF/MyVim.git
+
+git push <远程仓库别名> <本地分支名>:<远程分支名>
+git push -u origin master:main
+
+git pull <远程仓库别名> <远程分支名>:<本地分支名>
+git pull origin main:master
+```

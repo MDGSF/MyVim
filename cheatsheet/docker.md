@@ -116,3 +116,21 @@ docker stats --no-stream
 docker inspect <containerID>
 ```
 
+## docker-compose
+
+```sh
+# 查看帮助文档
+docker-compose -h
+
+# 启动
+docker-compose up -d
+# 重启
+docker-compose restart
+# 关闭
+docker-compose down
+# 查看运行状态
+docker-compose ls
+```
+
+
+
