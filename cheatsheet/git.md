@@ -141,17 +141,27 @@ origin  https://github.com/MDGSF/MyVim.git (push)
 $ git remote get-url origin
 https://github.com/MDGSF/MyVim.git
 
+# 删除
 git remote rm origin
-git remote add origin https://github.com/MDGSF/MyVim.git
 
-git remote rename origin github
+# 添加
+git remote add origin https://github.com/MDGSF/MyVim.git
 git remote add codeberg https://github.com/MDGSF/MyVim.git
 
+# 重命名
+git remote rename origin github
+
+# 推送
 git push <远程仓库别名> <本地分支名>:<远程分支名>
 git push -u origin master:main
 
+# 拉取
 git pull <远程仓库别名> <远程分支名>:<本地分支名>
 git pull origin main:master
 
+# 推送所有的分支到 origin 对应的远程仓库
 git push --all origin
+# 指定 origin 对应的远程仓库 进行拉取
+git pull origin
 ```
+
