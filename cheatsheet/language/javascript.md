@@ -14,6 +14,8 @@ https://github.com/nodesource/distributions
 ```sh
 npm init
 npm install xxx
+npm --registry https://registry.npm.taobao.org install
+npm --registry https://registry.npm.taobao.org install xxx
 ```
 
 ## cnpm
