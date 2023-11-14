@@ -700,6 +700,18 @@ New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEth
 ## xlaunch
 
 ```sh
+# 先更新apt-get
+sudo apt-get update && sudo apt-get upgrade -y
+
+# 安装XFCE桌面环境
+sudo apt-get install xfce4 -y
+
+# 将必要软件安装到XFCE桌面
+sudo apt-get install xfce4-goodies -y
+
+# xhost 命令
+sudo apt-get install -y x11-xserver-utils
+
 $ export DISPLAY=localhost:0
 $ export DISPLAY=192.168.2.102:0
 $ export DISPLAY=[xlaunch设备的IP地址]:0
