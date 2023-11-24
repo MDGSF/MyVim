@@ -719,3 +719,12 @@ $ xhost +
 $ startxfce4
 ```
 
+## iotop
+
+查看哪些程序在对硬盘继续读写操作。
+
+```sh
+sudo apt install iotop
+sudo iotop
+```
+
