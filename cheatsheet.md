@@ -731,3 +731,12 @@ sudo apt install iotop
 sudo iotop
 ```
 
+## window powershell 设置环境变量
+
+```sh
+Set-Item -Path Env:https_proxy -Value "http://127.0.0.1:1080"
+Set-Item -Path Env:http_proxy -Value "http://127.0.0.1:1080"
+Set-Item -Path Env:all_proxy -Value "http://127.0.0.1:1080"
+Get-ChildItem Env:
+```
+
