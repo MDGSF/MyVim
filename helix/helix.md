@@ -162,5 +162,8 @@ y # copy
 p # paste
 <space> + y # copy to system clipboard
 <space> + p # paste from system clipboard
+
+# show current filename
+: ctrl+r shift+%
 ```
 
