@@ -46,6 +46,8 @@ b # cursor move backward to the beginning of the current word.
 
 ctrl+d # scroll down
 ctrl+u # scroll up
+
+ctrl+o # cursor jump to previous position
 ```
 
 ### open multi file
@@ -77,6 +79,7 @@ shift+A # enter insert mode, insert at the end of the line
 # Select mode
 v # enter selection mode
 x # select cursor line
+; # deselect, cancel selected text without moving cursor
 
 # match mode
 # key is `m`
@@ -111,6 +114,29 @@ ctrl+w ctrl+k # Jump to above split
 ctrl+w ctrl+j # Jump to below split
 ```
 
+### search in file
+
+```sh
+/ # search forward
+? # search backward
+n # go to next search match
+N # go to previous search match
+```
+
+### multi cursor
+
+```sh
+C # duplicate cursor
+, # remove the second cursor
+```
+
+### search in selection
+
+```sh
+# after select text
+s # can be used to search in selected text
+```
+
 ### others
 
 ```sh
@@ -123,5 +149,11 @@ d
 c # change the current selection
 
 u # undo
+shift+U # redo
+
+y # copy
+p # paste
+<space> + y # copy to system clipboard
+<space> + p # paste from system clipboard
 ```
 
