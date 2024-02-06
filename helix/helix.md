@@ -137,6 +137,13 @@ C # duplicate cursor
 s # can be used to search in selected text
 ```
 
+### format
+
+```sh
+# format code manually
+:format
+```
+
 ### others
 
 ```sh
