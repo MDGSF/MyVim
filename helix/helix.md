@@ -15,6 +15,8 @@
 ### open and quit
 
 ```sh
+# open file
+hx <filename>
 # save file
 :w
 # quit helix
@@ -38,11 +40,12 @@ gg # cursor jump to file start
 ge # cursor jump to file end
 gs # cursor jump to line start
 gl # cursor jump to line end
-w # cursor move to next word end.
-b # cursor move to prev word start.
+w # cursor move forward to before the beginning of the next word.
+e # cursor move forward to the end of the current word.
+b # cursor move backward to the beginning of the current word.
 
-ctrl+d # move cursor down quickly
-ctrl+u # move cursor up quickly
+ctrl+d # scroll down
+ctrl+u # scroll up
 ```
 
 ### open multi file
@@ -51,28 +54,74 @@ ctrl+u # move cursor up quickly
 <space> + f # open file picker
 <space> + shift + F # open file picker at current working directory
 <space> b # open buffer picker
+:bp # switch to next buffer
 ```
 
 ### mode change
 
 ```sh
-<Esc> # enter normal mode
+# normal mode
+# key is `<Esc>`
 
+# Insert mode
 i # enter insert mode, insert before cursor
 a # enter insert mode, insert after cursor
-o # enter insert mode, begin a new line below current line
-shift+O # enter insert mode, begin a new line above current line
+o # enter insert mode, add a new line below current line
+shift+O # enter insert mode, add a new line above current line
+shift+I # enter insert mode, insert at the start of the line
+shift+A # enter insert mode, insert at the end of the line
 
+# view mode
+# key is `z`
+
+# Select mode
 v # enter selection mode
 x # select cursor line
+
+# match mode
+# key is `m`
+
+# command mode
+# key is `:`
+
+# window mode
+# key is `ctrl+w`
+
+# space mode
+# key is `<space>`
+
+# goto mode
+# key is `g`
+```
+
+### split window
+
+```sh
+# vertical split
+:vsplit (:vs)
+:split-new (:vnew)
+# horizontal split
+:hsplit (:hs,:sp)
+:hsplit-new (:hnew)
+
+ctrl+w ctrl+w # Jump to next window
+ctrl+w ctrl+h # Jump to left split
+ctrl+w ctrl+l # Jump to right split
+ctrl+w ctrl+k # Jump to above split
+ctrl+w ctrl+j # Jump to below split
 ```
 
 ### others
 
 ```sh
-zz # move cursor line to window's middle
+zz # align view center
 
-d # used to delete
+# 1. delete the character at the cursor
+# 2. delete all selected text
+d 
+
+c # change the current selection
+
 u # undo
 ```
 
