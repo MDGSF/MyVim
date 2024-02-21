@@ -5,6 +5,14 @@
   - javascript: `cheatsheet/language/javascript.md`
   - csharp: `cheatsheet/language/csharp.md`
 
+## Linux tools
+
+- vim
+- git
+- gcc, g++, make, cmake
+- hexyl
+- ripgrep
+
 ## 终端快捷键
 
 ```sh
