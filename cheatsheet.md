@@ -528,6 +528,8 @@ rm -f /tmp/f; mkfifo /tmp/f
 cat /tmp/f | /bin/sh -i 2>&1 | nc -l 127.0.0.1 1234 > /tmp/f
 # 在客户端执行
 nc 127.0.0.1 1234
+
+# nc 命令局域网传文件。
 ```
 
 ## 挂载
@@ -755,5 +757,11 @@ Set-Item -Path Env:https_proxy -Value "http://127.0.0.1:1080"
 Set-Item -Path Env:http_proxy -Value "http://127.0.0.1:1080"
 Set-Item -Path Env:all_proxy -Value "http://127.0.0.1:1080"
 Get-ChildItem Env:
+```
+
+## cgdb
+
+```sh
+gdb 增强调试。
 ```
 
