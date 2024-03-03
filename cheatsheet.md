@@ -5,6 +5,14 @@
   - javascript: `cheatsheet/language/javascript.md`
   - csharp: `cheatsheet/language/csharp.md`
 
+## Linux tools
+
+- vim
+- git
+- gcc, g++, make, cmake
+- hexyl
+- ripgrep
+
 ## 终端快捷键
 
 ```sh
@@ -322,6 +330,9 @@ touch file{1..100}
 ```sh
 # 创建一个 4G 大小的空文件
 dd if=/dev/zero of=4G.txt count=4096 bs=1MB
+
+# 创建一个 4G 大小的文件，里面都是随机字符
+dd if=/dev/urandom of=4G.txt bs=1M count=4096
 ```
 
 ## ssh 登录
@@ -735,5 +746,14 @@ $ startxfce4
 ```sh
 sudo apt install iotop
 sudo iotop
+```
+
+## window powershell 设置环境变量
+
+```sh
+Set-Item -Path Env:https_proxy -Value "http://127.0.0.1:1080"
+Set-Item -Path Env:http_proxy -Value "http://127.0.0.1:1080"
+Set-Item -Path Env:all_proxy -Value "http://127.0.0.1:1080"
+Get-ChildItem Env:
 ```
 
