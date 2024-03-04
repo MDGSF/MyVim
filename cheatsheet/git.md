@@ -55,6 +55,9 @@ git branch -D local_test
 git branch -r -d origin/huangjian_test
 git push origin :huangjian_test
 
+# 删除远程分支
+git push origin --delete [branch name]
+
 # 查看所有 tag
 git tag
 
@@ -87,6 +90,13 @@ git clean -ffxd
 git config --global core.quotepath false
 git config --global i18n.commitencoding utf-8
 git config --global i18n.logoutputencoding utf-8
+
+# git commit 回退
+git reset --soft HEAD^
+# git add 回退
+git restore --staged .
+# modified 回退
+git restore .
 ```
 
 ## 拉取所有分支
@@ -115,5 +125,43 @@ git lfs track "Assets/*"
 
 # list all track
 git lfs track
+```
+
+## git remote
+
+
+```sh
+$ git remote
+origin
+
+$ git remote -v
+origin  https://github.com/MDGSF/MyVim.git (fetch)
+origin  https://github.com/MDGSF/MyVim.git (push)
+
+$ git remote get-url origin
+https://github.com/MDGSF/MyVim.git
+
+# 删除
+git remote rm origin
+
+# 添加
+git remote add origin https://github.com/MDGSF/MyVim.git
+git remote add codeberg https://github.com/MDGSF/MyVim.git
+
+# 重命名
+git remote rename origin github
+
+# 推送
+git push <远程仓库别名> <本地分支名>:<远程分支名>
+git push -u origin master:main
+
+# 拉取
+git pull <远程仓库别名> <远程分支名>:<本地分支名>
+git pull origin main:master
+
+# 推送所有的分支到 origin 对应的远程仓库
+git push --all origin
+# 指定 origin 对应的远程仓库 进行拉取
+git pull origin
 ```
 

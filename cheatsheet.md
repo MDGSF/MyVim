@@ -5,6 +5,14 @@
   - javascript: `cheatsheet/language/javascript.md`
   - csharp: `cheatsheet/language/csharp.md`
 
+## Linux tools
+
+- vim
+- git
+- gcc, g++, make, cmake
+- hexyl
+- ripgrep
+
 ## 终端快捷键
 
 ```sh
@@ -322,6 +330,9 @@ touch file{1..100}
 ```sh
 # 创建一个 4G 大小的空文件
 dd if=/dev/zero of=4G.txt count=4096 bs=1MB
+
+# 创建一个 4G 大小的文件，里面都是随机字符
+dd if=/dev/urandom of=4G.txt bs=1M count=4096
 ```
 
 ## ssh 登录
@@ -503,11 +514,22 @@ nc -l 127.0.0.1 1234
 # TCP 客户端去连接本地的 TCP 服务器
 nc 127.0.0.1 1234
 
+# 在本地启动一个 TCP 服务器
+# -k 保持连接
+# -v verbose 日志输出
+nc -kv -l 127.0.0.1 12345
+# TCP 客户端去连接本地的 TCP 服务器
+# 10000 是指定客户端的端口
+# 12345 是服务端的端口
+nc -v -p 10000 127.0.0.1 12345
+
 # 启动一个远程 bash 终端，在服务端执行如下命令
 rm -f /tmp/f; mkfifo /tmp/f
 cat /tmp/f | /bin/sh -i 2>&1 | nc -l 127.0.0.1 1234 > /tmp/f
 # 在客户端执行
 nc 127.0.0.1 1234
+
+# nc 命令局域网传文件。
 ```
 
 ## 挂载
@@ -697,5 +719,56 @@ tar -zcvf - [dirname] | openssl aes256 -salt -k [password] | dd of=[dirname].bin
 dd if=[dirname].bin | openssl aes256 -d -k [password] | tar -zxf -
 ```
 
-##
+## WSL ping 不通 windows 主机
+
+```sh
+以管理员权限打开 powershell，执行下面命令：
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+```
+
+## xlaunch
+
+```sh
+# 先更新apt-get
+sudo apt-get update && sudo apt-get upgrade -y
+
+# 安装XFCE桌面环境
+sudo apt-get install xfce4 -y
+
+# 将必要软件安装到XFCE桌面
+sudo apt-get install xfce4-goodies -y
+
+# xhost 命令
+sudo apt-get install -y x11-xserver-utils
+
+$ export DISPLAY=localhost:0
+$ export DISPLAY=192.168.2.102:0
+$ export DISPLAY=[xlaunch设备的IP地址]:0
+$ xhost +
+$ startxfce4
+```
+
+## iotop
+
+查看哪些程序在对硬盘继续读写操作。
+
+```sh
+sudo apt install iotop
+sudo iotop
+```
+
+## window powershell 设置环境变量
+
+```sh
+Set-Item -Path Env:https_proxy -Value "http://127.0.0.1:1080"
+Set-Item -Path Env:http_proxy -Value "http://127.0.0.1:1080"
+Set-Item -Path Env:all_proxy -Value "http://127.0.0.1:1080"
+Get-ChildItem Env:
+```
+
+## cgdb
+
+```sh
+gdb 增强调试。
+```
 
