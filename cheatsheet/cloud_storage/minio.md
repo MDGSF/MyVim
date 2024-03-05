@@ -23,8 +23,8 @@ mc get myminio/mcaptest/aa.mcap test.mcap
 mc stat myminio/mcaptest/aa.mcap
 # 生成一个下载链接
 mc share download myminio/mcaptest/aa.mcap
-# 下载，指定 range 范围
-curl -i -o test.mcap_0_1024 -r 0-1024 <url>
+# 下载并保存到文件中，指定 range 范围 [0, 1024)
+curl -o test.mcap_0_1024 -r 0-1023 <url>
 
 
 # 管理和部署 minio 到 k8s 上面.
