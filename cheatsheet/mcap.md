@@ -16,6 +16,5 @@ mcap list channels test.mcap
 mcap list chunks test.mcap
 mcap list metadata test.mcap
 mcap list schemas test.mcap
-
 ```
 

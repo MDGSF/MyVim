@@ -25,6 +25,9 @@ mc stat myminio/mcaptest/aa.mcap
 mc share download myminio/mcaptest/aa.mcap
 # 下载并保存到文件中，指定 range 范围 [0, 1024)
 curl -o test.mcap_0_1024 -r 0-1023 <url>
+# 上传文件
+mc put local_file remote_dir
+mc put test.mcap myminio/mcaptest/
 
 
 # 管理和部署 minio 到 k8s 上面.
