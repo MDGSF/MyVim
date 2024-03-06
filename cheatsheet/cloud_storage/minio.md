@@ -28,6 +28,8 @@ curl -o test.mcap_0_1024 -r 0-1023 <url>
 # 上传文件
 mc put local_file remote_dir
 mc put test.mcap myminio/mcaptest/
+# 查看请求日志
+mc admin trace -v -a --path mcaptest/NuScenes-v1.0-mini-scene-0061.mcap myminio > log.txt
 
 
 # 管理和部署 minio 到 k8s 上面.
