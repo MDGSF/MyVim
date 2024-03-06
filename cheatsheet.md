@@ -8,10 +8,16 @@
 ## Linux tools
 
 - vim
-- git
-- gcc, g++, make, cmake
-- hexyl
-- ripgrep
+- git, gcc, g++, gdb, cgdb, make, cmake
+  - sudo apt install git gcc g++ make cmake
+- hexyl：以 16 进制查看文件，很好看
+  - <https://github.com/sharkdp/hexyl>
+  - sudo apt install hexyl
+- ripgrep：文件查找
+  - <https://github.com/BurntSushi/ripgrep>
+  - sudo apt install ripgrep
+- tokei：统计代码行数
+  - <https://github.com/XAMPPRocky/tokei>
 
 ## 终端快捷键
 
