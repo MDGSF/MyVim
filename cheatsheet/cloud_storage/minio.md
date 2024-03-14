@@ -17,6 +17,10 @@ mc admin info myminio
 # 查看 buckets and objects
 mc ls myminio
 mc ls myminio/mcaptest
+
+# 创建一个叫 new_bucket_name 名字的 bucket
+mc mb myminio/new_bucket_name
+
 # 下载到本地
 mc get myminio/mcaptest/aa.mcap test.mcap
 # 查看文件信息
