@@ -12,6 +12,7 @@ kubectl run my-mc -i --tty --image minio/mc:latest --command -- bash
 kubectl exec my-mc -i --tty -- bash
 # mc 连接到 minio server
 mc alias set myminio http://127.0.0.1:9000 <user> <password>
+mc alias set myminio http://my-service.my-namespace.svc.cluster.local <user> <password>
 # 查看 minio 信息
 mc admin info myminio
 # 查看 buckets and objects
