@@ -512,6 +512,13 @@ ifstat
 sudo tcpdump -i eth0 host 192.168.1.233 -w log.cap
 ```
 
+## lsof 命令
+
+```sh
+# 查看端口占用，网络连接，和 netstat 有点类似
+lsof -i -Pn
+```
+
 ## nc 命令
 
 ```sh
