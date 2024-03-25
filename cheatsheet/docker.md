@@ -1,18 +1,5 @@
 # docker
 
-## 使用代理
-
-在 docker build 的时候使用代理，推荐使用方法一。
-
-```sh
-# 方法一
-docker build --build-arg http_proxy=http://10.239.4.80:913 --build-arg https_proxy=http://10.239.4.80:913 .
-
-# 方法二
-ENV http_proxy 10.239.4.80:913
-ENV https_proxy 10.239.4.80:913
-```
-
 ## 常用操作
 
 ```sh
@@ -147,5 +134,33 @@ docker-compose down
 docker-compose ls
 ```
 
+## 使用代理
 
+在 docker build 的时候使用代理，推荐使用方法一。
+
+```sh
+# 方法一
+docker build --build-arg http_proxy=http://10.239.4.80:913 --build-arg https_proxy=http://10.239.4.80:913 .
+
+# 方法二
+ENV http_proxy 10.239.4.80:913
+ENV https_proxy 10.239.4.80:913
+```
+
+在 `docker-compose` 中使用代理：
+
+```yaml
+version: "3"
+services:
+  nodejs:
+    hostname: nodejs
+    build:
+      context: ./
+      dockerfile: docker/dev/nodejs/Dockerfile
+      args:
+        http_proxy: http://172.24.32.1:7897
+        https_proxy: http://172.24.32.1:7897
+    environment:
+      NODE_ENV: development
+```
 
