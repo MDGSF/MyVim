@@ -33,3 +33,11 @@ https://pypi.tuna.tsinghua.edu.cn/simple
 https://pypi.mirrors.ustc.edu.cn/simple
 ```
 
+```sh
+# 升级 pip
+python -m pip install --upgrade pip
+python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+
+# 清华源设为默认
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
