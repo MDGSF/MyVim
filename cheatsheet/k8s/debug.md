@@ -1,6 +1,11 @@
 # debug
 
 ```sh
+sudo ktctl connect --kubeconfig ~/.kube/config --namespace default
+.\ktctl.exe connect --kubeconfig config --namespace default
+```
+
+```sh
 kubectl run mybusybox -i --tty --image busybox:latest --command -- sh
 kubectl exec mybusybox -i --tty -- sh
 
