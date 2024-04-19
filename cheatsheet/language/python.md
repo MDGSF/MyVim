@@ -16,6 +16,23 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
 ```sh
 # pipenv
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pipenv
+
+# 修改源，在 Pipfile 中添加如下内容
+[[source]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+name = "tsinghua"
+
+
+# 查看帮助文档
+pipenv -h
+# 检测当前项目对应的虚拟环境是否存在，不存在则自动创建项目所需要的环境
+pipenv shell
+# 虚拟环境安装包
+pipenv install
+列出本地工程的路径：pipenv --where
+列出虚拟环境路径：pipenv --venv
 ```
 
 ```sh
