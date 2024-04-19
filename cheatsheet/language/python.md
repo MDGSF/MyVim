@@ -1,9 +1,26 @@
 # python
 
 ```sh
+# 创建虚拟环境 .env
 python -m venv .env
 source .env/bin/activate
+deactivate
+
+# 创建虚拟环境 myenv
+python -m venv myenv
+source myenv/bin/activate
+deactivate
+
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+```
+
+```sh
+# pipenv
+```
+
+```sh
+# pyenv
+# https://github.com/pyenv/pyenv
 ```
 
 ```sh
