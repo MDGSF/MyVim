@@ -18,6 +18,9 @@ helm search repo mysql-operator --versions
 helm pull mayastor/mayastor --version 2.5.0
 helm pull mysql-operator/mysql-operator --version 2.1.2
 
+# 下载 kafka 到本地
+helm pull oci://registry-1.docker.io/bitnamicharts/kafka
+
 # 安装指定的 charts
 helm install my-mysql-operator mysql-operator/mysql-operator \
    --namespace mysql-operator --create-namespace
