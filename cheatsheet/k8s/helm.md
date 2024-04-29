@@ -26,5 +26,6 @@ helm install my-mysql-operator mysql-operator/mysql-operator \
    --namespace mysql-operator --create-namespace
 helm install my-mysql-operator ./mysql-operator-2.1.2 \
    --namespace mysql-operator --create-namespace
+helm install my-kafka ./kafka
 ```
 
