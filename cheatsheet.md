@@ -785,3 +785,11 @@ Get-ChildItem Env:
 gdb 增强调试。
 ```
 
+## PlantUML
+
+<https://github.com/plantuml>
+
+```sh
+docker run -d -p 8080:8080 plantuml/plantuml-server:jetty
+```
+
