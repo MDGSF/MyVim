@@ -21,6 +21,9 @@ helm pull mysql-operator/mysql-operator --version 2.1.2
 # 下载 kafka 到本地
 helm pull oci://registry-1.docker.io/bitnamicharts/kafka
 
+# 下载 spark 到本地
+helm pull oci://registry-1.docker.io/bitnamicharts/spark
+
 # 安装指定的 charts
 helm install my-mysql-operator mysql-operator/mysql-operator \
    --namespace mysql-operator --create-namespace
