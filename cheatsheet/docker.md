@@ -1,5 +1,12 @@
 # docker
 
+## 安装
+
+- <https://yeasy.gitbook.io/docker_practice/install/ubuntu>
+- 安装问题；
+  - `dial unix /var/run/docker.sock: connect: permission denied.`
+  - 解决方案，把用户加入 docker 用户组后，记得重启电脑。
+
 ## 常用操作
 
 ```sh
