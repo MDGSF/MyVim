@@ -51,3 +51,38 @@ kubectl get svc/console -n minio-operator -o json | jq -r '.spec.ports'
 kubectl get secret/console-sa-secret -n minio-operator -o json | jq -r '.data.token' | base64 -d
 ```
 
+```sh
+# minio event webhook
+
+mc alias set myminio http://localhost:9000 minio minio123
+
+mc mb myminio/mybucket
+mc mb myminio/schemas
+
+mc admin config set myminio notify_webhook:1 endpoint="http://flaskapp:5000/minio-event" queue_limit="10"
+mc admin config set myminio notify_webhook:2 endpoint="https://test.dev-110.xxx.com/miniowebhook/minio-event" queue_limit="10"
+mc admin config set myminio notify_webhook:3 endpoint="https://test.dev-120.xxx.com/miniowebhook/minio-event" queue_limit="10"
+mc admin config set myminio notify_webhook:4 endpoint="https://test.dev-110.xxx.com/versionmanagement/minio-event" queue_limit="10"
+mc admin config set myminio notify_webhook:5 endpoint="https://test.dev-120.xxx.com/versionmanagement/minio-event" queue_limit="10"
+
+mc admin service restart myminio
+
+mc admin config get myminio/ notify_webhook
+
+mc event add myminio/mybucket arn:minio:sqs::1:webhook --event put,get,delete
+mc event add myminio/mybucket arn:minio:sqs::2:webhook --event put,get,delete
+mc event add myminio/mybucket arn:minio:sqs::3:webhook --event put,get,delete
+mc event add myminio/schemas arn:minio:sqs::4:webhook --event put,get,delete
+mc event add myminio/schemas arn:minio:sqs::5:webhook --event put,get,delete
+
+mc event remove myminio/mybucket arn:minio:sqs::1:webhook --event put,get,delete
+mc event remove myminio/mybucket arn:minio:sqs::2:webhook --event put,get,delete
+mc event remove myminio/mybucket arn:minio:sqs::3:webhook --event put,get,delete
+
+mc event list myminio/mybucket
+mc event list myminio/schemas
+
+mc put a.txt myminio/mybucket/aa/a.txt
+mc put aa_projectname_branchname_v0.0.1.tar.gz myminio/schemas/project_74B123/dbc/aa_projectname_branchname_v0.0.1.tar.gz
+```
+
