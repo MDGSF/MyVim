@@ -75,3 +75,9 @@ python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 # 清华源设为默认
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+```sh
+# pipx
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pipx
+pipx ensurepath
+```
