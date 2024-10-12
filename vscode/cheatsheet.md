@@ -8,3 +8,4 @@
 - 光标选中单词: `Ctrl + Shift + Left/Right/Up/Down`
 - 打开/关闭终端: `Ctrl + ~`, 就是 Esc 下面那个键
 - 多行光标: `Alt + Shift + Mouse Left`
+- 光标在匹配的两个括号之间跳转: `Ctrl + Shift + \`
