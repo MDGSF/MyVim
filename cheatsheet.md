@@ -793,3 +793,31 @@ gdb 增强调试。
 docker run -d -p 8080:8080 plantuml/plantuml-server:jetty
 ```
 
+## trans 翻译
+
+<https://github.com/soimort/translate-shell>
+
+```sh
+# 把任意语言翻译为 locale 语言
+trans 你好
+trans vorto
+trans hello
+
+# Translate a word into French
+trans :fr word
+
+# Translate a word into Chinese and Japanese
+trans :zh+ja word
+
+# English -> Chinese
+trans en:zh "word processor"
+
+# Chinese -> English
+trans zh:en "你好"
+
+# 默认使用 google 翻译
+trans "你好"
+# 使用 bing 翻译
+trans "你好" -e bing
+```
+
