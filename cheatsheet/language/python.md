@@ -81,3 +81,13 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pipx
 pipx ensurepath
 ```
+
+## uv
+
+- <https://github.com/astral-sh/uv>
+- <https://docs.astral.sh/uv/>
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv self update
+```
