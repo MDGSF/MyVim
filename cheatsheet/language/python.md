@@ -91,3 +91,12 @@ pipx ensurepath
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv self update
 ```
+
+## download
+
+```sh
+pip download -d /home/huangjian/pywhls -i https://mirrors.aliyun.com/pypi/simple/ xxx
+pip download -d /home/huangjian/pywhls -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+cd /home/huangjian/pywhls
+pip install --upgrade *.whl
+```
