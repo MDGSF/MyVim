@@ -100,3 +100,42 @@ pip download -d /home/huangjian/pywhls -i https://mirrors.aliyun.com/pypi/simple
 cd /home/huangjian/pywhls
 pip install --upgrade *.whl
 ```
+
+## pypiserver
+
+<https://github.com/pypiserver/pypiserver>
+
+```sh
+pip install -i https://mirrors.aliyun.com/pypi/simple/ pypiserver
+pypi-server -h
+pypi-server run -h
+
+mkdir -p ~/packages
+pypi-server run --host "0.0.0.0" --port 9000 -a . -P . --backend "simple-dir" --fallback-url
+"https://mirrors.aliyun.com/pypi/simple/" ~/packages
+pip install --index-url http://127.0.0.1:9000/simple/ PACKAGE [PACKAGE2...]
+```
+
+## devpi-server
+
+<https://github.com/kenatbasis/devpi/blob/master/doc/quickstart-server.rst>
+
+```sh
+pip install -i https://mirrors.aliyun.com/pypi/simple/ devpi-server
+pip install -i https://mirrors.aliyun.com/pypi/simple/ devpi-client
+
+devpi-server --host=localhost --port=3141
+
+devpi use http://localhost:3141
+devpi login root --password ''
+devpi user -m root password=123
+devpi user -l
+devpi logoff
+
+devpi user -c alice password=456 email=mdgsf@qq.com
+devpi login alice --password=456
+devpi index -c dev
+devpi use alice/dev
+
+pip install -i http://localhost:3141/alice/dev <package>
+```
