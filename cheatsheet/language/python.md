@@ -139,3 +139,11 @@ devpi use alice/dev
 
 pip install -i http://localhost:3141/alice/dev <package>
 ```
+
+## install target
+
+```sh
+pip install -i https://mirrors.aliyun.com/pypi/simple/ --target="/home/huangjian/test/pydependency" --upgrade torch
+
+PYTHONUSERBASE="/home/huangjian/test/pydependency" pip install -i https://mirrors.aliyun.com/pypi/simple/ --upgrade torch
+```
