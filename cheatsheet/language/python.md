@@ -114,6 +114,20 @@ mkdir -p ~/packages
 pypi-server run --host "0.0.0.0" --port 9000 -a . -P . --backend "simple-dir" --fallback-url
 "https://mirrors.aliyun.com/pypi/simple/" ~/packages
 pip install --index-url http://127.0.0.1:9000/simple/ PACKAGE [PACKAGE2...]
+
+# 启动一个本地的 pypi server
+mkdir -p ~/pypi
+pypi-server run --host "0.0.0.0" --port 9000 -a . -P . --backend "cached-dir"
+--fallback-url "https://mirrors.aliyun.com/pypi/simple/" ~/pypi
+
+# 下载 whl 格式的 python 库到 pypi server 的本地存储目录
+pip download \
+  --no-cache-dir \
+  --dest="~/pypi" \
+  --index=https://mirrors.aliyun.com/pypi/simple \
+  --retries=100 \
+  --timeout=86400 \
+  cowsay requests
 ```
 
 ## devpi-server
