@@ -1,24 +1,25 @@
 # python download module
 
-- `pypi_x86_64_windows`
-- `pypi_x86_64_ubuntu20.04`
-- `pypi_x86_64_ubuntu22.04`
-- `pypi_x86_64_ubuntu24.04`
-  - py39
-  - py310
-  - py311
-    - torch
-      - torch_2.5.1_rocm6.1
-      - torch_2.5.1_rocm6.2
-      - torch_2.5.1_cu118
-      - torch_2.5.1_cu121
-      - torch_2.5.1_cu124
-      - torch_2.5.1_cpu
-      - torch_2.6.0_cu118
-      - torch_2.6.0_cu124
-      - torch_2.6.0_cu126
-  - py312
-  - py313
+- pypi
+  - `pypi_x86_64_windows`
+  - `pypi_x86_64_ubuntu2004`
+  - `pypi_x86_64_ubuntu2204`
+  - `pypi_x86_64_ubuntu2404`
+    - py39
+    - py310
+    - py311
+      - torch
+        - torch_2.5.1_rocm6.1
+        - torch_2.5.1_rocm6.2
+        - torch_2.5.1_cu118
+        - torch_2.5.1_cu121
+        - torch_2.5.1_cu124
+        - torch_2.5.1_cpu
+        - torch_2.6.0_cu118
+        - torch_2.6.0_cu124
+        - torch_2.6.0_cu126
+    - py312
+    - py313
 
 ```sh
 downpy.sh lz4 zstandard protobuf python-dotenv
