@@ -88,8 +88,19 @@ pipx ensurepath
 - <https://docs.astral.sh/uv/>
 
 ```sh
+# 安装 uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
+# 更新 uv
 uv self update
+
+# 查看 python 版本，包括已经安装的和未安装的
+uv python list
+# 安装 python 3.13.2 到默认目录
+uv python install 3.13.2
+# 查看默认的 python 安装目录
+uv python dir
+# 查看指定版本 python 的安装目录
+uv python find 3.13
 ```
 
 ## download
