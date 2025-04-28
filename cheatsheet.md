@@ -821,3 +821,13 @@ trans "你好"
 trans "你好" -e bing
 ```
 
+
+## vscode server
+
+- 打开 vscode -> Help -> About, 找到 Commit
+- 用下面连接下载
+  - <https://update.code.visualstudio.com/commit:${commit_id}/server-linux-x64/stable>
+- 上传 `vscode-server-linux-x64.tar.gz` 到服务器
+- 创建目录：`mkdir -p ${HOME}/.vscode-server/bin/${commit_id}`
+- 解压到上面的目录下: `tar -xzf vscode-server-linux-x64.tar.gz -C ${HOME}/.vscode-server/bin/${commit_id} --strip-components 1`
+- `touch ${HOME}/.vscode-server/bin/${commit_id}/0`
