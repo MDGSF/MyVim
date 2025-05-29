@@ -172,3 +172,22 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ --target="/home/huangjian
 
 PYTHONUSERBASE="/home/huangjian/test/pydependency" pip install -i https://mirrors.aliyun.com/pypi/simple/ --upgrade torch
 ```
+
+## ruff
+
+- <https://github.com/astral-sh/ruff-vscode/blob/main/README.md>
+
+vscode 的配置文件 settings.json
+
+```json
+{
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+      }
+  }
+}
+```
