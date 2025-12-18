@@ -5,6 +5,7 @@
   default = simple
 [core]
   editor = vim
+  quotepath = false
 [color]
   ui = true
 [diff]
